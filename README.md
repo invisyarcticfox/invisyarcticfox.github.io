@@ -1,2 +1,2 @@
-# shamshitty.github.io
-gwegrwe
+# please help
+idk what im doing
