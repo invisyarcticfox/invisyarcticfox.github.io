@@ -1,2 +1,2 @@
-# please help
-idk what im doing
+# shamshitty.xyz
+my website :)

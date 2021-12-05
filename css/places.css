@@ -1,0 +1,68 @@
+#sites {
+    font-size: 1.4em;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15%;
+    text-align: center;
+}
+#sites > div {
+    animation: transitionIn 2s;
+    color: #ffffff;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+
+.links > div a {
+    text-decoration: underline;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+.links > div a:visited {
+    text-decoration: underline;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+.links > div a:hover {
+    text-decoration: underline;
+    transition: all 0.3s ease 0s;
+    color: #c33;
+}
+.links > div a:active {
+    text-decoration: underline;
+    transition: all 0.3s ease 0s;
+    color: #c33;
+}
+.links > div a:focus {
+    text-decoration: underline;
+    transition: all 0.3s ease 0s;
+    color: #c33;
+}
+/* idk it has to be like this to look like how i want */
+
+.links > div a i::selection {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+  
+.sites {
+    padding-left: 7px;
+}
+  
+.fab:hover {
+    transition: all 0.3s ease 0s;
+    color: #c33;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    #sites {
+        margin-top: -30px;
+        font-size: 0.8em;
+    }
+}
