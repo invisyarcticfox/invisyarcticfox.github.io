@@ -7,20 +7,6 @@
     letter-spacing: 5px;
 }
 
-
-#title {
-    animation: animIn 1s ease;
-    font-size: 2em;
-    margin-top: 15%;
-}
-
-.links {
-    animation: animIn 1s ease;
-    margin-top: 50px;
-    display: inline-block;
-    font-size: 1.7em;
-}
-
 #socials {
     animation: animIn 1s ease;
     display: inline-block;
@@ -35,5 +21,17 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px){
+    #nav {
+        font-size: 1.2em;
+    }
+    #socials {
+        font-size: 1.5em;
+        margin-top: 25%;
     }
 }
