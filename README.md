@@ -1,2 +1,2 @@
-# newindex
-a redesign of literally everything
+# shamshitty.xyz
+my website
