@@ -1,9 +1,11 @@
 #title {
+    animation: animIn 1s ease forwards;
     font-size: 2em;
     margin-top: 15%;
 }
 
 .links {
+    animation: animIn 1s ease forwards;
     margin-top: 50px;
     display: inline-block;
     font-size: 1.7em;
