@@ -1,14 +1,29 @@
 #title {
-    animation: animIn 1s ease forwards;
+    animation: animIn 1s 0.5s ease forwards;
     font-size: 2em;
-    margin-top: 15%;
+    margin-top: 10%;
+    opacity: 0;
+}
+#title > div {
+    animation: animIn 1s 1s ease forwards;
+    opacity: 0;
 }
 
 .links {
-    animation: animIn 1s ease forwards;
+    animation: animIn 1s 1.5s ease forwards;
     margin-top: 50px;
     display: inline-block;
     font-size: 1.7em;
+    opacity: 0;
+}
+
+img {
+    animation: animIn 1s 2s ease forwards;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 35%;
+    opacity: 0;
 }
 
 
@@ -17,9 +32,12 @@
 @media only screen and (max-width: 600px){
     #title {
         font-size: 1.5em;
-        margin-top: 30%;
+        margin-top: 20%;
     }
     .links {
-        font-size: 1.2em;
+        font-size: 0.9em;
+    }
+    img {
+        width: 90%;
     }
 }
