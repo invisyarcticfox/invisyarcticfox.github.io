@@ -1,18 +1,28 @@
 h1 {
-    animation: animIn 1s ease forwards;
+    animation: animIn 1s 0.5s ease forwards;
     font-size: 2.7em;
     margin-top: 50px;
     text-transform: uppercase;
 }
 h3 {
-    animation: animIn 1s ease forwards;
+    animation: animIn 1s 1s ease forwards;
     font-size: 1.5em;
     margin-top: 10px;
     margin-bottom: 150px;
 }
 
-.tg, .gmod, .mc {
+.tg {
     animation: animIn 1s ease forwards;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.gmod {
+    animation: animIn 1s 1.2s ease forwards;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.mc {
+    animation: animIn 1s 1.4s ease forwards;
     font-size: 2.5em;
     margin-bottom: 10px;
 }
