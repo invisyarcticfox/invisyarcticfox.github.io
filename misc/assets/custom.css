@@ -11,7 +11,7 @@ h3 {
     margin-bottom: 150px;
 }
 
-.tg, .gmod {
+.tg, .gmod, .mc {
     animation: animIn 1s ease forwards;
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -58,5 +58,18 @@ h3 {
     }
     #back {
         display: none;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-top: 50px;
+    }
+    h3 {
+        font-size: 1.2em;
+        margin-bottom: 60px;
+    }
+    .tg, .gmod, .mc {
+        font-size: 1.5em;
+        margin-bottom: 20px;
     }
 }
