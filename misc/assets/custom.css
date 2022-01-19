@@ -3,28 +3,33 @@ h1 {
     font-size: 2.7em;
     margin-top: 50px;
     text-transform: uppercase;
+    opacity: 0;
 }
 h3 {
     animation: animIn 1s 1s ease forwards;
     font-size: 1.5em;
     margin-top: 10px;
     margin-bottom: 150px;
+    opacity: 0;
 }
 
 .tg {
-    animation: animIn 1s ease forwards;
+    animation: animIn 1s 1.5s ease forwards;
     font-size: 2.5em;
     margin-bottom: 10px;
+    opacity: 0;
 }
 .gmod {
-    animation: animIn 1s 1.2s ease forwards;
+    animation: animIn 1s 1.7s ease forwards;
     font-size: 2.5em;
     margin-bottom: 10px;
+    opacity: 0;
 }
 .mc {
-    animation: animIn 1s 1.4s ease forwards;
+    animation: animIn 1s 1.9s ease forwards;
     font-size: 2.5em;
     margin-bottom: 10px;
+    opacity: 0;
 }
 
 
