@@ -9,16 +9,48 @@
     opacity: 0;
 }
 
-.links {
+
+.icons {
     animation: animIn 1s 1.5s ease forwards;
+    display: block;
+    margin-top: 20px;
+    position: relative;
+    word-wrap: normal;
+    white-space: nowrap;
+    opacity: 0;
+}
+.iconimg {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+    width: 50px;
+    filter: invert(100%);
+}
+
+.iconlink {
+    transition: all ease 0.3s;
+    color: #141414;
+    text-decoration: none;
+}
+.iconlink:hover {
+    transition: all ease 0.3s;
+    color: #141414;
+    text-decoration: none;
+}
+
+
+.links {
+    animation: animIn 1s 2s ease forwards;
     margin-top: 50px;
     display: inline-block;
-    font-size: 1.7em;
+    font-size: 1.8em;
     opacity: 0;
 }
 
-img {
-    animation: animIn 1s 2s ease forwards;
+
+.discord {
+    animation: animIn 1s 2.5s ease forwards;
     display: block;
     margin: 0 auto;
     margin-top: 50px;
@@ -32,13 +64,17 @@ img {
 @media only screen and (max-width: 600px){
     #title {
         font-size: 1.5em;
-        margin-top: 20%;
+        margin-top: 25%;
     }
     .links {
-        font-size: 0.9em;
+        font-size: 1.3em;
+        margin-top: 30px;
     }
-    img {
-        width: 90%;
-        display: none;
+    .iconimg {
+        width: 40px;
+    }
+    .discord {
+        width: 80%;
+        margin-top: 40px;
     }
 }
