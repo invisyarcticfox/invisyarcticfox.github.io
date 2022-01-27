@@ -13,7 +13,7 @@
 .icons {
     animation: animIn 1s 1.5s ease forwards;
     display: block;
-    margin-top: 20px;
+    margin-top: 30px;
     position: relative;
     word-wrap: normal;
     white-space: nowrap;
@@ -42,7 +42,7 @@
 
 .links {
     animation: animIn 1s 2s ease forwards;
-    margin-top: 50px;
+    margin-top: 30px;
     display: inline-block;
     font-size: 1.8em;
     opacity: 0;
@@ -58,23 +58,39 @@
     opacity: 0;
 }
 
+.discordmobile {
+    display: none;
+    visibility: hidden;
+}
+
 
 
 
 @media only screen and (max-width: 600px){
     #title {
         font-size: 1.5em;
-        margin-top: 25%;
+        margin-top: 28%;
     }
     .links {
         font-size: 1.3em;
         margin-top: 30px;
     }
     .iconimg {
-        width: 40px;
+        width: 35px;
     }
     .discord {
+        display: none;
         width: 80%;
         margin-top: 40px;
+    }
+    .discordmobile {
+        display: block;
+        visibility: visible;
+        font-size: 0.9em;
+        text-align: center;
+        margin: 0 auto;
+        animation: animIn 1s 1.5s ease forwards;
+        opacity: 0;
+        margin-top: 10px;
     }
 }
