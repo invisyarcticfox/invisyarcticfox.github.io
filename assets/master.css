@@ -12,7 +12,7 @@ a, a:visited {
 }
 a:hover, a:focus, a:active {
   transition: all 0.3s ease;
-  color: #c33;
+  color: #7e7e7e;
   text-decoration: underline;
 }
 

@@ -20,6 +20,7 @@
     opacity: 0;
 }
 .iconimg {
+    transition: all ease 0.3s;
     display: inline;
     margin: 0px;
     padding: 0px;
@@ -34,6 +35,12 @@
     text-decoration: none;
 }
 .iconlink:hover {
+    transition: all ease 0.3s;
+    color: #141414;
+    text-decoration: none;
+    filter: invert(50%);
+}
+.iconlink:active, .iconlink:focus {
     transition: all ease 0.3s;
     color: #141414;
     text-decoration: none;
@@ -77,6 +84,9 @@
     }
     .iconimg {
         width: 35px;
+    }
+    .iconlink:hover {
+        filter: invert(100%);
     }
     .discord {
         display: none;
