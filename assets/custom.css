@@ -11,6 +11,8 @@
 
 
 .icons {
+    padding: 0;
+    margin: 0;
     animation: animIn 1s 1.5s ease forwards;
     display: block;
     margin-top: 30px;
@@ -18,32 +20,20 @@
     word-wrap: normal;
     white-space: nowrap;
     opacity: 0;
+    text-decoration: none;
 }
-.iconimg {
-    transition: all ease 0.3s;
-    display: inline;
-    margin: 0px;
-    padding: 0px;
-    vertical-align: middle;
-    width: 50px;
-    filter: invert(100%);
+.iconlink {
+    text-decoration: none !important;
 }
 
-.iconlink {
-    transition: all ease 0.3s;
-    color: #141414;
-    text-decoration: none;
+svg, svg:visited {
+    transition: all 0.3s ease;
+    width: 50px;
+    fill: #fff;
 }
-.iconlink:hover {
-    transition: all ease 0.3s;
-    color: #141414;
-    text-decoration: none;
-    filter: invert(50%);
-}
-.iconlink:active, .iconlink:focus {
-    transition: all ease 0.3s;
-    color: #141414;
-    text-decoration: none;
+svg:hover, svg:active, svg:focus {
+    transition: all 0.3s ease;
+    fill: #00df00;
 }
 
 
@@ -82,12 +72,7 @@
         font-size: 1.3em;
         margin-top: 30px;
     }
-    .iconimg {
-        width: 35px;
-    }
-    .iconlink:hover {
-        filter: invert(100%);
-    }
+
     .discord {
         display: none;
         width: 80%;
