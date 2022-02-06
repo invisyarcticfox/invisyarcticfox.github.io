@@ -72,7 +72,9 @@ svg:hover, svg:active, svg:focus {
         font-size: 1.3em;
         margin-top: 30px;
     }
-
+    svg {
+        width: 40px;
+    }
     .discord {
         display: none;
         width: 80%;
