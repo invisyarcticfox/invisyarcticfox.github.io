@@ -44,8 +44,7 @@ svg:hover, svg:active, svg:focus {
     fill: #00df00;
 }
 
-
-.links {
+.work {
     animation: animIn 1s 2s ease forwards;
     margin-top: 30px;
     display: inline-block;
@@ -74,11 +73,11 @@ svg:hover, svg:active, svg:focus {
 @media only screen and (max-width: 600px){
     #title {
         font-size: 1.5em;
-        margin-top: 28%;
+        margin-top: 25%;
     }
-    .links {
-        font-size: 1.3em;
-        margin-top: 35px;
+    .work {
+        font-size: 1.5em;
+        margin-top: 30px;
     }
     svg {
         width: 35px;
