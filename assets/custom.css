@@ -6,7 +6,7 @@ body {
 #title {
     animation: animIn 1s 0.5s ease forwards;
     font-size: 2em;
-    margin-top: 150px;
+    margin-top: 140px;
     opacity: 0;
 }
 #title > div {
@@ -47,14 +47,30 @@ svg:hover, svg:active, svg:focus {
 .work {
     animation: animIn 1s 2s ease forwards;
     margin-top: 30px;
-    display: inline-block;
+    display: block;
     font-size: 2em;
     opacity: 0;
 }
 
+.gendershit {
+    animation: animIn 1s 2.5s ease forwards;
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 2em;
+    opacity: 0;
+
+    padding: 5px;
+
+    background: #fff !important;
+    color: #fff !important;
+}
+.gendershit:hover, .gendershit > a:hover {
+    color: #000 !important;
+}
+
 
 .discord {
-    animation: animIn 1s 2.5s ease forwards;
+    animation: animIn 1s 3s ease forwards;
     display: block;
     margin: 0 auto;
     margin-top: 50px;
@@ -78,6 +94,16 @@ svg:hover, svg:active, svg:focus {
     .work {
         font-size: 1.5em;
         margin-top: 30px;
+    }
+    .gendershit {
+        background: none !important;
+        color: #fff !important;
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+    .gendershit:hover {
+        background: none !important;
+        color: #00df00 !important;
     }
     svg {
         width: 35px;
