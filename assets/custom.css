@@ -52,25 +52,8 @@ svg:hover, svg:active, svg:focus {
     opacity: 0;
 }
 
-.gendershit {
-    animation: animIn 1s 2.5s ease forwards;
-    margin-top: 30px;
-    display: inline-block;
-    font-size: 2em;
-    opacity: 0;
-
-    padding: 5px;
-
-    background: #fff !important;
-    color: #fff !important;
-}
-.gendershit:hover, .gendershit > a:hover {
-    color: #000 !important;
-}
-
-
 .discord {
-    animation: animIn 1s 3s ease forwards;
+    animation: animIn 1s 2.5s ease forwards;
     display: block;
     margin: 0 auto;
     margin-top: 50px;
@@ -94,16 +77,6 @@ svg:hover, svg:active, svg:focus {
     .work {
         font-size: 1.5em;
         margin-top: 30px;
-    }
-    .gendershit {
-        background: none !important;
-        color: #fff !important;
-        font-size: 1.5em;
-        margin-top: 30px;
-    }
-    .gendershit:hover {
-        background: none !important;
-        color: #00df00 !important;
     }
     svg {
         width: 35px;
