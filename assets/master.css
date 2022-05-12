@@ -52,3 +52,14 @@ a:hover, a:focus, a:active {
       opacity: 1;
   }
 }
+
+@keyframes animIn {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
