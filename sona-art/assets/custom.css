@@ -1,0 +1,104 @@
+#back {
+    animation: backAnim 1.5s 0.5s ease forwards;
+    opacity: 0;
+    text-align: left;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #fff;
+    height: 50px;
+    width: 10%;
+    font-size: 1.5em;
+    margin-left: -9px;
+    margin-top: -5px;
+
+    position: fixed;
+}
+.back {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+
+#refheader {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 70px;
+}
+
+.ref {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.divider {
+    width: 80%;
+    height: 5px;
+    background-color: grey;
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+
+#artheader {
+    font-size: 2em;
+    margin-top: 50px;
+}
+.art {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    margin-top: 10px;
+}
+
+
+@keyframes animIn {
+    from {
+      transform: translateY(80px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    #back {
+        display: none;
+    }
+
+    #refheader {
+        font-size: 2em;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .ref {
+        width: 90%;
+        margin-top: 10px;
+    }
+    .divider {
+        width: 80%;
+        height: 5px;
+        background-color: grey;
+    
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 50px;
+    }
+    #artheader {
+        font-size: 1.5em;
+        margin-top: 50px;
+    }
+    .art {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 10px;
+    }
+}

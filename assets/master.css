@@ -42,13 +42,13 @@ a:hover, a:focus, a:active {
 
 
 
-@keyframes animIn {
+@keyframes backAnim {
   from {
-    transform: translateY(80px);
-    opacity: 0;
+      transform: translateX(-300px);
+      opacity: 0;
   }
   to {
-    transform: translateY(0);
-    opacity: 1;
+      transform: translateX(0px);
+      opacity: 1;
   }
 }
