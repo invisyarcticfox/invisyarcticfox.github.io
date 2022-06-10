@@ -2,18 +2,15 @@ body {
   font-family: 'Courier New', Courier, monospace !important;
   color: #fff;
   background: #141414;
-  text-align: center;
 }
 
-a, a:visited {
+a,a:visited {
   transition: all 0.3s ease;
   color: #fff;
-  text-decoration: underline;
 }
 a:hover, a:focus, a:active {
   transition: all 0.3s ease;
   color: #00df00;
-  text-decoration: underline;
 }
 
 ::selection {

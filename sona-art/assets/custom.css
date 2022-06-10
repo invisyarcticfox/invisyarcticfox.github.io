@@ -18,15 +18,23 @@
     padding-top: 5px;
 }
 
+body {
+    text-align: center;
+}
 
 #refheader {
     font-size: 3em;
     font-weight: bold;
     margin-top: 70px;
 }
-
+.imgcont {
+    margin: 0 auto;
+    text-align: left !important;
+    width: 60%;
+    font-size: 1.5em;
+}
 .ref {
-    width: 50%;
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -54,17 +62,6 @@
 }
 
 
-@keyframes animIn {
-    from {
-      transform: translateY(80px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-}
-
 
 @media only screen and (max-width: 600px){
     #back {
@@ -72,12 +69,16 @@
     }
 
     #refheader {
-        font-size: 2em;
+        font-size: 1.9em;
         font-weight: bold;
         margin-top: 20px;
     }
-    .ref {
+    .imgcont {
         width: 90%;
+        font-size: 1em;
+    }
+    .ref {
+        width: 100%;
         margin-top: 10px;
     }
     .divider {
@@ -92,7 +93,7 @@
         border-radius: 50px;
     }
     #artheader {
-        font-size: 1.5em;
+        font-size: 1.2em;
         margin-top: 50px;
     }
     .art {

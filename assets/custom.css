@@ -1,30 +1,28 @@
 body {
-    overflow: visible;
+    text-align: center;
 }
 
-
-#title {
-    animation: animIn 1s 0.5s ease forwards;
-    font-size: 2em;
-    margin-top: 120px;
-    opacity: 0;
+#message {
+    font-weight: bold;
+    font-size: 3.5em;
+    margin-top: 290px;
 }
-#title > div {
+#bio {
     animation: animIn 1s 1s ease forwards;
     opacity: 0;
+    font-size: 2.5em;
 }
 
-
-.icons {
+#icons {
+    animation: animIn 1s 1.5s ease forwards;
+    opacity: 0;
     padding: 0;
     margin: 0;
-    animation: animIn 1s 1.5s ease forwards;
     display: block;
     margin-top: 30px;
     position: relative;
     word-wrap: normal;
     white-space: nowrap;
-    opacity: 0;
     text-decoration: none !important;
 }
 .iconlink {
@@ -45,63 +43,38 @@ svg:hover, svg:active, svg:focus {
     fill: #00df00;
 }
 
-.work {
-    animation: animIn 1s 2s ease forwards;
-    margin-top: 30px;
-    display: block;
-    font-size: 2em;
-    opacity: 0;
-}
-
-.archive {
-    animation: animIn 1s 2.5s ease forwards;
-    margin-top: 30px;
-    display: block;
-    font-size: 2em;
-    opacity: 0;
-}
-.art {
-    animation: animIn 1s 3s ease forwards;
-    margin-top: 30px;
-    display: block;
-    font-size: 2em;
-    opacity: 0;
-}
-
-.discord {
-    animation: animIn 1s 3.5s ease forwards;
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-    width: 35%;
-    opacity: 0;
-}
-
 .discordmobile {
     display: none;
-    visibility: hidden;
 }
 
-
+#links {
+    animation: animIn 1s 2s ease forwards;
+    opacity: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2.5em;
+    margin-top: 30px;
+}
+.link {
+    display: inline-block;
+}
 
 
 @media only screen and (max-width: 600px){
-    #title {
-        font-size: 1.5em;
-        margin-top: 25%;
+    #name {
+        font-size: 2em;
+        margin-top: 100px;
     }
-    .work, .archive, .art {
+    #bio {
         font-size: 1.5em;
-        margin-top: 30px;
+        margin-top: 20px;
     }
     svg {
         width: 35px;
         margin: 0;
     }
-    .discord {
-        display: none;
-        width: 80%;
-        margin-top: 40px;
+    #links {
+        font-size: 1.5em;
     }
     .discordmobile {
         display: block;
@@ -109,8 +82,30 @@ svg:hover, svg:active, svg:focus {
         font-size: 1em;
         text-align: center;
         margin: 0 auto;
-        animation: animIn 1s 2s ease forwards;
+        animation: animIn 1s 2.5s ease forwards;
         opacity: 0;
         margin-top: 10px;
+    }
+}
+
+
+@keyframes animIn {
+    from {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+span {
+    animation: blinker 1s linear infinite
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
     }
 }
