@@ -4,6 +4,7 @@ body {
   background: #141414;
 }
 
+
 a,a:visited {
   transition: all 0.3s ease;
   color: #fff;
@@ -13,10 +14,12 @@ a:hover, a:focus, a:active {
   color: #00df00;
 }
 
+
 ::selection {
   background: #fff;
   color: #000;
 }
+
 
 * {
   scrollbar-color: #343434 #0B0B0B;
