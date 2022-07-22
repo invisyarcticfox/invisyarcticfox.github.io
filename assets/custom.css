@@ -1,6 +1,9 @@
 body {
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
+
 
 #name {
     font-weight: bold;
@@ -9,6 +12,7 @@ body {
 }
 #bio {
     animation: animIn 1s 1s ease forwards;
+
     opacity: 0;
     font-size: 2.5em;
 }
@@ -16,10 +20,11 @@ body {
 #icons {
     animation: animIn 1s 1.5s ease forwards;
     opacity: 0;
-    padding: 0;
-    margin: 0;
     display: block;
+
+    padding: 0;
     margin-top: 30px;
+
     position: relative;
     word-wrap: normal;
     white-space: nowrap;
@@ -32,7 +37,7 @@ body {
 
 svg, svg:visited {
     transition: all 0.3s ease;
-    width: 50px;
+    width: 55px;
     fill: #fff;
 
     margin-left: 5px;
@@ -43,27 +48,68 @@ svg:hover, svg:active, svg:focus {
     fill: #00df00;
 }
 
-.discord {
-    font-size: 2em;
-    animation: animIn 1s 1.5s ease forwards;
-    opacity: 0;
-}
-.discord > b:hover {
-    cursor: pointer;
-    text-decoration: underline;
+.discmob {
+    display: none;
+    visibility: hidden;
 }
 
 #links {
     animation: animIn 1s 2s ease forwards;
     opacity: 0;
+
     width: 100%;
+
     margin: 0 auto;
+
     font-size: 2.5em;
     margin-top: 30px;
 }
 .link {
     display: inline-block;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    transition-duration: 0.3s;
+}
+.tooltip .tooltiptext {
+    opacity: 0.0;
+    transform: scaleY(0.0);
+
+    width: auto;
+    max-width: 400px;
+
+    background-color: #646464;
+    color: #fff;
+
+    border: 0px solid #00df00;
+    border-radius: 50px;
+
+    transition-duration: 0.3s;
+
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+
+    box-shadow: 0px 0px 0px #ffffff;
+
+    margin-left: 5px;
+    margin-top: 5px;
+
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    opacity: 1.0;
+    transform: scaleY(1.0);
+    transition-duration: 0.3s;
+
+    border: 3px solid #00df00;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+/* thanks bonkmaykr :) */
 
 
 @media only screen and (max-width: 600px){
@@ -79,31 +125,27 @@ svg:hover, svg:active, svg:focus {
         width: 35px;
         margin: 0;
     }
+    .tooltip .tooltiptext, .discord {
+        display: none;
+    }
+    .discmob {
+        animation: animIn 1s 1.5s ease forwards;
+
+        display: block;
+        visibility: visible;
+        opacity: 0;
+
+        font-size: 1em;
+        margin-top: 10px;
+    }
     #links {
         font-size: 1.5em;
     }
-    .discord {
-        font-size: 1em;
-        opacity: 0;
-        margin-top: 10px;
-    }
 }
 
 
-@keyframes animIn {
-    from {
-        transform: translateY(80px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-span {
-    animation: blinker 1s linear infinite
+.blinker {
+    animation: blinker 1s linear infinite;
 }
 @keyframes blinker {
     50% {
