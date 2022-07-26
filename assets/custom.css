@@ -4,12 +4,24 @@ body {
     margin: 0;
 }
 
-
+/*
 #name {
     font-weight: bold;
     font-size: 3.5em;
     margin-top: 300px;
 }
+*/
+#namegif {
+    animation: animIn 1s 0.5s ease forwards;
+    opacity: 0;
+
+    display: block;
+    margin: 0 auto;
+
+    width: 550px;
+    margin-top: 100px;
+}
+
 #bio {
     animation: animIn 1s 1s ease forwards;
 
