@@ -42,6 +42,9 @@ body {
     white-space: nowrap;
     text-decoration: none !important;
 }
+#icons::selection {
+    background: #141414;
+}
 .iconlink {
     text-decoration: none !important;
     display: inline-block;
@@ -105,7 +108,7 @@ svg:hover, svg:active, svg:focus {
     font-size: 16px;
     padding: 5px;
 
-    box-shadow: 0px 0px 0px #ffffff;
+    box-shadow: 0px 0px 0px #fff;
 
     margin-left: 5px;
     margin-top: 5px;
@@ -119,7 +122,7 @@ svg:hover, svg:active, svg:focus {
     transition-duration: 0.3s;
 
     border: 3px solid #00df00;
-    box-shadow: 0px 0px 10px #ffffff;
+    box-shadow: 0px 0px 10px #fff;
 }
 /* thanks bonkmaykr :) */
 
