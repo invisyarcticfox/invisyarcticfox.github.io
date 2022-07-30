@@ -128,9 +128,14 @@ svg:hover, svg:active, svg:focus {
 
 
 @media only screen and (max-width: 600px){
+    /*
     #name {
         font-size: 2em;
         margin-top: 100px;
+    }
+    */
+    #namegif {
+        width: 80%;
     }
     #bio {
         font-size: 1.5em;
