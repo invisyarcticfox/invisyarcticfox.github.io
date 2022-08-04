@@ -22,7 +22,8 @@ body {
 #icons {
     animation: animIn 1s 1.5s ease forwards;
     opacity: 0;
-    display: block;
+    display: inline-flex;
+    align-items: center;
 
     padding: 0;
     margin-top: 30px;
@@ -37,25 +38,19 @@ body {
 }
 .iconlink {
     text-decoration: none !important;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    margin: 5px;
 }
 
 svg, svg:visited {
     transition: all 0.3s ease;
     width: 55px;
     fill: #fff;
-
-    margin-left: 5px;
-    margin-right: 5px;
 }
 svg:hover, svg:active, svg:focus {
     transition: all 0.3s ease;
     fill: #00df00;
-}
-
-.discmob {
-    display: none;
-    visibility: hidden;
 }
 
 #links {
@@ -77,49 +72,6 @@ svg:hover, svg:active, svg:focus {
     margin: 0%;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-
-    transition-duration: 0.3s;
-}
-.tooltip .tooltiptext {
-    opacity: 0.0;
-    transform: scaleY(0.0);
-
-    width: auto;
-    max-width: 400px;
-
-    background-color: #646464;
-    color: #fff;
-
-    border: 0px solid #00df00;
-    border-radius: 50px;
-
-    transition-duration: 0.3s;
-
-    text-align: center;
-    font-size: 16px;
-    padding: 5px;
-
-    box-shadow: 0px 0px 0px #fff;
-
-    margin-left: 5px;
-    margin-top: 5px;
-
-    position: absolute;
-    z-index: 1;
-}
-.tooltip:hover .tooltiptext {
-    opacity: 1.0;
-    transform: scaleY(1.0);
-    transition-duration: 0.3s;
-
-    border: 3px solid #00df00;
-    box-shadow: 0px 0px 10px #fff;
-}
-/* thanks bonkmaykr :) */
-
 
 @media only screen and (max-width: 600px){
     #name {
@@ -133,19 +85,6 @@ svg:hover, svg:active, svg:focus {
     svg {
         width: 35px;
         margin: 0;
-    }
-    .tooltip .tooltiptext, .discord {
-        display: none;
-    }
-    .discmob {
-        animation: animIn 1s 1.5s ease forwards;
-
-        display: block;
-        visibility: visible;
-        opacity: 0;
-
-        font-size: 1em;
-        margin-top: 10px;
     }
     #links {
         font-size: 1.6em;
