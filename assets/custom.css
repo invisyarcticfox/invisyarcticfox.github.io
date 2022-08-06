@@ -57,12 +57,15 @@ svg:hover, svg:active, svg:focus {
     animation: animIn 1s 2s ease forwards;
     opacity: 0;
 
+    display: block;
     margin: 0 auto;
     font-size: 2.5em;
     margin-top: 30px;
+    text-align: center;
 }
 .link {
     display: inline-block;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px){
