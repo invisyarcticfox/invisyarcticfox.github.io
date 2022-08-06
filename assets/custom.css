@@ -56,22 +56,14 @@ svg:hover, svg:active, svg:focus {
 #links {
     animation: animIn 1s 2s ease forwards;
     opacity: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0%;
 
-    width: 100%;
     margin: 0 auto;
     font-size: 2.5em;
     margin-top: 30px;
 }
 .link {
     display: inline-block;
-    list-style: none;
-    padding: 0;
-    margin: 0%;
 }
-
 
 @media only screen and (max-width: 600px){
     #name {
