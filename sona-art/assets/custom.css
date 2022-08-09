@@ -1,114 +1,45 @@
 body {
-    text-align: center;
-}
-
-#back {
-  animation: backAnim 1.5s 0.5s ease forwards;
-  opacity: 0;
-  text-align: left;
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, #ffffff77 0%, #ffffff00 100%);
-  height: 50px;
-  width: 150px;
-  font-size: 1.5em;
-  margin-left: -9px;
-  margin-top: -5px;
-  position: fixed;
-}
-.back {
-  padding-left: 30px;
-  padding-top: 10px;
-}
-a.back, a.back:visited {
-  color: #fff !important;
-  text-decoration: none;
-}
-a.back:hover, a.back:focus, a.back:active {
-  color: #00df00 !important;
+  text-align: center;
 }
 
 #refheader {
-    font-size: 3em;
-    font-weight: bold;
-    margin-top: 70px;
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 70px;
 }
 .refcont {
-    margin: 0 auto;
-    text-align: left !important;
-    width: 60%;
-    font-size: 1.5em;
+  margin: 0 auto;
+  text-align: left !important;
+  width: 60%;
+  font-size: 1.5em;
 }
 .ref {
-    width: 100%;
-    margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .divider {
-    width: 80%;
-    height: 5px;
-    background-color: grey;
-
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 50px;
+  width: 80%;
+  height: 5px;
+  background-color: grey;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 50px;
 }
 
 #artheader {
-    font-size: 2em;
-    margin-top: 50px;
+  font-size: 2em;
+  margin-top: 50px;
 }
 .artcont {
-    width: 40%;
-    display: block;
-    margin: 0 auto;
+  width: 40%;
+  display: block;
+  margin: 0 auto;
 }
 .art {
-    width: 100%;
-    margin-top: 10px;
-    background: rgba(0, 0, 0, .3);
-}
-
-
-
-@media only screen and (max-width: 600px){
-    #back {
-        display: none;
-    }
-
-    #refheader {
-        font-size: 1.9em;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-    .imgcont {
-        width: 90%;
-        font-size: 1em;
-    }
-    .ref {
-        width: 100%;
-        margin-top: 10px;
-    }
-    .divider {
-        width: 80%;
-        height: 5px;
-        background-color: grey;
-    
-        display: block;
-        margin: 0 auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        border-radius: 50px;
-    }
-    #artheader {
-        font-size: 1.2em;
-        margin-top: 50px;
-    }
-    .art {
-        display: block;
-        margin: 0 auto;
-        width: 80%;
-        margin-top: 10px;
-    }
+  width: 100%;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, .3);
 }

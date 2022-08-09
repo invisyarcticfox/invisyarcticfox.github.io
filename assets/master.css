@@ -5,13 +5,15 @@ body {
 }
 
 
-a, a:visited {
+a, a:visited, a:focus {
   transition: all 0.3s ease;
   color: #fff;
+  text-decoration: none;
 }
-a:hover, a:focus, a:active {
+a:hover, a:active {
   transition: all 0.3s ease;
   color: #00df00;
+  text-decoration: none;
 }
 
 

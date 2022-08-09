@@ -1,97 +1,97 @@
 body {
-    text-align: center;
-    padding: 0;
-    margin: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 
 #name {
-    font-weight: bold;
-    font-size: 3.5em;
-    margin-top: 250px;
+  font-weight: bold;
+  font-size: 3.5em;
+  margin-top: 250px;
 }
 
 #bio {
-    animation: animIn 1s 1s ease forwards;
-
-    opacity: 0;
-    font-size: 2.5em;
-    margin-top: 10px;
+  animation: animIn 1s 1s ease forwards;
+  opacity: 0;
+  font-size: 2.5em;
+  margin-top: 10px;
 }
 
 #icons {
-    animation: animIn 1s 1.5s ease forwards;
-    opacity: 0;
-    display: inline-flex;
-    align-items: center;
-
-    padding: 0;
-    margin-top: 30px;
-
-    position: relative;
-    word-wrap: normal;
-    white-space: nowrap;
-    text-decoration: none !important;
-}
-#icons::selection {
-    background: #141414;
+  animation: animIn 1s 1.5s ease forwards;
+  opacity: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  margin: 30px;
+  position: relative;
 }
 .iconlink {
-    text-decoration: none !important;
-    display: block;
-    margin: 0 auto;
-    margin: 5px;
+  margin: 0 auto;
+  margin: 5px;
 }
 
-svg, svg:visited {
-    transition: all 0.3s ease;
-    width: 55px;
-    fill: #fff;
+svg, svg:visited, svg:focus {
+  transition: all 0.3s ease;
+  height: 55px;
+  fill: #fff;
 }
-svg:hover, svg:active, svg:focus {
-    transition: all 0.3s ease;
-    fill: #00df00;
+svg:hover, svg:active {
+  transition: all 0.3s ease;
+}
+.disc:hover {
+  fill: #5865F2;
+}
+.gh:hover {
+  fill: #828282;
+}
+.insta:hover {
+  fill: #FE227B;
+}
+.reddit:hover {
+  fill: #FF4500;
+}
+.steam:hover, .tg:hover, .twt:hover {
+  fill: #1D9BF0;
+}
+.yt:hover {
+  fill: #ff0000;
 }
 
 #links {
-    animation: animIn 1s 2s ease forwards;
-    opacity: 0;
-
-    display: block;
-    margin: 0 auto;
-    font-size: 2.5em;
-    margin-top: 30px;
-    text-align: center;
+  animation: animIn 1s 2s ease forwards;
+  opacity: 0;
+  display: block;
+  margin: 0 auto;
+  font-size: 2.5em;
+  text-align: center;
+  cursor: default;
 }
 .link {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
-
-@media only screen and (max-width: 600px){
-    #name {
-        font-size: 2em;
-        margin-top: 100px;
-    }
-    #bio {
-        font-size: 1.5em;
-        margin-top: 20px;
-    }
-    svg {
-        width: 35px;
-        margin: 0;
-    }
-    #links {
-        font-size: 1.6em;
-    }
+.link .underline {
+  margin: 0 auto;
+  width: 50%;
+  height: 3px;
+  background: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
-
+.link:hover .underline {
+  width: 100%;
+  height: 3px;
+  background: #00df00;
+  transition: all 0.3s ease;
+}
 
 .blinker {
-    animation: blinker 1s linear infinite;
+  animation: blinker 1s linear infinite;
 }
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }

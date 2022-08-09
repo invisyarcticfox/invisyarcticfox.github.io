@@ -1,2 +1,0 @@
-# shamshitty.xyz
-my website
