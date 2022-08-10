@@ -43,3 +43,20 @@ body {
   margin-top: 10px;
   background: rgba(0, 0, 0, .3);
 }
+
+
+@media only screen and (max-width: 650px) {
+  .refcont {
+    width: 90%;
+  }
+  .artcont {
+    width: 80%;
+  }
+  #refheader {
+    font-size: 2em;
+    margin-top: 50px;
+  }
+  #artheader {
+    font-size: 1.5em;
+  }
+}
