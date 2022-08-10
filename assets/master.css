@@ -8,12 +8,10 @@ body {
 a, a:visited, a:focus {
   transition: all 0.3s ease;
   color: #fff;
-  text-decoration: none;
 }
 a:hover, a:active {
   transition: all 0.3s ease;
   color: #00df00;
-  text-decoration: none;
 }
 
 
@@ -42,18 +40,6 @@ a:hover, a:active {
   background: #4e4e4e;
 }
 
-
-
-@keyframes backAnim {
-  from {
-      transform: translateX(-300px);
-      opacity: 0;
-  }
-  to {
-      transform: translateX(0px);
-      opacity: 1;
-  }
-}
 
 @keyframes animIn {
   from {

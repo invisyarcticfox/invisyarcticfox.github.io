@@ -1,5 +1,8 @@
 body {
   text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  margin: 0;
 }
 
 #refheader {
@@ -19,7 +22,7 @@ body {
 }
 
 .divider {
-  width: 80%;
+  width: 70%;
   height: 5px;
   background-color: grey;
   display: block;
@@ -34,14 +37,27 @@ body {
   margin-top: 50px;
 }
 .artcont {
-  width: 40%;
+  width: 90%;
   display: block;
   margin: 0 auto;
 }
 .art {
+  display: block;
+  margin: 0 auto;
   width: 100%;
-  margin-top: 10px;
+  margin: 10px;
   background: rgba(0, 0, 0, .3);
+}
+
+@keyframes divAnimIn {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 80%;
+  }
 }
 
 
@@ -57,6 +73,16 @@ body {
     margin-top: 50px;
   }
   #artheader {
-    font-size: 1.5em;
+    font-size: 1.3em;
+  }
+  @keyframes divAnimIn {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 95%;
+    }
   }
 }
