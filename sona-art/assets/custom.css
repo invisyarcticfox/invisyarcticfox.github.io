@@ -37,7 +37,7 @@ body {
   margin-top: 50px;
 }
 .artcont {
-  width: 90%;
+  width: 50%;
   display: block;
   margin: 0 auto;
 }
@@ -49,16 +49,6 @@ body {
   background: rgba(0, 0, 0, .3);
 }
 
-@keyframes divAnimIn {
-  0% {
-    opacity: 0;
-    width: 0;
-  }
-  100% {
-    opacity: 1;
-    width: 80%;
-  }
-}
 
 
 @media only screen and (max-width: 650px) {
@@ -74,15 +64,5 @@ body {
   }
   #artheader {
     font-size: 1.3em;
-  }
-  @keyframes divAnimIn {
-    0% {
-      opacity: 0;
-      width: 0;
-    }
-    100% {
-      opacity: 1;
-      width: 95%;
-    }
   }
 }
