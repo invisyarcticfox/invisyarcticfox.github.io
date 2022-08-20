@@ -51,7 +51,10 @@ svg:hover, svg:active {
 .reddit:hover {
   fill: #FF4500;
 }
-.steam:hover, .tg:hover, .twt:hover {
+.steam:hover {
+  fill: #14588A;
+}
+.tg:hover, .twt:hover {
   fill: #1D9BF0;
 }
 .yt:hover {
@@ -93,8 +96,8 @@ svg:hover, svg:active {
   bottom: 0;
   content: "";
   display: block;
-  height: 2px;
   left: 25%;
+  height: 2px;
   width: 50%;
   position: absolute;
   background: #fff;
