@@ -55,6 +55,16 @@
     <div class="artcont">
         <img class="art" src="./assets/sona-art/art/eolixa.png" alt="eolixa">
     </div>
+    <div class="artcont" id="play">
+        <img class="art" src="./assets/sona-art/art/eolixa2.png" alt="eolixa2" style="cursor: pointer;" title="please dont click this">
+        <audio id="audio" src="./assets/sona-art/buru.mp3"></audio>
+        <script>
+            document.getElementById('play').addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('audio').play();
+            });
+        </script>
+    </div>
 
     <div class="divider"></div>
 

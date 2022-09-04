@@ -1,7 +1,15 @@
 body {
   font-family: 'Courier New', Courier, monospace !important;
+  padding: 0;
+  margin: 0;
   color: #fff;
   background: #141414;
+}
+
+
+::selection {
+  background: #fff;
+  color: #000;
 }
 
 
@@ -15,15 +23,9 @@ a:hover, a:active {
 }
 
 
-::selection {
-  background: #fff;
-  color: #000;
-}
-
-
 * {
   scrollbar-color: #343434 #0B0B0B;
-  scrollbar-width: thin;
+  scrollbar-width: medium;
 }
 ::-webkit-scrollbar {
   width: 15px;
