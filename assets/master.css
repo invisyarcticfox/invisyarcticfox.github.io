@@ -6,10 +6,13 @@ body {
   background: #141414;
 }
 
-
 ::selection {
   background: #fff;
   color: #000;
+}
+
+:root {
+  --link-colour: #00df00;
 }
 
 
@@ -19,7 +22,7 @@ a, a:visited, a:focus {
 }
 a:hover, a:active {
   transition: all 0.3s ease;
-  color: #00df00;
+  color: var(--link-colour);
 }
 
 
@@ -51,5 +54,13 @@ a:hover, a:active {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  body {
+    padding: 5;
+    margin: 5;
   }
 }

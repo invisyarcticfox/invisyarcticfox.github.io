@@ -3,10 +3,9 @@ body {
 }
 
 
-
 #name {
   font-size: 3.5em;
-  margin-top: 250px;
+  margin-top: 230px;
 }
 #bio {
   animation: animIn .75s 1s forwards ease;
@@ -32,34 +31,14 @@ body {
 
 svg, svg:visited, svg:focus {
   transition: all 0.3s ease;
-  height: 55px;
+  height: 60px;
   fill: #fff;
 }
 svg:hover, svg:active {
   transition: all 0.3s ease;
-}
-.disc:hover {
-  fill: #5865F2;
-}
-.gh:hover {
-  fill: #828282;
-}
-.insta:hover {
-  fill: #FE227B;
-}
-.reddit:hover {
-  fill: #FF4500;
-}
-.steam:hover {
-  fill: #14588A;
-}
-.tg:hover, .twt:hover {
-  fill: #1D9BF0;
-}
-.yt:hover {
-  fill: #ff0000;
-}
+  fill: var(--link-colour);
 
+}
 
 #links {
   animation: animIn .75s 2.7s forwards ease;
@@ -73,9 +52,9 @@ svg:hover, svg:active {
   font-size: 2.5em;
 }
 .link {
-  display: table-cell;
+  display: inline-block;
   position: relative;
-  padding: 0;
+  padding: 10;
   transition: all 0.3s ease;
 }
 .link > a {
@@ -87,7 +66,7 @@ svg:hover, svg:active {
   transition: all 0.3s ease;
 }
 .link > a:hover {
-  color: #00df00;
+  color: var(--link-colour);
   transition: all 0.3s ease;
 }
 .link > a:after {
@@ -105,7 +84,7 @@ svg:hover, svg:active {
 .link > a:hover:after { 
   width: 100%;
   left: 0;
-  background: #00df00;
+  background: var(--link-colour);
   transition: all 0.3s ease;
 }
 
@@ -119,44 +98,41 @@ svg:hover, svg:active {
   }
 }
 
+
 @media only screen and (max-width: 650px) {
   body {
-    padding: 5;
-    margin: 5;
+    overflow: hidden;
   }
   #name {
-    font-size: 2.3em;
-    margin-top: 125px;
+    font-size: 3em;
+    margin-top: 50px;
   }
   #bio {
-    font-size: 1.5em;
+    animation: animIn .75s 1s forwards ease;
+    opacity: 0;
+    font-size: 2em;
+  }
+  #bio > span {
+    display: none;
   }
   #icons {
     display: block;
   }
   .iconlink {
     margin: 0 auto;
-    margin: 10px;
+    margin: 5px;
     text-decoration: none !important;
   }
-  svg {
+  svg, svg:visited, svg:focus {
+    transition: all 0.3s ease;
     height: 40px;
-    text-decoration: none !important;
+    fill: #fff;
   }
   #links {
-    animation: animIn .75s 2.7s forwards ease;
-    width: 280px;
-    opacity: 0;
-    font-size: 1.7em;
-    display: block;
-    visibility: visible;
-    margin: 0 auto;
-    text-align: center;
+    font-size: 2em;
+    display: flex;
   }
   .link {
-    display: table-cell;
-    position: relative;
-    padding: 0;
-    transition: all 0.3s ease;
+    position: unset;
   }
 }
