@@ -3,12 +3,27 @@ body {
 }
 
 
+.discavatar {
+  margin-top: 100px;
+  border-radius: 50%;
+  width: 200px;
+  transition: var(--transition-set);
+
+  animation: var(--animin-transition2);
+  animation-delay: 1s;
+  opacity: 0;
+
+  border-color: #fff;
+  border-width: 5px;
+  border-style: solid;
+}
+
 #name {
   font-size: 3.5em;
-  margin-top: 230px;
 }
 #bio {
-  animation: animIn .75s 1s forwards ease;
+  animation: var(--animin-transition);
+  animation-delay: 1s;
   opacity: 0;
   font-size: 2.5em;
 }
@@ -21,27 +36,56 @@ body {
   position: relative;
 }
 .iconlink {
-  margin: 0 auto;
-  margin: 5px;
+  animation: var(--animin-transition);
+  opacity: 0;
+  margin: auto 5px;
 }
+
+.iconlink:nth-child(1) {
+  animation-delay: 1.5s;
+}
+.iconlink:nth-child(2) {
+  animation-delay: 1.6s;
+}
+.iconlink:nth-child(3) {
+  animation-delay: 1.7s;
+}
+.iconlink:nth-child(4) {
+  animation-delay: 1.8s;
+}
+.iconlink:nth-child(5) {
+  animation-delay: 1.9s;
+}
+.iconlink:nth-child(6) {
+  animation-delay: 2s;
+}
+.iconlink:nth-child(7) {
+  animation-delay: 2.1s;
+}
+.iconlink:nth-child(8) {
+  animation-delay: 2.2s;
+}
+
 .iconlink::selection {
   background: #fff;
   color: #000;
 }
 
 svg, svg:visited, svg:focus {
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
   height: 60px;
   fill: #fff;
 }
 svg:hover, svg:active {
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
   fill: var(--link-colour);
 
 }
 
+
 #links {
-  animation: animIn .75s 2.7s forwards ease;
+  animation: var(--animin-transition);
+  animation-delay: 2.7s;
   opacity: 0;
   margin: 0 auto;
   padding: 0;
@@ -50,12 +94,14 @@ svg:hover, svg:active {
   width: 500px;
   text-align: center;
   font-size: 2.5em;
+
+  cursor: default;
 }
 .link {
   display: inline-block;
   position: relative;
   padding: 10;
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
 }
 .link > a {
   color: #fff;
@@ -63,11 +109,11 @@ svg:hover, svg:active {
   display: inline-block;
   padding: 5px 20px;
   position: relative;
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
 }
 .link > a:hover {
   color: var(--link-colour);
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
 }
 .link > a:after {
   background: none repeat scroll 0 0 transparent;
@@ -79,13 +125,13 @@ svg:hover, svg:active {
   width: 50%;
   position: absolute;
   background: #fff;
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
 }
 .link > a:hover:after { 
   width: 100%;
   left: 0;
   background: var(--link-colour);
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
 }
 
 
@@ -103,12 +149,17 @@ svg:hover, svg:active {
   body {
     overflow: hidden;
   }
+  .discavatar {
+    margin-top: 10px;
+    width: 125px;
+    border-width: 2px;
+  }
   #name {
-    font-size: 3em;
-    margin-top: 50px;
+    font-size: 2.5em;
   }
   #bio {
-    animation: animIn .75s 1s forwards ease;
+    animation: var(--animin-transition);
+    animation-delay: 1s;
     opacity: 0;
     font-size: 2em;
   }
@@ -124,7 +175,7 @@ svg:hover, svg:active {
     text-decoration: none !important;
   }
   svg, svg:visited, svg:focus {
-    transition: all 0.3s ease;
+    transition: var(--transition-set);
     height: 40px;
     fill: #fff;
   }

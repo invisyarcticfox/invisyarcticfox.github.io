@@ -13,15 +13,18 @@ body {
 
 :root {
   --link-colour: #00df00;
+  --transition-set: all 0.3s ease;
+  --animin-transition: animIn .75s forwards ease;
+  --animin-transition2: animIn2 .75s forwards ease;
 }
 
 
 a, a:visited, a:focus {
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
   color: #fff;
 }
 a:hover, a:active {
-  transition: all 0.3s ease;
+  transition: var(--transition-set);
   color: var(--link-colour);
 }
 
@@ -49,6 +52,16 @@ a:hover, a:active {
 @keyframes animIn {
   from {
     transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animIn2 {
+  from {
+    transform: translateY(-80px);
     opacity: 0;
   }
   to {
