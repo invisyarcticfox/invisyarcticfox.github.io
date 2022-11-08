@@ -3,64 +3,70 @@ body {
   margin: 0 auto;
 }
 
-#refheader {
-  font-size: 3em;
-  font-weight: bold;
-  margin-top: 70px;
-}
-.refcont {
-  margin: 0 auto;
-  text-align: left !important;
-  width: 60%;
-  font-size: 1.5em;
-}
-.ref {
-  width: 100%;
-  margin-top: 10px;
-}
 
 .divider {
   width: 70%;
   height: 5px;
   background-color: grey;
   display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px auto;
   border-radius: 50px;
 }
 
-#artheader {
-  font-size: 2em;
+#refcont {
+  width: 60%;
+  margin: 0 auto;
   margin-top: 50px;
+  font-size: 2.5em;
 }
-.artcont {
-  width: 600px;
-  display: block;
+.refheader {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#artcont {
+  width: 35%;
   margin: 0 auto;
 }
-.art {
-  display: block;
-  margin: 0 auto;
+#artcont img {
+  margin: 5px auto;
   width: 100%;
-  margin: 10px;
-  background: rgba(0, 0, 0, .3);
+}
+.artheader {
+  font-size: 1.75em;
+  margin-bottom: 5px
+}
+.artheader:before {
+  content: "art by:";
+  cursor: text;
 }
 
 
 @media only screen and (max-width: 650px) {
-  #refheader {
-    font-size: 2em;
-    margin-top: 10px;
+  .divider {
+    height: 2px;
+    margin: 25px auto;
   }
-  .refcont {
+  #refcont {
     width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 2.5em;
   }
-  #artheader {
-    font-size: 1.5em;
-    margin-top: 20px;
+  .refheader {
+    font-weight: bold;
+    margin-bottom: 5px;
   }
-  .artcont {
-    width: 300px;
+  #artcont {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #artcont img {
+    margin: 2px auto;
+    width: 100%;
+  }
+  .artheader {
+    font-size: 1.1em;
+    margin-bottom: 5px
   }
 }
