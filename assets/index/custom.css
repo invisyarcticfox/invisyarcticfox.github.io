@@ -7,7 +7,7 @@ body {
   margin-top: 100px;
   border-radius: 50%;
   width: 200px;
-  transition: var(--transition-set);
+  transition: all .3s ease;
 
   animation: var(--animin-transition2);
   animation-delay: 1s;
@@ -66,18 +66,14 @@ body {
   animation-delay: 2.2s;
 }
 
-.iconlink::selection {
-  background: #fff;
-  color: #000;
-}
 
 svg, svg:visited, svg:focus {
-  transition: var(--transition-set);
+  transition: all .3s ease;
   height: 60px;
   fill: #fff;
 }
 svg:hover, svg:active {
-  transition: var(--transition-set);
+  transition: all .3s ease;
   fill: var(--link-colour);
 
 }
@@ -101,7 +97,7 @@ svg:hover, svg:active {
   display: inline-block;
   position: relative;
   padding: 10;
-  transition: var(--transition-set);
+  transition: all .3s ease;
 }
 .link > a {
   color: #fff;
@@ -109,11 +105,11 @@ svg:hover, svg:active {
   display: inline-block;
   padding: 5px 20px;
   position: relative;
-  transition: var(--transition-set);
+  transition: all .3s ease;
 }
 .link > a:hover {
   color: var(--link-colour);
-  transition: var(--transition-set);
+  transition: all .3s ease;
 }
 .link > a:after {
   background: none repeat scroll 0 0 transparent;
@@ -125,13 +121,13 @@ svg:hover, svg:active {
   width: 50%;
   position: absolute;
   background: #fff;
-  transition: var(--transition-set);
+  transition: all .3s ease;
 }
 .link > a:hover:after { 
   width: 100%;
   left: 0;
   background: var(--link-colour);
-  transition: var(--transition-set);
+  transition: all .3s ease;
 }
 
 
@@ -175,7 +171,7 @@ svg:hover, svg:active {
     text-decoration: none !important;
   }
   svg, svg:visited, svg:focus {
-    transition: var(--transition-set);
+    transition: all .3s ease;
     height: 40px;
     fill: #fff;
   }

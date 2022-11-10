@@ -12,19 +12,18 @@ body {
 }
 
 :root {
-  --link-colour: #00df00;
-  --transition-set: all 0.3s ease;
   --animin-transition: animIn .75s forwards ease;
   --animin-transition2: animIn2 .75s forwards ease;
+  --link-colour: #00ee00;
 }
 
 
 a, a:visited, a:focus {
-  transition: var(--transition-set);
+  transition: all .3s ease;
   color: #fff;
 }
 a:hover, a:active {
-  transition: var(--transition-set);
+  transition: all .3s ease;
   color: var(--link-colour);
 }
 
