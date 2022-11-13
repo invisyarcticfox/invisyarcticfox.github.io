@@ -5,7 +5,7 @@ body {
 
 
 .divider {
-  width: 70%;
+  width: 1111px;
   height: 5px;
   background-color: grey;
   display: block;
@@ -14,10 +14,13 @@ body {
 }
 
 #refcont {
-  width: 60%;
+  width: 1000px;
   margin: 0 auto;
   margin-top: 50px;
   font-size: 2.5em;
+}
+#refcont img {
+  width: 100%;
 }
 .refheader {
   font-weight: bold;
@@ -25,12 +28,13 @@ body {
 }
 
 #artcont {
-  width: 35%;
+  width: 610px;
   margin: 0 auto;
 }
 #artcont img {
   margin: 5px auto;
   width: 100%;
+  border-radius: 15px;
 }
 .artheader {
   font-size: 1.75em;
