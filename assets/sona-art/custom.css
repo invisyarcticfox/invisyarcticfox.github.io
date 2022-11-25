@@ -35,6 +35,14 @@ body {
   margin: 5px auto;
   width: 100%;
 }
+#artcont.eolixa {
+  width: 888px;
+  margin: 0 auto;
+}
+#artcont.eolixa img {
+  margin: 5px auto;
+  width: 49%;
+}
 .artheader {
   font-size: 1.75em;
   margin-bottom: 5px
@@ -65,6 +73,14 @@ body {
     margin: 0 auto;
   }
   #artcont img {
+    margin: 2px auto;
+    width: 100%;
+  }
+  #artcont.eolixa {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #artcont.eolixa img {
     margin: 2px auto;
     width: 100%;
   }
