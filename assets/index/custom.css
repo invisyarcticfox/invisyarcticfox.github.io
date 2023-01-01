@@ -84,6 +84,9 @@ body {
 .icons a:nth-child(8) {
   animation-delay: 2.2s;
 }
+.icons a:nth-child(9) {
+  animation-delay: 2.3s;
+}
 
 svg, svg:visited, svg:focus {
   transition: all .3s ease;
