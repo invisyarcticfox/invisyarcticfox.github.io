@@ -13,7 +13,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 95%;
   text-align: center;
   justify-content: center;
   position: absolute;
@@ -119,6 +119,7 @@ svg:hover, svg:active {
   position: relative;
   padding: 10;
   transition: all .3s ease;
+  width: 500px;
 }
 .link a {
   color: #fff;
