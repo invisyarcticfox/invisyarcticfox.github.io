@@ -2,12 +2,6 @@ body {
   text-align: center;
 }
 
-.icons br {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-}
-
 
 #centerdiv {
   align-items: center;
@@ -88,12 +82,15 @@ body {
   animation-delay: 2.3s;
 }
 
-svg, svg:visited, svg:focus {
+.icons svg,
+.icons svg:visited,
+.icons svg:focus {
   transition: all .3s ease;
   height: 60px;
   fill: #fff;
 }
-svg:hover, svg:active {
+.icons svg:hover,
+.icons svg:active {
   transition: all .3s ease;
   fill: var(--link-colour);
 
@@ -166,11 +163,6 @@ svg:hover, svg:active {
 @media only screen and (max-width: 650px) {
   body {
     overflow-x: hidden;
-  }
-  .icons br {
-    display: block;
-    opacity: 1;
-    visibility: visible;
   }
   .avatar {
     width: 125px;
