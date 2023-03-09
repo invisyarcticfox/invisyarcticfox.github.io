@@ -17,7 +17,7 @@ body {
 }
 
 
-.avatar {
+#pfp {
   border-radius: 50%;
   width: 200px;
   transition: all .3s ease;
