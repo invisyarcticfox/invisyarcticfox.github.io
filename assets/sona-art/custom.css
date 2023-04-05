@@ -51,6 +51,14 @@ body {
   content: "art by:";
   cursor: text;
 }
+.artheader a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.artheader a:before {
+  content: "@";
+  cursor: pointer;
+}
 
 
 @media only screen and (max-width: 650px) {

@@ -1,5 +1,5 @@
 body {
-  font-family: var(--font);
+  font-family: 'Courier New', Courier, monospace !important;
   padding: 0;
   margin: 0;
   color: #fff;
@@ -12,9 +12,7 @@ body {
 }
 
 :root {
-  --font: 'Courier New', Courier, monospace !important;
   --animin-transition: animIn .75s forwards ease;
-  --animin-transition2: animIn2 .75s forwards ease;
   --link-colour: #00ee00;
 }
 
@@ -22,12 +20,12 @@ body {
 a,
 a:visited,
 a:focus {
-  transition: all .3s ease;
+  transition: all .2s ease;
   color: #fff;
 }
 a:hover,
 a:active {
-  transition: all .3s ease;
+  transition: all .2s ease;
   color: var(--link-colour);
 }
 
