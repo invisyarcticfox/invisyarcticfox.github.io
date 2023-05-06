@@ -18,13 +18,21 @@ body {
 
 
 .pfp {
+  background: url(../sona-art/art/eutumned2.png) center no-repeat;
+  background-size: 300%;
+  background-position-y: -130px;
+  background-position-x: -190px;
+
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  transition: all .3s ease;
 
-  animation: animIn2 .75s forwards ease;
-  animation-delay: 1s;
+  aspect-ratio: 1/1;
+
+  transition: all .3s ease;
+  animation: var(--animin);
+  animation-delay: 1700ms;
+
   opacity: 0;
   border: #fff 5px solid;
 }
@@ -32,9 +40,10 @@ body {
 .name {
   font-size: 3.5em;
 }
+
 .bio {
-  animation: var(--animin-transition);
-  animation-delay: 1s;
+  animation: var(--animin);
+  animation-delay: 1700ms;
   opacity: 0;
   font-size: 2.5em;
 }
@@ -47,38 +56,39 @@ body {
   position: relative;
 }
 .icons a {
-  animation: var(--animin-transition);
+  animation: var(--animin);
   opacity: 0;
   margin: auto 5px;
 }
 
 .icons a:nth-child(1) {
-  animation-delay: 1.5s;
+  animation-delay: 2200ms;
 }
 .icons a:nth-child(2) {
-  animation-delay: 1.6s;
+  animation-delay: 2300ms;
 }
 .icons a:nth-child(3) {
-  animation-delay: 1.7s;
+  animation-delay: 2400ms;
 }
 .icons a:nth-child(4) {
-  animation-delay: 1.8s;
+  animation-delay: 2500ms;
 }
 .icons a:nth-child(5) {
-  animation-delay: 1.9s;
+  animation-delay: 2600ms;
 }
 .icons a:nth-child(6) {
-  animation-delay: 2s;
+  animation-delay: 2700ms;
 }
 .icons a:nth-child(7) {
-  animation-delay: 2.1s;
+  animation-delay: 2800ms;
 }
 .icons a:nth-child(8) {
-  animation-delay: 2.2s;
+  animation-delay: 2900ms;
 }
 .icons a:nth-child(9) {
-  animation-delay: 2.3s;
+  animation-delay: 3000ms;
 }
+/* this could probably be done with js */
 
 .icons svg,
 .icons svg:visited,
@@ -96,13 +106,16 @@ body {
 
 
 .linkcontainer {
-  animation: var(--animin-transition);
-  animation-delay: 2.7s;
+  animation: var(--animin);
+  animation-delay: 3400ms;
+
   opacity: 0;
   margin: 0 auto;
   padding: 0;
+
   list-style: none;
   display: table;
+
   width: 500px;
   text-align: center;
   font-size: 2.5em;
@@ -148,16 +161,6 @@ body {
 }
 
 
-.blinker {
-  animation: blinker 1s linear infinite;
-}
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
-
 @media only screen and (max-width: 650px) {
   body {
     overflow-x: hidden;
@@ -170,7 +173,7 @@ body {
     font-size: 2em;
   }
   .bio {
-    animation: var(--animin-transition);
+    animation: var(--animin);
     animation-delay: 1s;
     opacity: 0;
     font-size: 1.5em;

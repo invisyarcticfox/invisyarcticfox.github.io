@@ -12,7 +12,7 @@ body {
 }
 
 :root {
-  --animin-transition: animIn .75s forwards ease;
+  --animin: animIn .75s forwards ease;
   --link-colour: #00ee00;
 }
 
@@ -52,21 +52,11 @@ a:active {
 
 @keyframes animIn {
   from {
-    transform: translateY(80px);
+    transform: translateX(-80px);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes animIn2 {
-  from {
-    transform: translateY(-80px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }

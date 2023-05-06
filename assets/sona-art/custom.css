@@ -35,11 +35,13 @@ body {
   margin: 5px auto;
   width: 100%;
 }
-#artcont.eolixa {
+#artcont.eolixa,
+#artcont.eutumned {
   width: 888px;
   margin: 0 auto;
 }
-#artcont.eolixa img {
+#artcont.eolixa img,
+#artcont.eutumned img {
   margin: 5px auto;
   width: 49%;
 }
