@@ -18,16 +18,11 @@ body {
 
 
 .pfp {
-  background: url(../sona-art/art/eutumned2.png) center no-repeat;
-  background-size: 300%;
-  background-position-y: -130px;
-  background-position-x: -190px;
-
   border-radius: 50%;
   width: 200px;
   height: 200px;
-
-  aspect-ratio: 1/1;
+  min-width: 200px;
+  min-height: 200px;
 
   transition: all .3s ease;
   animation: var(--animin);
