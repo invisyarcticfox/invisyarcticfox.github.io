@@ -1,0 +1,65 @@
+$img-wh: 25px;
+
+
+img {
+    display: block;
+    width: $img-wh;
+    height: $img-wh;
+    margin: 100px auto 15px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    transition: all .2s ease;
+
+    &:hover {
+        border-radius: 25%;
+        cursor: grabbing;
+    }
+    &:active {
+        transform: translateY(5px);
+    }
+}
+
+#bio {
+    text-align: center;
+
+    .name:first-child {
+        font-weight: bold;
+    }
+    .desc {
+        margin-top: 15px;
+    }
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    a {
+        margin: 0 5px;
+        display: flex;
+        transition: all .2s ease;
+
+        &:hover svg,
+        &:active svg {
+            fill: var(--accent);
+        }
+    }
+    svg {
+        height: 25px;
+        fill: #fff;
+        transition: all .2s ease;
+    }
+}
+
+#links {
+    display: table;
+    margin: 25px auto 0;
+    text-align: center;
+
+    .link {
+        margin-top: 10px;
+        width: 500px;
+    }
+}

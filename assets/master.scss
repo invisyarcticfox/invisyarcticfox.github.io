@@ -1,0 +1,24 @@
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  background: #141414;
+  color: #fff;
+}
+
+::selection {
+  background: #fff;
+  color: #000;
+}
+
+
+a {
+  --accent: #0e0;
+  transition: all 0.2s ease;
+  color: #fff;
+
+  &:hover,
+  &:active {
+    color: var(--accent);
+  }
+}

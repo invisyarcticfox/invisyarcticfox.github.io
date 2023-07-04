@@ -1,0 +1,56 @@
+img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 100px auto 15px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+img:hover {
+  border-radius: 25%;
+  cursor: grabbing;
+}
+img:active {
+  transform: translateY(5px);
+}
+
+#bio {
+  text-align: center;
+}
+#bio .name:first-child {
+  font-weight: bold;
+}
+#bio .desc {
+  margin-top: 15px;
+}
+
+#icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+#icons a {
+  margin: 0 5px;
+  display: flex;
+  transition: all 0.2s ease;
+}
+#icons a:hover svg, #icons a:active svg {
+  fill: var(--accent);
+}
+#icons svg {
+  height: 25px;
+  fill: #fff;
+  transition: all 0.2s ease;
+}
+
+#links {
+  display: table;
+  margin: 25px auto 0;
+  text-align: center;
+}
+#links .link {
+  margin-top: 10px;
+  width: 500px;
+}/*# sourceMappingURL=custom.css.map */
