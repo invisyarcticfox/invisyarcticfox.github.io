@@ -1,8 +1,9 @@
 img {
+  --img-wh: 225px;
   display: block;
-  width: 25px;
-  height: 25px;
-  margin: 100px auto 15px;
+  width: var(--img-wh);
+  height: var(--img-wh);
+  margin: 115px auto 15px;
   border: 5px solid #fff;
   border-radius: 50%;
   transition: all 0.2s ease;
@@ -14,8 +15,14 @@ img:hover {
 img:active {
   transform: translateY(5px);
 }
+@media screen and (max-height: 720px) {
+  img {
+    margin-top: 25px;
+  }
+}
 
 #bio {
+  font-size: 2.5em;
   text-align: center;
 }
 #bio .name:first-child {
@@ -40,17 +47,33 @@ img:active {
   fill: var(--accent);
 }
 #icons svg {
-  height: 25px;
+  height: 60px;
   fill: #fff;
   transition: all 0.2s ease;
 }
 
 #links {
+  font-size: 2.5em;
   display: table;
   margin: 25px auto 0;
   text-align: center;
 }
 #links .link {
   margin-top: 10px;
-  width: 500px;
+  width: 145px;
+}
+
+@media screen and (max-width: 720px) {
+  img {
+    --img-wh: 125px;
+  }
+  #bio, #links {
+    font-size: 1.5em;
+  }
+  svg {
+    height: 40px !important;
+  }
+  .pridecodes-rainbow-corner {
+    display: none;
+  }
 }/*# sourceMappingURL=custom.css.map */

@@ -1,0 +1,60 @@
+body {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.divider {
+  width: 1111px;
+  height: 5px;
+  background-color: grey;
+  display: block;
+  margin: 50px auto;
+  border-radius: 50px;
+}
+
+#refcont {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 2.5em;
+
+  img {
+    width: 100%;
+  }
+
+  .refheader {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
+
+#artcont {
+  width: 625px;
+  margin: 0 auto;
+
+  img {
+    margin: 5px auto;
+    width: 100%;
+  }
+  
+  .artheader {
+    font-size: 1.75em;
+    margin-bottom: 5px;
+
+    &::before {
+      content: "art by:";
+      cursor: text;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+
+      &::before {
+        content: "@";
+        cursor: pointer;
+      }
+    }
+  }
+}

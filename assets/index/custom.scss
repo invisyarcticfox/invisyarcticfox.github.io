@@ -1,65 +1,86 @@
-$img-wh: 25px;
-
-
 img {
-    display: block;
-    width: $img-wh;
-    height: $img-wh;
-    margin: 100px auto 15px;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    transition: all .2s ease;
+  --img-wh: 225px;
+  display: block;
+  width: var(--img-wh);
+  height: var(--img-wh);
+  margin: 115px auto 15px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  transition: all .2s ease;
 
-    &:hover {
-        border-radius: 25%;
-        cursor: grabbing;
-    }
-    &:active {
-        transform: translateY(5px);
-    }
+  &:hover {
+    border-radius: 25%;
+    cursor: grabbing;
+  }
+  &:active {
+    transform: translateY(5px);
+  }
+
+  @media screen and (max-height: 720px) {
+    margin-top: 25px;
+  }
 }
 
 #bio {
-    text-align: center;
+  font-size: 2.5em;
+  text-align: center;
 
-    .name:first-child {
-        font-weight: bold;
-    }
-    .desc {
-        margin-top: 15px;
-    }
+  .name:first-child {
+    font-weight: bold;
+  }
+  .desc {
+    margin-top: 15px;
+  }
 }
 
 #icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+  a {
+    margin: 0 5px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+    transition: all .2s ease;
 
-    a {
-        margin: 0 5px;
-        display: flex;
-        transition: all .2s ease;
-
-        &:hover svg,
-        &:active svg {
-            fill: var(--accent);
-        }
+    &:hover svg,
+    &:active svg {
+      fill: var(--accent);
     }
-    svg {
-        height: 25px;
-        fill: #fff;
-        transition: all .2s ease;
-    }
+  }
+  svg {
+    height: 60px;
+    fill: #fff;
+    transition: all .2s ease;
+  }
 }
 
 #links {
-    display: table;
-    margin: 25px auto 0;
-    text-align: center;
+  font-size: 2.5em;
+  display: table;
+  margin: 25px auto 0;
+  text-align: center;
 
-    .link {
-        margin-top: 10px;
-        width: 500px;
-    }
+  .link {
+    margin-top: 10px;
+    width: 145px;
+  }
+}
+
+
+
+@media screen and (max-width: 720px) {
+  img {
+    --img-wh: 125px;
+  }
+  #bio, #links {
+    font-size: 1.5em;
+  }
+  svg {
+    height: 40px !important;
+  }
+  .pridecodes-rainbow-corner {
+    display: none;
+  }
 }
