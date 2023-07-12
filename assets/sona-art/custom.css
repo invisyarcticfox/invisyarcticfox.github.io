@@ -4,7 +4,7 @@ body {
 }
 
 .divider {
-  width: 1111px;
+  width: 80%;
   height: 5px;
   background-color: grey;
   display: block;
@@ -49,4 +49,20 @@ body {
 #artcont .artheader a::before {
   content: "@";
   cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .divider {
+    width: 75%;
+    height: 3px;
+    margin: 25px auto;
+  }
+  #refcont {
+    width: 90%;
+    font-size: 1.75em;
+    margin-top: 100px;
+  }
+  #artcont {
+    width: 80%;
+  }
 }/*# sourceMappingURL=custom.css.map */

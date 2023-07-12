@@ -1,4 +1,19 @@
-img {
+.mlm {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-45deg) translateX(145px);
+
+  &:hover {
+    width: 205px;
+    height: 205px;
+  }
+}
+
+
+#avatar {
   --img-wh: 225px;
   display: block;
   width: var(--img-wh);
@@ -6,6 +21,7 @@ img {
   margin: 115px auto 15px;
   border: 5px solid #fff;
   border-radius: 50%;
+  
   transition: all .2s ease;
 
   &:hover {
@@ -71,16 +87,18 @@ img {
 
 
 @media screen and (max-width: 720px) {
-  img {
+  #avatar {
     --img-wh: 125px;
+    margin-top: 100px;
   }
   #bio, #links {
     font-size: 1.5em;
   }
-  svg {
+  #icons svg {
     height: 40px !important;
   }
-  .pridecodes-rainbow-corner {
+  .mlm {
     display: none;
   }
 }
+

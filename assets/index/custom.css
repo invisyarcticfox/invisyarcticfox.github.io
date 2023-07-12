@@ -1,4 +1,17 @@
-img {
+.mlm {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-45deg) translateX(145px);
+}
+.mlm:hover {
+  width: 205px;
+  height: 205px;
+}
+
+#avatar {
   --img-wh: 225px;
   display: block;
   width: var(--img-wh);
@@ -8,15 +21,15 @@ img {
   border-radius: 50%;
   transition: all 0.2s ease;
 }
-img:hover {
+#avatar:hover {
   border-radius: 25%;
   cursor: grabbing;
 }
-img:active {
+#avatar:active {
   transform: translateY(5px);
 }
 @media screen and (max-height: 720px) {
-  img {
+  #avatar {
     margin-top: 25px;
   }
 }
@@ -64,16 +77,17 @@ img:active {
 }
 
 @media screen and (max-width: 720px) {
-  img {
+  #avatar {
     --img-wh: 125px;
+    margin-top: 100px;
   }
   #bio, #links {
     font-size: 1.5em;
   }
-  svg {
+  #icons svg {
     height: 40px !important;
   }
-  .pridecodes-rainbow-corner {
+  .mlm {
     display: none;
   }
 }/*# sourceMappingURL=custom.css.map */
