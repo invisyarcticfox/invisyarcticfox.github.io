@@ -19,14 +19,11 @@
   margin: 115px auto 15px;
   border: 5px solid #fff;
   border-radius: 50%;
-  transition: all 0.2s ease;
+  transition: all 300ms ease;
 }
 #avatar:hover {
   border-radius: 25%;
   cursor: grabbing;
-}
-#avatar:active {
-  transform: translateY(5px);
 }
 @media screen and (max-height: 720px) {
   #avatar {
@@ -54,7 +51,7 @@
 #icons a {
   margin: 0 5px;
   display: flex;
-  transition: all 0.2s ease;
+  transition: all 200ms ease;
 }
 #icons a:hover svg, #icons a:active svg {
   fill: var(--accent);
@@ -62,7 +59,7 @@
 #icons svg {
   height: 60px;
   fill: #fff;
-  transition: all 0.2s ease;
+  transition: all 200ms ease;
 }
 
 #links {
@@ -73,7 +70,7 @@
 }
 #links .link {
   margin-top: 10px;
-  width: 145px;
+  width: 300px;
 }
 
 @media screen and (max-width: 720px) {

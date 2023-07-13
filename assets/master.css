@@ -18,9 +18,36 @@ body {
 
 a {
   --accent: #0e0;
-  transition: all 0.2s ease;
+  transition: all 300ms ease;
   color: #fff;
+  text-decoration: underline;
 }
 a:hover, a:active {
   color: var(--accent);
+  cursor: pointer;
+}
+
+#back {
+  position: fixed;
+  top: 15px;
+  left: 0;
+  font-size: 1.75em;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 40%);
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 15px;
+  transition: all 0.3s ease;
+}
+#back:hover {
+  padding-left: 29px;
+  padding-right: 19px;
+}
+#back a {
+  color: #000;
+}
+@media screen and (max-width: 720px) {
+  #back {
+    display: none;
+  }
 }/*# sourceMappingURL=master.css.map */

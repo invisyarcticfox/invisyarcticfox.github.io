@@ -22,14 +22,11 @@
   border: 5px solid #fff;
   border-radius: 50%;
   
-  transition: all .2s ease;
+  transition: all 300ms ease;
 
   &:hover {
     border-radius: 25%;
     cursor: grabbing;
-  }
-  &:active {
-    transform: translateY(5px);
   }
 
   @media screen and (max-height: 720px) {
@@ -58,7 +55,7 @@
   a {
     margin: 0 5px;
     display: flex;
-    transition: all .2s ease;
+    transition: all 200ms ease;
 
     &:hover svg,
     &:active svg {
@@ -68,7 +65,7 @@
   svg {
     height: 60px;
     fill: #fff;
-    transition: all .2s ease;
+    transition: all 200ms ease;
   }
 }
 
@@ -80,7 +77,7 @@
 
   .link {
     margin-top: 10px;
-    width: 145px;
+    width: 300px;
   }
 }
 
