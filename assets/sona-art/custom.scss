@@ -3,6 +3,7 @@ body {
   margin: 0 auto;
 }
 
+
 .divider {
   width: 80%;
   height: 5px;
@@ -17,39 +18,48 @@ body {
   margin: 0 auto;
   margin-top: 50px;
   font-size: 2.5em;
-}
-#refcont img {
-  width: 100%;
-}
-#refcont .refheader {
-  font-weight: bold;
-  margin-bottom: 5px;
+
+  img {
+    width: 100%;
+  }
+
+  .refheader {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
 }
 
 #artcont {
   width: 625px;
   margin: 0 auto;
+
+  img {
+    margin: 5px auto;
+    width: 100%;
+  }
+  
+  .artheader {
+    font-size: 1.75em;
+    margin-bottom: 5px;
+
+    &::before {
+      content: "art by:";
+      cursor: text;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+
+      &::before {
+        content: "@";
+        cursor: pointer;
+      }
+    }
+  }
 }
-#artcont img {
-  margin: 5px auto;
-  width: 100%;
-}
-#artcont .artheader {
-  font-size: 1.75em;
-  margin-bottom: 5px;
-}
-#artcont .artheader::before {
-  content: "art by:";
-  cursor: text;
-}
-#artcont .artheader a {
-  font-weight: bold;
-  text-decoration: underline;
-}
-#artcont .artheader a::before {
-  content: "@";
-  cursor: pointer;
-}
+
+
 
 @media screen and (max-width: 720px) {
   .divider {
@@ -57,12 +67,14 @@ body {
     height: 3px;
     margin: 25px auto;
   }
+  
   #refcont {
     width: 90%;
     font-size: 1.75em;
     margin-top: 100px;
   }
+  
   #artcont {
     width: 80%;
   }
-}/*# sourceMappingURL=custom.css.map */
+}
