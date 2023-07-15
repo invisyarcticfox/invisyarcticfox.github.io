@@ -27,6 +27,19 @@ a:hover, a:active {
   cursor: pointer;
 }
 
+.mlm {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-45deg) translateX(145px);
+}
+.mlm:hover {
+  width: 205px;
+  height: 205px;
+}
+
 #back {
   position: fixed;
   top: 15px;

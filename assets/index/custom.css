@@ -1,16 +1,3 @@
-.mlm {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  transform: rotate(-45deg) translateX(145px);
-}
-.mlm:hover {
-  width: 205px;
-  height: 205px;
-}
-
 #avatar {
   --img-wh: 225px;
   display: block;
