@@ -44,23 +44,24 @@ a:hover, a:active {
   position: fixed;
   top: 15px;
   left: 0;
-  font-size: 1.75em;
+  font-size: 2em;
   background: rgb(255, 255, 255);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 40%);
   padding: 5px;
-  padding-left: 25px;
-  padding-right: 15px;
+  padding-left: 50px;
+  padding-right: 20px;
   transition: all 0.3s ease;
 }
 #back:hover {
-  padding-left: 29px;
-  padding-right: 19px;
+  padding-left: 65px;
+  padding-right: 25px;
 }
 #back a {
   color: #000;
 }
+
 @media screen and (max-width: 720px) {
-  #back {
+  #back, .mlm {
     display: none;
   }
 }/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,49 @@
+#title {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 15px;
+
+  &.first {
+    margin-top: 150px;
+  };
+  &.second {
+    margin-top: 50px;
+  }
+}
+
+.desc {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  width: 45%;
+
+  img {
+    height: 25px;
+    margin-bottom: -5px;
+    margin-left: -5px;
+  }
+  .space {
+    margin: 10px 0;
+  }
+  .info {
+    font-size: .75em;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #title {
+    &.first {
+      margin-top: 50px;
+    }
+    &.second {
+      margin-top: 15px;
+    }
+  }
+  .desc {
+    width: 55%;
+  }
+}
