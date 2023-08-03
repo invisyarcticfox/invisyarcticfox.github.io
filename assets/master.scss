@@ -4,6 +4,17 @@ body {
   padding: 0;
   background: #141414;
   color: #fff;
+
+  &::after {
+    display: block;
+    position: fixed;
+    content: url("./mlm.svg");
+    width: 200px;
+    height: 200px;
+    top: 0;
+    right: 0;
+    transform: rotate(-45deg) translateX(145px);
+  }
 }
 
 ::selection {
@@ -22,21 +33,6 @@ a {
   &:active {
     color: var(--accent);
     cursor: pointer;
-  }
-}
-
-
-.mlm {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  transform: rotate(-45deg) translateX(145px);
-
-  &:hover {
-    width: 205px;
-    height: 205px;
   }
 }
 
@@ -68,7 +64,7 @@ a {
 
 
 @media screen and (max-width: 720px) {
-  #back, .mlm {
+  #back, body::after {
   display: none;
 }
 }

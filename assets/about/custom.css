@@ -1,12 +1,12 @@
-#title {
+h1 {
   text-align: center;
   font-size: 3em;
   margin-bottom: 15px;
 }
-#title.first {
-  margin-top: 150px;
+h1.first {
+  margin-top: 100px;
 }
-#title.second {
+h1:not(.first) {
   margin-top: 50px;
 }
 
@@ -17,7 +17,7 @@
   font-size: 2em;
   width: 45%;
 }
-.desc img {
+.desc img:not(a img) {
   height: 25px;
   margin-bottom: -5px;
   margin-left: -5px;
@@ -30,6 +30,40 @@
   text-align: left;
   margin-top: 5px;
   margin-left: 25px;
+}
+.desc a img {
+  width: 30px;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+.pcspecs {
+  font-size: 22px;
+  margin: 0 auto 100px;
+  text-align: left;
+  background: rgb(15, 15, 15);
+  padding: 5px 15px 20px;
+}
+.pcspecs th,
+.pcspecs td {
+  border-bottom: 2px #aaa dashed;
+  padding: 10px 20px;
+}
+.pcspecs th:not(:first-child),
+.pcspecs td:not(:first-child) {
+  border-left: 2px #aaa dashed;
+}
+.pcspecs th i,
+.pcspecs td i {
+  opacity: 0.75;
+}
+.pcspecs th i::before,
+.pcspecs td i::before {
+  content: "(";
+}
+.pcspecs th i::after,
+.pcspecs td i::after {
+  content: ")";
 }
 
 @media screen and (max-width: 720px) {

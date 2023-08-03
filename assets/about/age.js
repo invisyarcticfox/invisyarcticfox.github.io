@@ -8,13 +8,12 @@ function AutoAge(birthYear, birthMonth, birthDay)
 
 function showBirthday()
 {
-  var i, elem, items = document.getElementsByTagName('span');
+  var i, elem, items = document.getElementsByClassName('age');
   for(i=0; i<items.length; i++)
   {
     elem = items[i];
-    elem.innerHTML = AutoAge(elem.dataset.year || 2005, elem.dataset.month || 5, elem.dataset.day || 4) + ' years old';
+    elem.innerHTML = AutoAge(elem.dataset.year || 2005, elem.dataset.month || 5, elem.dataset.day || 4) + ' year old';
   }
 }
-
 
 // https://stackoverflow.com/a/54492798

@@ -1,12 +1,12 @@
-#title {
+h1 {
   text-align: center;
   font-size: 3em;
   margin-bottom: 15px;
 
   &.first {
-    margin-top: 150px;
+    margin-top: 100px;
   };
-  &.second {
+  &:not(.first){
     margin-top: 50px;
   }
 }
@@ -18,7 +18,7 @@
   font-size: 2em;
   width: 45%;
 
-  img {
+  img:not(a img) {
     height: 25px;
     margin-bottom: -5px;
     margin-left: -5px;
@@ -32,7 +32,40 @@
     margin-top: 5px;
     margin-left: 25px;
   }
+  a img {
+    width: 30px;
+    margin-right: 5px;
+    margin-bottom: -5px;
+  }
 }
+
+.pcspecs {
+  $--t-brdr: 2px #aaa dashed;
+  font-size: 22px;
+  margin: 0 auto 100px;
+  text-align: left;
+  background: rgb(15, 15, 15);
+  padding: 5px 15px 20px;
+
+  th,
+  td {
+    border-bottom: $--t-brdr;
+    padding: 10px 20px;
+    &:not(:first-child) {
+      border-left: $--t-brdr;
+    }
+    i {
+      opacity: .75;
+      &::before {
+        content: "(";
+      }
+      &::after {
+        content: ")";
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 720px) {
   #title {
