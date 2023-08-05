@@ -18,12 +18,41 @@ body {
   margin-top: 50px;
   font-size: 2.5em;
 }
-#refcont img {
-  width: 100%;
-}
 #refcont .refheader {
   font-weight: bold;
   margin-bottom: 5px;
+}
+#refcont img.overlays {
+  position: absolute;
+  width: 1000px;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+#refcont img.overlays.visible {
+  opacity: 1;
+  transition: 0.2s ease;
+}
+#refcont #ref {
+  width: 100%;
+  opacity: 1;
+  transition: 0.2s ease;
+  filter: saturate(1);
+  z-index: 1;
+}
+#refcont #ref.green1, #refcont #ref.green2, #refcont #ref.pink, #refcont #ref.grey, #refcont #ref.black, #refcont #ref.white, #refcont #ref.blue {
+  opacity: 0.2;
+  transition: 0.2s ease;
+  filter: saturate(0);
+}
+#refcont .hexcodes {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+}
+#refcont .hexcodes .hcodes {
+  display: inline-table;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 #artcont {
