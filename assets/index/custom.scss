@@ -1,10 +1,10 @@
 #avatar {
-  --img-wh: 225px;
+  $--img-wh: 225px;
   display: block;
-  width: var(--img-wh);
-  height: var(--img-wh);
+  width: $--img-wh;
+  height: $--img-wh;
   margin: 115px auto 15px;
-  border: 5px solid #fff;
+  border: 5px solid var(--main-fg);
   border-radius: 50%;
   
   transition: all 300ms ease;
@@ -17,6 +17,9 @@
   @media screen and (max-width: 720px) {
     margin-top: 25px;
   }
+}
+.lightmode #avatar {
+  border: 5px solid var(--main-bg) !important;
 }
 
 #bio {
@@ -49,8 +52,15 @@
   }
   svg {
     height: 60px;
-    fill: #fff;
+    fill: var(--main-fg);
     transition: all 200ms ease;
+  }
+}
+.lightmode svg {
+  fill: var(--main-bg) !important;
+  &:hover,
+  &:active {
+    fill: var(--accent) !important;
   }
 }
   
@@ -74,7 +84,7 @@
     text-decoration: none !important;
 
     a {
-      color: #fff;
+      color: var(--main-fg);
       text-decoration: none;
       display: inline-block;
       padding: 5px 20px;
@@ -91,7 +101,7 @@
         left: 25%;
         width: 50%;
         position: absolute;
-        background: #fff;
+        background: var(--main-fg);
         transition: all .3s ease;
       }
 
@@ -107,5 +117,17 @@
         }
       }
     }
+  }
+}
+.lightmode .link a {
+  color: var(--main-bg) !important;
+  &:hover {
+    color: var(--accent) !important;
+    &::after {
+      background: var(--accent) !important;
+    }
+  }
+  &::after {
+    background: var(--main-bg) !important;
   }
 }

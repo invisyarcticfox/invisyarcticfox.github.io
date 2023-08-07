@@ -1,35 +1,42 @@
 body {
+  --main-bg: #141414;
+  --main-fg: #fff;
+  --accent: #0e0;
   font-family: monospace;
   margin: 0;
   padding: 0;
-  background: #141414;
-  color: #fff;
+  background: var(--main-bg);
+  color: var(--main-fg);
 }
-body::after {
-  display: block;
-  position: fixed;
-  content: url("./mlm.svg");
-  width: 200px;
-  height: 200px;
-  top: 0;
-  right: 0;
-  transform: rotate(-45deg) translateX(145px);
+
+body.lightmode {
+  background: var(--main-fg);
+  color: var(--main-bg);
 }
 
 ::-moz-selection {
-  background: #fff;
-  color: #000;
+  background: var(--main-fg);
+  color: var(--main-bg);
 }
 
 ::selection {
-  background: #fff;
-  color: #000;
+  background: var(--main-fg);
+  color: var(--main-bg);
+}
+
+.lightmode ::-moz-selection {
+  background: var(--main-bg);
+  color: var(--main-fg);
+}
+
+.lightmode ::selection {
+  background: var(--main-bg);
+  color: var(--main-fg);
 }
 
 a {
-  --accent: #0e0;
   transition: all 300ms ease;
-  color: #fff;
+  color: var(--main-fg);
   text-decoration: underline;
 }
 a:hover, a:active {
@@ -37,13 +44,20 @@ a:hover, a:active {
   cursor: pointer;
 }
 
+.lightmode a {
+  color: var(--main-bg) !important;
+}
+.lightmode a:hover {
+  color: var(--accent) !important;
+}
+
 #back {
   position: fixed;
   top: 15px;
   left: 0;
   font-size: 2em;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 40%);
+  background: var(--main-fg);
+  background: linear-gradient(90deg, var(--main-bg) 0%, var(--main-fg) 40%);
   padding: 5px;
   padding-left: 50px;
   padding-right: 20px;
@@ -54,11 +68,47 @@ a:hover, a:active {
   padding-right: 25px;
 }
 #back a {
-  color: #000;
+  color: var(--main-bg);
+}
+
+.lightmode #back {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, var(--main-fg) 0%, var(--main-bg) 40%);
+}
+.lightmode #back a {
+  color: var(--main-fg) !important;
+}
+
+#lm-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 0%;
+}
+#lm-toggle svg {
+  fill: var(--main-fg);
+  transform: rotate(90deg);
+}
+#lm-toggle svg:hover {
+  fill: var(--main-fg) !important;
+}
+#lm-toggle:hover {
+  border-radius: 25%;
+}
+
+.lightmode #lm-toggle svg {
+  fill: var(--main-bg);
+  transform: rotate(270deg);
+}
+.lightmode #lm-toggle svg:hover {
+  fill: var(--main-bg) !important;
 }
 
 @media screen and (max-width: 720px) {
-  #back, body::after {
+  #back, body::after, #lm-toggle {
     display: none;
   }
 }/*# sourceMappingURL=master.css.map */

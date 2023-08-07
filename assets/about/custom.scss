@@ -65,6 +65,16 @@ h1 {
     }
   }
 }
+.lightmode .pcspecs {
+  background: rgb(100, 100, 100);
+  color: var(--main-fg) !important;
+  a {
+    color: var(--main-fg) !important;
+    &:hover {
+      color: var(--accent) !important;
+    }
+  }
+}
 
 
 @media screen and (max-width: 720px) {

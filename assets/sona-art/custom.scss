@@ -37,14 +37,13 @@ body {
     opacity: 1;
     transition: .2s ease;
     filter: saturate(1);
-    z-index: 1;
     
     &.green1, &.green2,
     &.pink, &.grey,
     &.black, &.white, &.blue {
-      opacity: .2;
+      opacity: .15;
       transition: .2s ease;
-      filter: saturate(0);
+      filter: saturate(.15);
     }
   }
   
@@ -56,13 +55,35 @@ body {
       display: inline-table;
       padding: 5px;
       margin-top: 10px;
+      &[style*="#ccff00"],
+      &[style*="#ffffff"] {
+        color: var(--main-bg);
+      }
+    }
+  }
+}
+.lightmode .hexcodes {
+  width: 80% !important;
+  .hcodes {
+    border: 2px var(--main-bg) solid;
+    &[style*="#212121"],
+    &[style*="#172758"] {
+      color: var(--main-fg);
     }
   }
 }
 
+
 #artcont {
-  width: 625px;
+  width: 600px;
   margin: 0 auto;
+  &:has(img[src*="eolixa"], img[src*="eutumned"]) {
+    width: 800px;
+
+    img {
+      width: 49%;
+    }
+  }
 
   img {
     margin: 5px auto;

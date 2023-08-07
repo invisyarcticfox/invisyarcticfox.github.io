@@ -1,38 +1,42 @@
 body {
+  --main-bg: #141414;
+  --main-fg: #fff;
+  --accent: #0e0;
   font-family: monospace;
   margin: 0;
   padding: 0;
-  background: #141414;
-  color: #fff;
-
-  &::after {
-    display: block;
-    position: fixed;
-    content: url("./mlm.svg");
-    width: 200px;
-    height: 200px;
-    top: 0;
-    right: 0;
-    transform: rotate(-45deg) translateX(145px);
-  }
+  background: var(--main-bg);
+  color: var(--main-fg);
+}
+body.lightmode {
+  background: var(--main-fg);
+  color: var(--main-bg);
 }
 
 ::selection {
-  background: #fff;
-  color: #000;
+  background: var(--main-fg);
+  color: var(--main-bg);
+}
+.lightmode ::selection {
+  background: var(--main-bg);
+  color: var(--main-fg);
 }
 
-
 a {
-  --accent: #0e0;
   transition: all 300ms ease;
-  color: #fff;
+  color: var(--main-fg);
   text-decoration: underline;
 
   &:hover,
   &:active {
     color: var(--accent);
     cursor: pointer;
+  }
+}
+.lightmode a {
+  color: var(--main-bg) !important;
+  &:hover {
+    color: var(--accent) !important;
   }
 }
 
@@ -45,8 +49,8 @@ a {
   left: 0;
   font-size: 2em;
 
-  background: rgb(255,255,255);
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%);
+  background: var(--main-fg);
+  background: linear-gradient(90deg, var(--main-bg) 0%, var(--main-fg) 40%);
   padding: 5px;
   padding-left: $pad-l;
   padding-right: $pad-r;
@@ -58,13 +62,50 @@ a {
   }
 
   a {
-    color: #000;
+    color: var(--main-bg);
+  }
+}
+.lightmode #back {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, var(--main-fg) 0%, var(--main-bg) 40%);
+  a {
+    color: var(--main-fg) !important;
   }
 }
 
+#lm-toggle {
+  $--deg-90: 90deg;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 0%;
+  svg {
+    fill: var(--main-fg);
+    transform: rotate($--deg-90);
+    &:hover {
+      fill: var(--main-fg) !important;
+    }
+  }
+  &:hover {
+    border-radius: 25%;
+  }
+}
+.lightmode #lm-toggle {
+  $--deg-90: 90deg;
+  svg {
+    fill: var(--main-bg);
+    transform: rotate(calc($--deg-90 + 180deg));
+    &:hover {
+      fill: var(--main-bg) !important;
+    }
+  }
+}
 
 @media screen and (max-width: 720px) {
-  #back, body::after {
+  #back, body::after, #lm-toggle {
   display: none;
 }
 }

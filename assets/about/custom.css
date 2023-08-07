@@ -66,6 +66,17 @@ h1:not(.first) {
   content: ")";
 }
 
+.lightmode .pcspecs {
+  background: rgb(100, 100, 100);
+  color: var(--main-fg) !important;
+}
+.lightmode .pcspecs a {
+  color: var(--main-fg) !important;
+}
+.lightmode .pcspecs a:hover {
+  color: var(--accent) !important;
+}
+
 @media screen and (max-width: 720px) {
   #title.first {
     margin-top: 50px;

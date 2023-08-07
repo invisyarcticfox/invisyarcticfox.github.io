@@ -21,37 +21,72 @@ const overlays = [
 const refsheet = document.querySelector("img#ref")
 
 
-colours[0].addEventListener('mouseover', function(e) { refsheet.classList.add('green1');})
-colours[0].addEventListener('mouseout', function(e) { refsheet.classList.remove('green1');})
-colours[0].addEventListener('mouseover', function(e) { overlays[0].classList.add('visible');})
-colours[0].addEventListener('mouseout', function(e) { overlays[0].classList.remove('visible');})
+colours[0].addEventListener('mouseover', function(e) {
+    refsheet.classList.add('green1');
+    overlays[0].classList.add('visible');
 
-colours[1].addEventListener('mouseover', function(e) { refsheet.classList.add('green2');})
-colours[1].addEventListener('mouseout', function(e) { refsheet.classList.remove('green2');})
-colours[1].addEventListener('mouseover', function(e) { overlays[1].classList.add('visible');})
-colours[1].addEventListener('mouseout', function(e) { overlays[1].classList.remove('visible');})
+    addEventListener('mouseout', function(e) {
+        refsheet.classList.remove('green1');
+        overlays[0].classList.remove('visible');
+    })
+})
 
-colours[2].addEventListener('mouseover', function(e) { refsheet.classList.add('pink');})
-colours[2].addEventListener('mouseout', function(e) { refsheet.classList.remove('pink');})
-colours[2].addEventListener('mouseover', function(e) { overlays[2].classList.add('visible');})
-colours[2].addEventListener('mouseout', function(e) { overlays[2].classList.remove('visible');})
+colours[1].addEventListener('mouseover', function(e) {
+    refsheet.classList.add('green1');
+    overlays[1].classList.add('visible');
 
-colours[3].addEventListener('mouseover', function(e) { refsheet.classList.add('grey');})
-colours[3].addEventListener('mouseout', function(e) { refsheet.classList.remove('grey');})
-colours[3].addEventListener('mouseover', function(e) { overlays[3].classList.add('visible');})
-colours[3].addEventListener('mouseout', function(e) { overlays[3].classList.remove('visible');})
+    addEventListener('mouseout', function(e) {
+        refsheet.classList.remove('green1');
+        overlays[1].classList.remove('visible');
+    })
+})
 
-colours[4].addEventListener('mouseover', function(e) { refsheet.classList.add('black');})
-colours[4].addEventListener('mouseout', function(e) { refsheet.classList.remove('black');})
-colours[4].addEventListener('mouseover', function(e) { overlays[4].classList.add('visible');})
-colours[4].addEventListener('mouseout', function(e) { overlays[4].classList.remove('visible');})
+colours[2].addEventListener('mouseover', function(e) {
+    refsheet.classList.add('green1');
+    overlays[2].classList.add('visible');
 
-colours[5].addEventListener('mouseover', function(e) { refsheet.classList.add('white');})
-colours[5].addEventListener('mouseout', function(e) { refsheet.classList.remove('white');})
-colours[5].addEventListener('mouseover', function(e) { overlays[5].classList.add('visible');})
-colours[5].addEventListener('mouseout', function(e) { overlays[5].classList.remove('visible');})
+    addEventListener('mouseout', function(e) {
+        refsheet.classList.remove('green1');
+        overlays[2].classList.remove('visible');
+    })
+})
 
-colours[6].addEventListener('mouseover', function(e) { refsheet.classList.add('blue');})
-colours[6].addEventListener('mouseout', function(e) { refsheet.classList.remove('blue');})
-colours[6].addEventListener('mouseover', function(e) { overlays[6].classList.add('visible');})
-colours[6].addEventListener('mouseout', function(e) { overlays[6].classList.remove('visible');})
+colours[3].addEventListener('mouseover', function(e) {
+    refsheet.classList.add('green1');
+    overlays[3].classList.add('visible');
+
+    addEventListener('mouseout', function(e) {
+        refsheet.classList.remove('green1');
+        overlays[3].classList.remove('visible');
+    })
+})
+
+colours[4].addEventListener('mouseover', function(e) {
+    refsheet.classList.add('green1');
+    overlays[4].classList.add('visible');
+
+    addEventListener('mouseout', function(e) {
+        refsheet.classList.remove('green1');
+        overlays[4].classList.remove('visible');
+    })
+})
+
+colours[5].addEventListener('mouseover', function(e) {
+    refsheet.classList.add('green1');
+    overlays[5].classList.add('visible');
+
+    addEventListener('mouseout', function(e) {
+        refsheet.classList.remove('green1');
+        overlays[5].classList.remove('visible');
+    })
+})
+
+colours[6].addEventListener('mouseover', function(e) {
+    refsheet.classList.add('green1');
+    overlays[6].classList.add('visible');
+
+    addEventListener('mouseout', function(e) {
+        refsheet.classList.remove('green1');
+        overlays[6].classList.remove('visible');
+    })
+})

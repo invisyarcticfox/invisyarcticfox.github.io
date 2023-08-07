@@ -37,12 +37,11 @@ body {
   opacity: 1;
   transition: 0.2s ease;
   filter: saturate(1);
-  z-index: 1;
 }
 #refcont #ref.green1, #refcont #ref.green2, #refcont #ref.pink, #refcont #ref.grey, #refcont #ref.black, #refcont #ref.white, #refcont #ref.blue {
-  opacity: 0.2;
+  opacity: 0.15;
   transition: 0.2s ease;
-  filter: saturate(0);
+  filter: saturate(0.15);
 }
 #refcont .hexcodes {
   display: block;
@@ -54,10 +53,29 @@ body {
   padding: 5px;
   margin-top: 10px;
 }
+#refcont .hexcodes .hcodes[style*="#ccff00"], #refcont .hexcodes .hcodes[style*="#ffffff"] {
+  color: var(--main-bg);
+}
+
+.lightmode .hexcodes {
+  width: 80% !important;
+}
+.lightmode .hexcodes .hcodes {
+  border: 2px var(--main-bg) solid;
+}
+.lightmode .hexcodes .hcodes[style*="#212121"], .lightmode .hexcodes .hcodes[style*="#172758"] {
+  color: var(--main-fg);
+}
 
 #artcont {
-  width: 625px;
+  width: 600px;
   margin: 0 auto;
+}
+#artcont:has(img[src*=eolixa], img[src*=eutumned]) {
+  width: 800px;
+}
+#artcont:has(img[src*=eolixa], img[src*=eutumned]) img {
+  width: 49%;
 }
 #artcont img {
   margin: 5px auto;
