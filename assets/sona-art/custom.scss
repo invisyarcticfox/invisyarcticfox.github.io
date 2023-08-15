@@ -133,7 +133,8 @@ body {
   }
 }
 
-.dynamic-content {
+.dynamic-content,
+#back.second {
   display: none;
 }
 
@@ -141,8 +142,7 @@ body {
 
 @media screen and (max-width: 720px) {
   #back {
-    &.second,
-    &.third {
+    &.second {
       display: block;
       top: 50px;
     }

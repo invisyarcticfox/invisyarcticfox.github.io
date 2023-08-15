@@ -15,6 +15,7 @@ $(document).ready(function () {
   if (dynamicContent == 'true') {
     $('.dynamic-content').show();
     $('#back.second').hide();
+    $('#back.third').show();
     document.title = "shamshitty - (NSFW) sona art";
   }
   // Check if the URL parmeter is empty or not defined, display default content
