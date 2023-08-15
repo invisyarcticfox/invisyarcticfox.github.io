@@ -3,6 +3,13 @@ body {
   margin: 0 auto;
 }
 
+#back {
+  transition: padding 0.2s ease;
+}
+#back.second {
+  top: 60px;
+}
+
 .divider {
   width: 80%;
   height: 5px;
@@ -71,10 +78,14 @@ body {
   width: 600px;
   margin: 0 auto;
 }
-#artcont:has(img[src*=eolixa], img[src*=eutumned]) {
+#artcont:has(img[src*=eolixa],
+img[src*=eutumned],
+img[src*=tuftdog]) {
   width: 800px;
 }
-#artcont:has(img[src*=eolixa], img[src*=eutumned]) img {
+#artcont:has(img[src*=eolixa],
+img[src*=eutumned],
+img[src*=tuftdog]) img {
   width: 49%;
 }
 #artcont img {
@@ -97,8 +108,19 @@ body {
   content: "@";
   cursor: pointer;
 }
+#artcont .base {
+  font-size: 1.75em;
+}
+
+.dynamic-content {
+  display: none;
+}
 
 @media screen and (max-width: 720px) {
+  #back.second {
+    display: block;
+    top: 50px;
+  }
   .divider {
     width: 75%;
     height: 3px;
