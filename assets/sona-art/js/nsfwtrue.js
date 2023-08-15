@@ -14,6 +14,8 @@ $(document).ready(function () {
   // Check if the URL parameter is true
   if (dynamicContent == 'true') {
     $('.dynamic-content').show();
+    $('#back.second').hide();
+    document.title = "shamshitty - (NSFW) sona art";
   }
   // Check if the URL parmeter is empty or not defined, display default content
   else {

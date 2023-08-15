@@ -5,7 +5,8 @@ body {
 
 #back {
   transition: padding .2s ease;
-  &.second {
+  &.second,
+  &.third {
     top: 60px;
   }
 }
@@ -83,11 +84,12 @@ body {
 #artcont {
   width: 600px;
   margin: 0 auto;
-  &:has(img[src*="eolixa"],
-  img[src*="eutumned"],
-  img[src*="tuftdog"]) {
-    width: 800px;
-
+  &:has(
+    img[src*="eolixa"],
+    img[src*="eutumned"],
+    img[src*="tuftdog"]
+    ){
+      width: 800px;
     img {
       width: 49%;
     }
@@ -101,7 +103,6 @@ body {
   .artheader {
     font-size: 1.75em;
     margin-bottom: 5px;
-
     &::before {
       content: "art by:";
       cursor: text;
@@ -110,11 +111,21 @@ body {
     a {
       font-weight: bold;
       text-decoration: underline;
-
       &::before {
         content: "@";
         cursor: pointer;
       }
+    }
+  }
+  img[src*="/tuftdog"],
+  img[src*="/vipi.png"]:last-child {
+    filter: blur(25px) saturate(.5);
+    opacity: .25;
+    transition: all .2s ease;
+    &:hover {
+      filter: blur(0) saturate(1);
+      opacity: 1;
+      transition: all .2s ease;
     }
   }
   .base {
@@ -129,9 +140,12 @@ body {
 
 
 @media screen and (max-width: 720px) {
-  #back.second {
-    display: block;
-    top: 50px;
+  #back {
+    &.second,
+    &.third {
+      display: block;
+      top: 50px;
+    }
   }
   .divider {
     width: 75%;

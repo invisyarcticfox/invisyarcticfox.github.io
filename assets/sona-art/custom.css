@@ -6,7 +6,7 @@ body {
 #back {
   transition: padding 0.2s ease;
 }
-#back.second {
+#back.second, #back.third {
   top: 60px;
 }
 
@@ -108,6 +108,18 @@ img[src*=tuftdog]) img {
   content: "@";
   cursor: pointer;
 }
+#artcont img[src*="/tuftdog"],
+#artcont img[src*="/vipi.png"]:last-child {
+  filter: blur(25px) saturate(0.5);
+  opacity: 0.25;
+  transition: all 0.2s ease;
+}
+#artcont img[src*="/tuftdog"]:hover,
+#artcont img[src*="/vipi.png"]:last-child:hover {
+  filter: blur(0) saturate(1);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
 #artcont .base {
   font-size: 1.75em;
 }
@@ -117,7 +129,7 @@ img[src*=tuftdog]) img {
 }
 
 @media screen and (max-width: 720px) {
-  #back.second {
+  #back.second, #back.third {
     display: block;
     top: 50px;
   }
