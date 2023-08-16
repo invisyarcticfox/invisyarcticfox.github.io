@@ -105,7 +105,7 @@ a {
 }
 
 @media screen and (max-width: 720px) {
-  #back, body::after, #lm-toggle {
+  #back, #lm-toggle {
   display: none;
 }
 }

@@ -20,7 +20,8 @@ body {
 }
 
 #refcont {
-  width: 1000px;
+  position: relative;
+  width: 55%;
   margin: 0 auto;
   margin-top: 50px;
   font-size: 2.5em;
@@ -29,26 +30,29 @@ body {
   font-weight: bold;
   margin-bottom: 5px;
 }
+#refcont img {
+  width: 100%;
+}
+#refcont img.ref {
+  width: 100%;
+  opacity: 1;
+  transition: 0.2s ease;
+  filter: saturate(1);
+}
+#refcont img.ref.green1, #refcont img.ref.green2, #refcont img.ref.pink, #refcont img.ref.grey, #refcont img.ref.black, #refcont img.ref.white, #refcont img.ref.blue {
+  opacity: 0.15;
+  transition: 0.2s ease;
+  filter: saturate(0.15);
+}
 #refcont img.overlays {
   position: absolute;
-  width: 1000px;
+  width: 100%;
   opacity: 0;
   transition: 0.2s ease;
 }
 #refcont img.overlays.visible {
   opacity: 1;
   transition: 0.2s ease;
-}
-#refcont #ref {
-  width: 100%;
-  opacity: 1;
-  transition: 0.2s ease;
-  filter: saturate(1);
-}
-#refcont #ref.green1, #refcont #ref.green2, #refcont #ref.pink, #refcont #ref.grey, #refcont #ref.black, #refcont #ref.white, #refcont #ref.blue {
-  opacity: 0.15;
-  transition: 0.2s ease;
-  filter: saturate(0.15);
 }
 #refcont .hexcodes {
   display: block;
@@ -108,14 +112,12 @@ img[src*=tuftdog]) img {
   content: "@";
   cursor: pointer;
 }
-#artcont img[src*="/tuftdog"],
-#artcont img[src*="/vipi.png"]:last-child {
+#artcont .nsfwimg {
   filter: blur(25px) saturate(0.5);
   opacity: 0.25;
   transition: all 0.2s ease;
 }
-#artcont img[src*="/tuftdog"]:hover,
-#artcont img[src*="/vipi.png"]:last-child:hover {
+#artcont .nsfwimg:hover {
   filter: blur(0) saturate(1);
   opacity: 1;
   transition: all 0.2s ease;
@@ -124,7 +126,7 @@ img[src*=tuftdog]) img {
   font-size: 1.75em;
 }
 
-.dynamic-content,
+.nsfw,
 #back.third {
   display: none;
 }
@@ -144,7 +146,20 @@ img[src*=tuftdog]) img {
     font-size: 1.75em;
     margin-top: 100px;
   }
+  #refcont img {
+    width: 90% !important;
+  }
   #artcont {
     width: 80%;
+  }
+  #artcont:has(img[src*=eolixa],
+  img[src*=eutumned],
+  img[src*=tuftdog]) {
+    width: 90%;
+  }
+  #artcont:has(img[src*=eolixa],
+  img[src*=eutumned],
+  img[src*=tuftdog]) img {
+    width: 50%;
   }
 }/*# sourceMappingURL=custom.css.map */

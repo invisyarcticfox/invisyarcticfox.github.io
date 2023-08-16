@@ -8,7 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./assets/master.css">
     <link rel="stylesheet" href="./assets/sona-art/custom.css">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
     <meta name="title" content="shamshitty">
     <meta name="description" content="shamshitty's sona art">
@@ -35,7 +35,7 @@
     <div id="back" class="second">
         <a href="?nsfw=true">nsfw?</a>
     </div>
-    <div id="back" class="third dynamic-content">
+    <div id="back" class="third nsfw">
         <a href="./sona-art">sfw</a>
     </div>
     <div id="lm-toggle">
@@ -54,7 +54,7 @@
         <img class="overlays" src="./assets/sona-art/overlays/212121.png" alt="">
         <img class="overlays" src="./assets/sona-art/overlays/ffffff.png" alt="">
         <img class="overlays" src="./assets/sona-art/overlays/172758.png" alt="">
-        <img id="ref" src="./assets/sona-art/art/ref.png" width="100%" alt="ref">
+        <img class="ref" src="./assets/sona-art/art/ref.png" alt="ref">
 
         <div class="hexcodes">
             <div class="hcodes" style="background: #99c317;">#99c317</div>
@@ -115,15 +115,15 @@
         <img src="./assets/sona-art/art/orlando.jpg" alt="orlando">
     </div>
 
-    <div class="divider dynamic-content"></div>
+    <div class="divider nsfw"></div>
 
-    <div id="artcont" class="dynamic-content">
+    <div id="artcont" class="nsfw">
         <div class="artheader">
             <a href="https://twitter.com/Tuftdog" target="_blank" rel="noopener noreferrer">Tuftdog</a>
         </div>
-        <img src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030194510037134/tuftdog1.png" alt="Tuftdog">
-        <img src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030194958848081/tuftdog2.png" alt="Tuftdog">
-        <img src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030195466350802/tuftdog3.png" alt="Tuftdog">
+        <img class="nsfwimg" src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030194510037134/tuftdog1.png" alt="Tuftdog">
+        <img class="nsfwimg" src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030194958848081/tuftdog2.png" alt="Tuftdog">
+        <img class="nsfwimg" src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030195466350802/tuftdog3.png" alt="Tuftdog">
         <div class="base">base
             <a href="https://www.furaffinity.net/view/30068561/" target="_blank" rel="noopener noreferrer">here</a>
         </div>
@@ -145,12 +145,21 @@
             <a href="https://www.twitter.com/Vipibolt" target="_blank" rel="noopener noreferrer">Vipibolt</a>
         </div>
         <img src="./assets/sona-art/art/vipi.png" alt="vipi">
-        <img class="dynamic-content" src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030195839651840/vipi.png" alt="vipinsfw">
+        <img class="nsfw nsfwimg" src="https://cdn.discordapp.com/attachments/1141028844447477770/1141030195839651840/vipi.png" alt="vipinsfw">
     </div>
 
     <div style="margin: 100px 0px;"></div>
     <script src="./assets/master.js"></script>
     <script src="./assets/sona-art/js/overlays.js"></script>
-    <script src="./assets/sona-art/js/nsfwtrue.js"></script>
+    <script>
+        $(document).ready(function () {
+          // Check if the URL parameter is true
+          if (dynamicContent == 'true') {
+            $('#back.second').remove();
+            $('#back.third').show();
+            document.title = "shamshitty - (NSFW) sona art";
+          }
+        });
+    </script>
 </body>
 </html>

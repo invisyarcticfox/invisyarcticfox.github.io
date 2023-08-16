@@ -18,7 +18,7 @@ const overlays = [
     white_0 = document.querySelector("img[src*='/overlays/ffffff']"),
     blue_0 = document.querySelector("img[src*='/overlays/172758']")
 ]
-const refsheet = document.querySelector("img#ref")
+const refsheet = document.querySelector("img.ref")
 
 
 colours[0].addEventListener('mouseover', function(e) {

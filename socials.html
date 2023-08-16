@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shamshitty - socials</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/master.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <meta name="title" content="shamshitty">
+    <meta name="description" content="shamshitty's full socials">
+    <meta name="image" content="https://shamshitty.xyz/assets/shamshitty.png">
+    <meta name="theme-color" content="#00ff00">
+
+    <meta property="og:type" content="wesbite">
+    <meta property="og:url" content="https://shamshitty.xyz">
+    <meta property="og:title" content="shamshitty">
+    <meta property="og:description" content="shamshitty's full socials">
+    <meta property="og:image" content="https://shamshitty.xyz/assets/shamshitty.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="shamshitty.xyz">
+    <meta property="twitter:url" content="https://shamshitty.xyz">
+    <meta property="twitter:title" content="shamshitty">
+    <meta property="twitter:description" content="shamshitty's full socials">
+    <meta property="twitter:image" content="https://shamshitty.xyz/assets/shamshitty.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        ul {
+            text-align: center;
+            list-style: none;
+            font-size: 30px;
+            margin-top: 10%;
+        }
+        a::after {
+            content: attr(data-website);
+        }
+        li.nsfw a::before {
+            content: "🔞";
+        }
+
+        .nsfw,
+        .second {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="back" class="first">
+        <a href="?nsfw=true">nsfw?</a>
+    </div>
+    <div id="back" class="second">
+        <a href="./socials">sfw?</a>
+    </div>
+    <div id="lm-toggle">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.0277 11.25C2.41123 6.07745 6.72944 2 12 2C17.2706 2 21.5888 6.07745 21.9723 11.25H22V12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12V11.25H2.0277ZM12 3.5C7.55831 3.5 3.91233 6.90686 3.53263 11.25H20.4674C20.0877 6.90686 16.4417 3.5 12 3.5Z"/>
+        </svg>
+    </div>
+
+    <ul>
+        <li>
+            <a data-website="bluesky" href="https://bsky.app/profile/shamshitty.xyz"></a>
+        </li>
+        <li>
+            <a data-website="discord" href="https://discord.com/users/470193291053498369"></a>
+        </li>
+        <li class="nsfw">
+            <a data-website="e621" href="https://e621.net/users/lucaskindagay"></a>
+        </li>
+        <li>
+            <a data-website="github" href="https://github.com/shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="instagram" href="https://instagram.com/shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="last.fm" href="https://www.last.fm/user/shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="reddit" href="https://www.reddit.com/user/shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="roblox" href="https://www.roblox.com/users/3097391228"></a>
+        </li>
+        <li>
+            <a data-website="spotify" href="https://open.spotify.com/user/9xxqc084xppfcj99y2qcx17e5"></a>
+        </li>
+        <li>
+            <a data-website="steam" href="https://steamcommunity.com/id/shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="telegram" href="https://t.me/shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="twitter" href="https://twitter.com/shamshitty"></a>
+        </li>
+        <li class="nsfw">
+            <a data-website="nsfw twitter" href="https://twitter.com/gayestfox"></a>
+        </li>
+        <li>
+            <a data-website="youtube" href="https://youtube.com/@shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="second youtube" href="https://youtube.com/@shamshiddy"></a>
+        </li>
+    </ul>
+
+    <script>
+        var els = document.querySelectorAll('[data-website]');
+        for (var i=0; i < els.length; i++) {
+          els[i].setAttribute("target", "_blank");
+          els[i].setAttribute("rel", "noopener noreferrer");
+        }
+    </script>
+    <script src="./assets/master.js"></script>
+    <script>
+        $(document).ready(function () {
+          // Check if the URL parameter is true
+          if (dynamicContent == 'true') {
+            $('#back.first').remove();
+            $('#back.second').show();
+            document.title = "shamshitty - (NSFW) about";
+          }
+          // Check if the URL parmeter is empty or not defined, display default content
+          else {
+            $('.default-content').show();
+            $('#back.second').remove();
+          }
+        });
+    </script>
+</body>
+</html>

@@ -1,9 +1,10 @@
+$--fz-nm: 35px;
+
 #avatar {
   $--img-wh: 225px;
   display: block;
   width: $--img-wh;
-  height: $--img-wh;
-  margin: 115px auto 15px;
+  margin: 75px auto 15px;
   border: 5px solid var(--main-fg);
   border-radius: 50%;
   
@@ -16,6 +17,7 @@
 
   @media screen and (max-width: 720px) {
     margin-top: 25px;
+    width: 40%;
   }
 }
 .lightmode #avatar {
@@ -23,7 +25,7 @@
 }
 
 #bio {
-  font-size: 2.5em;
+  font-size: $--fz-nm;
   text-align: center;
 
   .name:first-child {
@@ -32,6 +34,13 @@
   .desc {
     margin-top: 15px;
   }
+
+  @media screen and (max-width: 720px) {
+    font-size: calc($--fz-nm - 10px);
+    .desc {
+      font-size: 20px;
+    }
+  }
 }
 
 #icons {
@@ -39,6 +48,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  $svg-wh: 60px;
 
   a {
     margin: 0 5px;
@@ -51,9 +61,21 @@
     }
   }
   svg {
-    height: 60px;
+    width: $svg-wh;
+    height: $svg-wh;
     fill: var(--main-fg);
     transition: all 200ms ease;
+  }
+
+  @media screen and (max-width: 720px) {
+    svg {
+      width: calc($svg-wh / 1.75);
+      height: calc($svg-wh / 1.75);
+      rect {
+        width: calc($svg-wh / 1.75);
+        height: calc($svg-wh / 1.75);
+      }
+    }
   }
 }
 .lightmode svg {
@@ -72,17 +94,15 @@
   display: table;
   width: 600px;
   text-align: center;
-  font-size: 2.5em;
+  font-size: $--fz-nm;
   text-decoration: none !important;
 
-  
   .link {
     display: block; 
     position: relative; 
     padding: 10px;
     transition: all .3s ease;
     text-decoration: none !important;
-
     a {
       color: var(--main-fg);
       text-decoration: none;
@@ -91,7 +111,6 @@
       position: relative;
       transition: all .3s ease;
       text-decoration: none !important;
-
       &:after {
         background: none 0 0 transparent;
         bottom: 0;
@@ -104,11 +123,9 @@
         background: var(--main-fg);
         transition: all .3s ease;
       }
-
       &:hover {
         color: var(--accent);
         transition: all .3s ease;
-
         &:after {
           width: 100%;
           left: 0;
@@ -117,6 +134,11 @@
         }
       }
     }
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 90%;
+    font-size: calc($--fz-nm - 10px);
   }
 }
 .lightmode .link a {
