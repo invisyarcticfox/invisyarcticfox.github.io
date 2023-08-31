@@ -6,7 +6,7 @@ body {
 #back {
   transition: padding 0.2s ease;
 }
-#back.second, #back.third {
+#back:not(:first-child) {
   top: 60px;
 }
 

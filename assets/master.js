@@ -29,7 +29,7 @@ lightModeToggle.addEventListener("click", () => {
 })
 
 
-// URL PARAMETERk//
+// URL PARAMETER //
 // Parse the URL parameter
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;

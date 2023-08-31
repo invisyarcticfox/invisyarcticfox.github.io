@@ -52,9 +52,15 @@
         .second {
             display: none;
         }
+        #back:not(:first-child) {
+            top: 60px;
+        }
     </style>
 </head>
 <body>
+    <div id="back">
+        <a href="./">back</a>
+    </div>
     <div id="back" class="first">
         <a href="?nsfw=true">nsfw?</a>
     </div>
@@ -72,6 +78,9 @@
             <a data-website="bluesky" href="https://bsky.app/profile/shamshitty.xyz"></a>
         </li>
         <li>
+            <a data-website="cohost" href="hhttps://cohost.org/shamshiddy"></a>
+        </li>
+        <li>
             <a data-website="discord" href="https://discord.com/users/470193291053498369"></a>
         </li>
         <li class="nsfw">
@@ -82,6 +91,9 @@
         </li>
         <li>
             <a data-website="instagram" href="https://instagram.com/shamshitty"></a>
+        </li>
+        <li>
+            <a data-website="itaku" href="https://itaku.ee/profile/shamshitty"></a>
         </li>
         <li>
             <a data-website="last.fm" href="https://www.last.fm/user/shamshitty"></a>
@@ -129,7 +141,7 @@
           if (dynamicContent == 'true') {
             $('#back.first').remove();
             $('#back.second').show();
-            document.title = "shamshitty - (NSFW) about";
+            document.title = "shamshitty - (NSFW) socials";
           }
           // Check if the URL parmeter is empty or not defined, display default content
           else {

@@ -144,4 +144,11 @@
 }
 .lightmode .link a::after {
   background: var(--main-bg) !important;
+}
+
+#furcode {
+  position: relative;
+  font-size: 15px;
+  margin: 15px;
+  bottom: -70px;
 }/*# sourceMappingURL=custom.css.map */
