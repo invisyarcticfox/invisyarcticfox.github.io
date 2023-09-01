@@ -41,9 +41,6 @@
             font-size: 30px;
             margin-top: 10%;
         }
-        a::after {
-            content: attr(data-website);
-        }
         li.nsfw a::before {
             content: "🔞";
         }
@@ -67,63 +64,52 @@
     <div id="back" class="second">
         <a href="./socials">sfw?</a>
     </div>
-    <div id="lm-toggle">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.0277 11.25C2.41123 6.07745 6.72944 2 12 2C17.2706 2 21.5888 6.07745 21.9723 11.25H22V12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12V11.25H2.0277ZM12 3.5C7.55831 3.5 3.91233 6.90686 3.53263 11.25H20.4674C20.0877 6.90686 16.4417 3.5 12 3.5Z"/>
-        </svg>
-    </div>
 
     <ul>
         <li>
-            <a data-website="bluesky" href="https://bsky.app/profile/shamshitty.xyz"></a>
+            <a href="https://bsky.app/profile/shamshitty.xyz">bluesky</a>
         </li>
         <li>
-            <a data-website="cohost" href="hhttps://cohost.org/shamshiddy"></a>
-        </li>
-        <li>
-            <a data-website="discord" href="https://discord.com/users/470193291053498369"></a>
+            <a href="https://discord.com/users/470193291053498369">discord</a>
         </li>
         <li class="nsfw">
-            <a data-website="e621" href="https://e621.net/users/lucaskindagay"></a>
+            <a href="https://e621.net/users/lucaskindagay">e621</a>
         </li>
         <li>
-            <a data-website="github" href="https://github.com/shamshitty"></a>
+            <a href="https://github.com/shamshitty">github</a>
         </li>
         <li>
-            <a data-website="instagram" href="https://instagram.com/shamshitty"></a>
+            <a href="https://instagram.com/shamshitty">instagram</a>
         </li>
         <li>
-            <a data-website="itaku" href="https://itaku.ee/profile/shamshitty"></a>
+            <a href="https://www.last.fm/user/shamshitty">last.fm</a>
         </li>
         <li>
-            <a data-website="last.fm" href="https://www.last.fm/user/shamshitty"></a>
+            <a href="https://www.reddit.com/user/shamshitty">reddit</a>
         </li>
         <li>
-            <a data-website="reddit" href="https://www.reddit.com/user/shamshitty"></a>
+            <a href="https://www.roblox.com/users/3097391228">roblox</a>
         </li>
         <li>
-            <a data-website="roblox" href="https://www.roblox.com/users/3097391228"></a>
+            <a href="https://open.spotify.com/user/9xxqc084xppfcj99y2qcx17e5">spotify</a>
         </li>
         <li>
-            <a data-website="spotify" href="https://open.spotify.com/user/9xxqc084xppfcj99y2qcx17e5"></a>
+            <a href="https://steamcommunity.com/id/shamshitty">stean</a>
         </li>
         <li>
-            <a data-website="steam" href="https://steamcommunity.com/id/shamshitty"></a>
+            <a href="https://t.me/shamshitty">telegram</a>
         </li>
         <li>
-            <a data-website="telegram" href="https://t.me/shamshitty"></a>
-        </li>
-        <li>
-            <a data-website="twitter" href="https://twitter.com/shamshitty"></a>
+            <a href="https://twitter.com/shamshitty">twitter</a>
         </li>
         <li class="nsfw">
-            <a data-website="nsfw twitter" href="https://twitter.com/gayestfox"></a>
+            <a href="https://twitter.com/gayestfox">twitter</a>
         </li>
         <li>
-            <a data-website="youtube" href="https://youtube.com/@shamshitty"></a>
+            <a href="https://youtube.com/@shamshitty">youtube</a>
         </li>
         <li>
-            <a data-website="second youtube" href="https://youtube.com/@shamshiddy"></a>
+            <a href="https://youtube.com/@shamshiddy">2nd youtube</a>
         </li>
     </ul>
 
@@ -145,7 +131,6 @@
           }
           // Check if the URL parmeter is empty or not defined, display default content
           else {
-            $('.default-content').show();
             $('#back.second').remove();
           }
         });

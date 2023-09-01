@@ -9,29 +9,9 @@ body {
   color: var(--main-fg);
 }
 
-body.lightmode {
-  background: var(--main-fg);
-  color: var(--main-bg);
-}
-
-::-moz-selection {
-  background: var(--main-fg);
-  color: var(--main-bg);
-}
-
 ::selection {
   background: var(--main-fg);
   color: var(--main-bg);
-}
-
-.lightmode ::-moz-selection {
-  background: var(--main-bg);
-  color: var(--main-fg);
-}
-
-.lightmode ::selection {
-  background: var(--main-bg);
-  color: var(--main-fg);
 }
 
 a {
@@ -39,19 +19,15 @@ a {
   color: var(--main-fg);
   text-decoration: underline;
 }
-a:hover, a:active {
+a:hover,
+a:active {
   color: var(--accent);
   cursor: pointer;
 }
 
-.lightmode a {
-  color: var(--main-bg) !important;
-}
-.lightmode a:hover {
-  color: var(--accent) !important;
-}
-
 #back {
+  --pad-l: 50px;
+  --pad-r: 20px;
   position: fixed;
   top: 15px;
   left: 0;
@@ -59,56 +35,20 @@ a:hover, a:active {
   background: var(--main-fg);
   background: linear-gradient(90deg, var(--main-bg) 0%, var(--main-fg) 40%);
   padding: 5px;
-  padding-left: 50px;
-  padding-right: 20px;
-  transition: all 0.3s ease;
+  padding-left: var(--pad-l);
+  padding-right: var(--pad-r);
+  transition: all .3s ease;
 }
 #back:hover {
-  padding-left: 65px;
-  padding-right: 25px;
+  padding-left: calc(var(--pad-l) + 15px);
+  padding-right: calc(var(--pad-r) + 5px);
 }
 #back a {
   color: var(--main-bg);
 }
 
-.lightmode #back {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(90deg, var(--main-fg) 0%, var(--main-bg) 40%);
-}
-.lightmode #back a {
-  color: var(--main-fg) !important;
-}
-
-#lm-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  border-radius: 0%;
-}
-#lm-toggle svg {
-  fill: var(--main-fg);
-  transform: rotate(90deg);
-}
-#lm-toggle svg:hover {
-  fill: var(--main-fg) !important;
-}
-#lm-toggle:hover {
-  border-radius: 25%;
-}
-
-.lightmode #lm-toggle svg {
-  fill: var(--main-bg);
-  transform: rotate(270deg);
-}
-.lightmode #lm-toggle svg:hover {
-  fill: var(--main-bg) !important;
-}
-
 @media screen and (max-width: 720px) {
-  #back, #lm-toggle {
+  #back {
     display: none;
   }
-}/*# sourceMappingURL=master.css.map */
+}
