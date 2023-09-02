@@ -20,9 +20,6 @@ $--fz-nm: 35px;
     width: 40%;
   }
 }
-.lightmode #avatar {
-  border: 5px solid var(--main-bg) !important;
-}
 
 #bio {
   font-size: $--fz-nm;
@@ -76,13 +73,6 @@ $--fz-nm: 35px;
         height: calc($svg-wh / 1.75);
       }
     }
-  }
-}
-.lightmode svg {
-  fill: var(--main-bg) !important;
-  &:hover,
-  &:active {
-    fill: var(--accent) !important;
   }
 }
   
@@ -141,19 +131,6 @@ $--fz-nm: 35px;
     font-size: calc($--fz-nm - 10px);
   }
 }
-.lightmode .link a {
-  color: var(--main-bg) !important;
-  &:hover {
-    color: var(--accent) !important;
-    &::after {
-      background: var(--accent) !important;
-    }
-  }
-  &::after {
-    background: var(--main-bg) !important;
-  }
-}
-
 
 #furcode {
   position: relative;

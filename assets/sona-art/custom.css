@@ -68,16 +68,6 @@ body {
   color: var(--main-bg);
 }
 
-.lightmode .hexcodes {
-  width: 80% !important;
-}
-.lightmode .hexcodes .hcodes {
-  border: 2px var(--main-bg) solid;
-}
-.lightmode .hexcodes .hcodes[style*="#212121"], .lightmode .hexcodes .hcodes[style*="#172758"] {
-  color: var(--main-fg);
-}
-
 #artcont {
   width: 600px;
   margin: 0 auto;

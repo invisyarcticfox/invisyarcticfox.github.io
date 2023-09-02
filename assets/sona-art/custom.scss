@@ -75,17 +75,6 @@ body {
     }
   }
 }
-.lightmode .hexcodes {
-  width: 80% !important;
-  .hcodes {
-    border: 2px var(--main-bg) solid;
-    &[style*="#212121"],
-    &[style*="#172758"] {
-      color: var(--main-fg);
-    }
-  }
-}
-
 
 #artcont {
   width: 600px;
