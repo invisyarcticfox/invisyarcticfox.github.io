@@ -7,7 +7,7 @@ h1.first {
   margin-top: 100px;
 }
 h1:not(.first) {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .desc {
@@ -15,12 +15,22 @@ h1:not(.first) {
   margin: 0 auto;
   text-align: center;
   font-size: 25px;
+}
+.desc.me {
+  width: 57%;
+}
+.desc.software {
   width: 45%;
 }
 .desc img:not(a img) {
   height: 25px;
   margin-bottom: -5px;
   margin-left: -5px;
+}
+.desc a img {
+  width: 30px;
+  margin-right: 5px;
+  margin-bottom: -5px;
 }
 .desc .space {
   margin: 10px 0;
@@ -30,11 +40,6 @@ h1:not(.first) {
   text-align: left;
   margin-top: 5px;
   margin-left: 25px;
-}
-.desc a img {
-  width: 30px;
-  margin-right: 5px;
-  margin-bottom: -5px;
 }
 
 .pcspecs {
@@ -53,28 +58,9 @@ h1:not(.first) {
 .pcspecs td:not(:first-child) {
   border-left: 2px #aaa dashed;
 }
-.pcspecs th i,
-.pcspecs td i {
-  opacity: 0.75;
-}
-.pcspecs th i::before,
-.pcspecs td i::before {
-  content: "(";
-}
-.pcspecs th i::after,
-.pcspecs td i::after {
-  content: ")";
-}
-
-.lightmode .pcspecs {
-  background: rgb(100, 100, 100);
-  color: var(--main-fg) !important;
-}
-.lightmode .pcspecs a {
-  color: var(--main-fg) !important;
-}
-.lightmode .pcspecs a:hover {
-  color: var(--accent) !important;
+.pcspecs tr:last-child td {
+  border-bottom: none;
+  padding-bottom: 5px;
 }
 
 @media screen and (max-width: 720px) {

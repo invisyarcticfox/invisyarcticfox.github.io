@@ -7,7 +7,7 @@ h1 {
     margin-top: 100px;
   };
   &:not(.first){
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 
@@ -16,12 +16,22 @@ h1 {
   margin: 0 auto;
   text-align: center;
   font-size: 25px;
-  width: 45%;
+  &.me {
+    width: 57%;
+  }
+  &.software {
+    width: 45%;
+  }
 
   img:not(a img) {
     height: 25px;
     margin-bottom: -5px;
     margin-left: -5px;
+  }
+  a img {
+    width: 30px;
+    margin-right: 5px;
+    margin-bottom: -5px;
   }
   .space {
     margin: 10px 0;
@@ -31,11 +41,6 @@ h1 {
     text-align: left;
     margin-top: 5px;
     margin-left: 25px;
-  }
-  a img {
-    width: 30px;
-    margin-right: 5px;
-    margin-bottom: -5px;
   }
 }
 
@@ -54,25 +59,11 @@ h1 {
     &:not(:first-child) {
       border-left: $--t-brdr;
     }
-    i {
-      opacity: .75;
-      &::before {
-        content: "(";
-      }
-      &::after {
-        content: ")";
-      }
-    }
   }
-}
-.lightmode .pcspecs {
-  background: rgb(100, 100, 100);
-  color: var(--main-fg) !important;
-  a {
-    color: var(--main-fg) !important;
-    &:hover {
-      color: var(--accent) !important;
-    }
+
+  tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 5px;
   }
 }
 
