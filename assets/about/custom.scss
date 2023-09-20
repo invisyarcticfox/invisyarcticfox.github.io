@@ -25,13 +25,13 @@ h1 {
 
   img:not(a img) {
     height: 25px;
-    margin-bottom: -5px;
     margin-left: -5px;
+    vertical-align: middle;
   }
   a img {
     width: 30px;
     margin-right: 5px;
-    margin-bottom: -5px;
+    vertical-align: middle;
   }
   .space {
     margin: 10px 0;

@@ -24,13 +24,13 @@ h1:not(.first) {
 }
 .desc img:not(a img) {
   height: 25px;
-  margin-bottom: -5px;
   margin-left: -5px;
+  vertical-align: middle;
 }
 .desc a img {
   width: 30px;
   margin-right: 5px;
-  margin-bottom: -5px;
+  vertical-align: middle;
 }
 .desc .space {
   margin: 10px 0;
