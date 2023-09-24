@@ -1,0 +1,9 @@
+@media only screen and (max-width: 720px) {
+  ul {
+    font-size: calc(mstr.$fz-nm-m + 5px);
+    margin-top: 60px;
+  }
+  #back:not(:first-child) {
+    top: 20px;
+  }
+}

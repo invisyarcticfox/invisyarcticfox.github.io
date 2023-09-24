@@ -1,11 +1,10 @@
-$--fz-nm: 35px;
+@use '../master' as mstr;
 
 #avatar {
-  $--img-wh: 225px;
   display: block;
-  width: $--img-wh;
+  width: 225px;
   margin: 75px auto 15px;
-  border: 5px solid var(--main-fg);
+  border: 5px solid mstr.$main-fg;
   border-radius: 50%;
   
   transition: all 300ms ease;
@@ -14,15 +13,10 @@ $--fz-nm: 35px;
     border-radius: 25%;
     cursor: grabbing;
   }
-
-  @media screen and (max-width: 720px) {
-    margin-top: 25px;
-    width: 40%;
-  }
 }
 
 #bio {
-  font-size: $--fz-nm;
+  font-size: mstr.$fz-nm;
   text-align: center;
 
   .name:first-child {
@@ -31,13 +25,6 @@ $--fz-nm: 35px;
   .desc {
     margin-top: 15px;
   }
-
-  @media screen and (max-width: 720px) {
-    font-size: calc($--fz-nm - 10px);
-    .desc {
-      font-size: 20px;
-    }
-  }
 }
 
 #icons {
@@ -45,7 +32,6 @@ $--fz-nm: 35px;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  $svg-wh: 60px;
 
   a {
     margin: 0 5px;
@@ -54,24 +40,17 @@ $--fz-nm: 35px;
 
     &:hover svg,
     &:active svg {
-      fill: var(--accent);
+      fill: mstr.$main-acc;
     }
   }
   svg {
-    width: $svg-wh;
-    height: $svg-wh;
-    fill: var(--main-fg);
+    width: mstr.$svg-wh;
+    height: mstr.$svg-wh;
+    fill: mstr.$main-fg;
     transition: all 200ms ease;
-  }
-
-  @media screen and (max-width: 720px) {
-    svg {
-      width: calc($svg-wh / 1.75);
-      height: calc($svg-wh / 1.75);
-      rect {
-        width: calc($svg-wh / 1.75);
-        height: calc($svg-wh / 1.75);
-      }
+    rect {
+      width: mstr.$svg-wh;
+      height: mstr.$svg-wh;
     }
   }
 }
@@ -84,7 +63,7 @@ $--fz-nm: 35px;
   display: table;
   width: 600px;
   text-align: center;
-  font-size: $--fz-nm;
+  font-size: mstr.$fz-nm;
   text-decoration: none !important;
 
   .link {
@@ -94,7 +73,7 @@ $--fz-nm: 35px;
     transition: all .3s ease;
     text-decoration: none !important;
     a {
-      color: var(--main-fg);
+      color: mstr.$main-fg;
       text-decoration: none;
       display: inline-block;
       padding: 5px 20px;
@@ -110,27 +89,23 @@ $--fz-nm: 35px;
         left: 25%;
         width: 50%;
         position: absolute;
-        background: var(--main-fg);
+        background: mstr.$main-fg;
         transition: all .3s ease;
       }
       &:hover {
-        color: var(--accent);
+        color: mstr.$main-acc;
         transition: all .3s ease;
         &:after {
           width: 100%;
           left: 0;
-          background: var(--accent);
+          background: mstr.$main-acc;
           transition: all .3s ease;
         }
       }
     }
   }
-
-  @media screen and (max-width: 720px) {
-    width: 90%;
-    font-size: calc($--fz-nm - 10px);
-  }
 }
+
 
 #furcode {
   position: relative;
@@ -138,3 +113,6 @@ $--fz-nm: 35px;
   margin: 15px;
   bottom: -70px;
 }
+
+
+@import './mobile';

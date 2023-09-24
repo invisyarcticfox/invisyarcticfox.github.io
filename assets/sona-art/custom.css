@@ -65,7 +65,7 @@ body {
   margin-top: 10px;
 }
 #refcont .hexcodes .hcodes[style*="#ccff00"], #refcont .hexcodes .hcodes[style*="#ffffff"] {
-  color: var(--main-bg);
+  color: #141414;
 }
 
 #artcont {

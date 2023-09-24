@@ -1,0 +1,30 @@
+@charset "UTF-8";
+ul {
+  text-align: center;
+  list-style: none;
+  font-size: 35px;
+  margin-top: 125px;
+  padding: 0;
+}
+ul li.nsfw a::before {
+  content: "🔞";
+}
+
+.nsfw,
+.second {
+  display: none;
+}
+
+#back:not(:first-child) {
+  top: 60px;
+}
+
+@media only screen and (max-width: 720px) {
+  ul {
+    font-size: 28px;
+    margin-top: 60px;
+  }
+  #back:not(:first-child) {
+    top: 20px;
+  }
+}/*# sourceMappingURL=custom.css.map */

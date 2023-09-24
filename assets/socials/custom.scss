@@ -1,0 +1,24 @@
+@use '../master' as mstr;
+
+ul {
+  text-align: center;
+  list-style: none;
+  font-size: mstr.$fz-nm;
+  margin-top: 125px;
+  padding: 0;
+  
+  li.nsfw a::before {
+    content: "🔞";
+  }
+}
+
+.nsfw,
+.second {
+  display: none;
+}
+
+#back:not(:first-child) {
+  top: 60px;
+}
+
+@import './mobile'

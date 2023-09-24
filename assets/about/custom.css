@@ -63,27 +63,17 @@ h1:not(.first) {
   padding-bottom: 5px;
 }
 
-@media screen and (max-width: 720px) {
+@media only screen and (max-width: 720px) {
   h1 {
-    font-size: 30px;
+    font-size: 35px;
   }
   h1.first {
-    margin-top: 50px;
-  }
-  h1.second {
-    margin-top: 15px;
+    margin-top: 5px;
   }
   .desc {
-    width: 92.5%;
     font-size: 20px;
   }
-  .desc table {
-    font-size: 20px;
-  }
-  .desc table td {
-    padding: 5px 10px;
-  }
-  a img {
-    width: 27px !important;
+  .desc.me, .desc.software {
+    width: 90%;
   }
 }/*# sourceMappingURL=custom.css.map */

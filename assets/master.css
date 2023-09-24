@@ -51,4 +51,7 @@ a:active {
   #back {
     display: none;
   }
+  #back.first {
+    display: block;
+  }
 }

@@ -68,29 +68,4 @@ h1 {
 }
 
 
-@media screen and (max-width: 720px) {
-  h1 {
-    font-size: 30px;
-    &.first {
-      margin-top: 50px;
-    }
-    &.second {
-      margin-top: 15px;
-    }
-  }
-
-  .desc {
-    width: 92.5%;
-    font-size: 20px;
-    table {
-      font-size: 20px;
-      td {
-        padding: 5px 10px;
-      }
-    }
-  }
-  
-  a img {
-    width: 27px !important;
-  }
-}
+@import './mobile';
