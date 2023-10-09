@@ -1,15 +1,14 @@
-@media only screen and (max-width: 720px) {
-  h1 {
-    font-size: 35px;
-    &.first {
-      margin-top: 5px;
-    }
+h1 {
+  font-size: 35px;
+  &.first {
+    margin-top: 5px;
   }
-  .desc {
-    font-size: 20px;
-    &.me,
-    &.software {
-      width: 90%;
-    }
+}
+
+.desc {
+  font-size: 20px;
+  &.me,
+  &.software {
+    width: 90%;
   }
 }

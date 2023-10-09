@@ -4,7 +4,7 @@ h1 {
   margin-bottom: 15px;
 }
 h1.first {
-  margin-top: 100px;
+  margin-top: 75px;
 }
 h1:not(.first) {
   margin-top: 40px;

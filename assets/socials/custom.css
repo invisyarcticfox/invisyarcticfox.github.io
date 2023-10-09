@@ -1,9 +1,13 @@
 @charset "UTF-8";
+body {
+  overflow: hidden;
+}
+
 ul {
   text-align: center;
   list-style: none;
   font-size: 35px;
-  margin-top: 125px;
+  margin-top: 115px;
   padding: 0;
 }
 ul li.nsfw a::before {
@@ -20,11 +24,14 @@ ul li.nsfw a::before {
 }
 
 @media only screen and (max-width: 720px) {
-  ul {
-    font-size: 28px;
-    margin-top: 60px;
+  body {
+    overflow: visible;
   }
   #back:not(:first-child) {
     top: 20px;
+  }
+  ul {
+    font-size: 28px;
+    margin-top: 60px;
   }
 }/*# sourceMappingURL=custom.css.map */

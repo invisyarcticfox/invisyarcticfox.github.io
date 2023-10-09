@@ -62,6 +62,9 @@
             <a href="https://www.last.fm/user/shamshitty">last.fm</a>
         </li>
         <li>
+            <a href="https://en.pronouns.page/@shamshitty" rel="me">pronouns.page</a>
+        </li>
+        <li>
             <a href="https://www.reddit.com/user/shamshitty">reddit</a>
         </li>
         <li>
@@ -103,14 +106,16 @@
           els[i].setAttribute("rel", "noopener noreferrer");
         }
     </script>
-    <script src="./assets/master.js"></script>
+    <script src="./assets/urlparam.js"></script>
     <script>
+        const socialList = document.querySelector('ul')
         $(document).ready(function () {
           // Check if the URL parameter is true
           if (dynamicContent == 'true') {
             $('#back.first').remove();
             $('#back.second').show();
             document.title = "shamshitty - (NSFW) socials";
+            socialList.style.marginTop = "75px"
           }
           // Check if the URL parmeter is empty or not defined, display default content
           else {

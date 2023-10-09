@@ -103,9 +103,9 @@
   bottom: -70px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 720px) and (max-width: 720px) {
   #avatar {
-    margin: 15px auto 5px;
+    margin: 20px auto 5px;
     width: 175px;
   }
   #bio {

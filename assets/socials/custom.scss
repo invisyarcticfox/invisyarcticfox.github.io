@@ -1,10 +1,14 @@
-@use '../master' as mstr;
+@use '../vars' as mstr;
+
+body {
+  overflow: hidden;
+}
 
 ul {
   text-align: center;
   list-style: none;
   font-size: mstr.$fz-nm;
-  margin-top: 125px;
+  margin-top: 115px;
   padding: 0;
   
   li.nsfw a::before {
@@ -21,4 +25,6 @@ ul {
   top: 60px;
 }
 
-@import './mobile'
+@media only screen and (max-width: 720px) {
+  @import './mobile';
+}
