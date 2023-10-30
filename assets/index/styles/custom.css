@@ -1,0 +1,116 @@
+div[id] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+#avatar {
+  margin-top: 50px;
+  width: 333.3333333333px;
+  height: 333.3333333333px;
+}
+#avatar #pfp {
+  background: #222;
+  outline: 5px solid #fff;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+#avatar .spotifylink {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  background: #000;
+  outline: 5px solid #141414;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: default;
+  animation: spotifyAnim 5s ease-in-out forwards infinite;
+  transition: opacity 0.25s ease;
+}
+#avatar .spotifylink svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spotifyAnim {
+  0%, 100% {
+    transform: translate(260px, 10px);
+  }
+  50% {
+    transform: translate(260px, -10px);
+  }
+}
+#desc {
+  text-align: center;
+  width: 35%;
+  font-size: 40px;
+}
+#desc .about {
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+#socials {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#socials a {
+  display: flex;
+  text-decoration: none !important;
+  height: 65px;
+  width: 65px;
+  margin: 0 5px;
+}
+#socials a:nth-child(3) {
+  height: 60px;
+  width: 60px;
+}
+#socials a svg {
+  fill: #fff;
+  height: 100%;
+  width: 100%;
+  transition: fill 0.2s ease;
+}
+#socials a svg:hover {
+  fill: #0e0;
+  transition: fill 0.2s ease;
+}
+
+#links {
+  width: 50%;
+  font-size: 40px;
+  text-align: center;
+}
+#links div {
+  margin: 25px auto;
+  width: 50%;
+}
+#links div a {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+#links div a::after {
+  content: "";
+  margin: 0 auto;
+  margin-top: 5px;
+  display: block;
+  position: absolute;
+  background: #fff;
+  left: 47.5%;
+  width: 5%;
+  height: 3px;
+  transition-property: background, width, left;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+#links div a:hover::after {
+  background: #0e0;
+  transition-property: background, width, left;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  width: 10%;
+  left: 45%;
+}/*# sourceMappingURL=custom.css.map */

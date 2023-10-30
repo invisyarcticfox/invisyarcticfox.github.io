@@ -1,0 +1,122 @@
+@import '../../vars';
+
+div[id] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+#avatar {
+  margin-top: 50px;
+  width: calc($av-wh / 1.5);
+  height: calc($av-wh / 1.5);
+
+  #pfp {
+    background: #222;
+    outline: $outline $fg;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .spotifylink {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    background: #000;
+    outline: $outline $bg;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: default;
+    animation: spotifyAnim 5s ease-in-out forwards infinite;
+    transition: opacity .25s ease;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@keyframes spotifyAnim {
+  0%, 100% {
+    transform: translate(260px, 10px);
+  }
+  50% {
+    transform: translate(260px, -10px);
+  }
+}
+
+#desc {
+  text-align: center;
+  width: 35%;
+  font-size: 40px;
+  .about {
+    font-size: 35px;
+    margin-top: 10px;
+  }
+}
+
+#socials {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: flex;
+    text-decoration: none !important;
+    height: 65px;
+    width: 65px;
+    margin: 0 5px;
+    &:nth-child(3) {
+      height: 60px;
+      width: 60px;
+    }
+
+    svg {
+      fill: $fg;
+      height: 100%;
+      width: 100%;
+      transition: fill .2s ease;
+      &:hover {
+        fill: $accent;
+        transition: fill .2s ease;
+      }
+    }
+  }
+}
+
+#links {
+  width: 50%;
+  font-size: 40px;
+  text-align: center;
+  div {
+    margin: 25px auto;
+    width: 50%;
+    a {
+      text-decoration: none;
+      padding-bottom: 5px;
+      &::after {
+        content: "";
+        margin: 0 auto;
+        margin-top: 5px;
+        display: block;
+        position: absolute;
+        background: $fg;
+        left: 47.5%;
+        width: 5%;
+        height: 3px;
+        transition-property: background, width, left;
+        transition-duration: .3s;
+        transition-timing-function: ease;
+      }
+      &:hover::after {
+        background: $accent;
+        transition-property: background, width, left;
+        transition-duration: .3s;
+        transition-timing-function: ease;
+        width: 10%;
+        left: 45%;
+      }
+    }
+  }
+}
