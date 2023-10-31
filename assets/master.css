@@ -36,8 +36,10 @@ a:focus {
   }
   noscript {
     font-size: 20px;
+    color: var(--fg);
   }
-  div {
+  div,
+  span {
     display: none !important;
   }
 }

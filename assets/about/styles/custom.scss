@@ -1,0 +1,101 @@
+#header {
+  text-align: center;
+  margin-top: 40px;
+  &.a {
+    margin-bottom: 20px;
+  }
+}
+
+.headerunder {
+  text-align: center;
+  font-size: 35px;
+  img {
+    height: 40px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 2px;
+    margin-left: 5px;
+  }
+}
+
+.desc {
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+  width: 50%;
+
+  a img {
+    height: 28px;
+    position: relative;
+    vertical-align: middle;
+    bottom: 2px;
+    margin: 0 3px;
+  }
+}
+
+.sep {
+  display: block;
+  height: 5px;
+}
+
+table {
+  $border: 2px #aaa dashed;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  padding: 10px;
+  padding-bottom: 20px;
+
+  background: #0f0f0f;
+  text-align: left;
+  width: 595px;
+
+  thead th,
+  tbody td {
+    padding: 10px 15px;
+    border-bottom: $border;
+    &:last-child {
+      border-left: $border;
+    }
+    &:first-child {
+      text-align: center;
+    }
+
+    i {
+      opacity: .5;
+      margin-left: 10px;
+      float: right;
+    }
+    img {
+      position: absolute;
+      height: 150px;
+      border-radius: 25px;
+      transform: translate(10px, -95px);
+      visibility: hidden;
+      opacity: 0;
+      transition: all .3s ease;
+    }
+    a:hover + img {
+      transform: translate(10px, -115px);
+      visibility: visible;
+      opacity: 1;
+      transition: all .3s ease;
+    }
+  }
+  thead th {
+    font-weight: bold;
+  }
+  tbody tr {
+    &:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+
+@media (scripting: none) {
+  h1 {
+    display: none !important;
+  }
+}

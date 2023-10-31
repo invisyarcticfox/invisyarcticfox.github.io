@@ -1,0 +1,98 @@
+#header {
+  text-align: center;
+  margin-top: 40px;
+}
+#header.a {
+  margin-bottom: 20px;
+}
+
+.headerunder {
+  text-align: center;
+  font-size: 35px;
+}
+.headerunder img {
+  height: 40px;
+  vertical-align: middle;
+  position: relative;
+  bottom: 2px;
+  margin-left: 5px;
+}
+
+.desc {
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 25px;
+  width: 50%;
+}
+.desc a img {
+  height: 28px;
+  position: relative;
+  vertical-align: middle;
+  bottom: 2px;
+  margin: 0 3px;
+}
+
+.sep {
+  display: block;
+  height: 5px;
+}
+
+table {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  padding: 10px;
+  padding-bottom: 20px;
+  background: #0f0f0f;
+  text-align: left;
+  width: 595px;
+}
+table thead th,
+table tbody td {
+  padding: 10px 15px;
+  border-bottom: 2px #aaa dashed;
+}
+table thead th:last-child,
+table tbody td:last-child {
+  border-left: 2px #aaa dashed;
+}
+table thead th:first-child,
+table tbody td:first-child {
+  text-align: center;
+}
+table thead th i,
+table tbody td i {
+  opacity: 0.5;
+  margin-left: 10px;
+  float: right;
+}
+table thead th img,
+table tbody td img {
+  position: absolute;
+  height: 150px;
+  border-radius: 25px;
+  transform: translate(10px, -95px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+table thead th a:hover + img,
+table tbody td a:hover + img {
+  transform: translate(10px, -115px);
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+table thead th {
+  font-weight: bold;
+}
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (scripting: none) {
+  h1 {
+    display: none !important;
+  }
+}/*# sourceMappingURL=custom.css.map */
