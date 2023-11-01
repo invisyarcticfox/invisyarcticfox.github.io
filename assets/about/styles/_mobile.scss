@@ -1,0 +1,34 @@
+@media screen and (max-width: 720px){
+  h1 {
+    font-size: 40px;
+  }
+  .headerunder {
+    font-size: 30px;
+    img {
+      height: 30px;
+    }
+  }
+
+  .desc {
+    width: 75%;
+    font-size: 20px;
+
+    a img {
+      height: 20px;
+    }
+  }
+
+  .sep {
+    height: 10px;
+  }
+
+  table {
+    background: #222;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: -25px;
+    tbody td img {
+      display: none !important;
+    }
+  }
+}

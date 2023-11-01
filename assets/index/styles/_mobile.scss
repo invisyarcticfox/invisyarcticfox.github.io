@@ -1,0 +1,65 @@
+@media screen and (max-width: 720px){
+  #avatar {
+    $av-wh: 90%;
+    width: calc($av-wh / 1.5);
+    height: calc($av-wh / 1.5);
+
+    .spotifylink {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @keyframes spotifyAnim {
+    $lr-pos: 180px;
+    0%, 100% {
+      transform: translate($lr-pos, 10px);
+    }
+    50% {
+      transform: translate($lr-pos, -10px);
+    }
+  }
+
+  #desc {
+    width: 90%;
+    font-size: 30px;
+    .about {
+      font-size: 25px;
+    }
+  }
+
+  #socials {
+    $wh: 50px;
+    a {
+      height: $wh;
+      width: $wh;
+      &[href*="bsky.app"] {
+        svg > rect {
+          width: $wh;
+          height: $wh;
+        }
+      }
+      &:nth-child(3) {
+        width: $wh;
+        height: $wh;
+      }
+    }
+  }
+
+  #links {
+    width: 90%;
+    font-size: 30px;
+    div {
+      width: 90%;
+      a {
+        &::after {
+        left: 42.5%;
+        width: 15%;
+        }
+        &:hover::after {
+          left: 40%;
+          width: 20%;
+        }
+      }
+    }
+  }
+}

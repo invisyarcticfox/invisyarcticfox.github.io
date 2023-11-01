@@ -91,6 +91,7 @@ div[id] {
 #links div a {
   text-decoration: none;
   padding-bottom: 5px;
+  /* i can probably calc() the width and left but whatever */
 }
 #links div a::after {
   content: "";
@@ -113,4 +114,57 @@ div[id] {
   transition-timing-function: ease;
   width: 10%;
   left: 45%;
+}
+
+@media screen and (max-width: 720px) {
+  #avatar {
+    width: 60%;
+    height: 60%;
+  }
+  #avatar .spotifylink {
+    width: 60px;
+    height: 60px;
+  }
+  @keyframes spotifyAnim {
+    0%, 100% {
+      transform: translate(180px, 10px);
+    }
+    50% {
+      transform: translate(180px, -10px);
+    }
+  }
+  #desc {
+    width: 90%;
+    font-size: 30px;
+  }
+  #desc .about {
+    font-size: 25px;
+  }
+  #socials a {
+    height: 50px;
+    width: 50px;
+  }
+  #socials a[href*="bsky.app"] svg > rect {
+    width: 50px;
+    height: 50px;
+  }
+  #socials a:nth-child(3) {
+    width: 50px;
+    height: 50px;
+  }
+  #links {
+    width: 90%;
+    font-size: 30px;
+  }
+  #links div {
+    width: 90%;
+  }
+  #links div a::after {
+    left: 42.5%;
+    width: 15%;
+  }
+  #links div a:hover::after {
+    left: 40%;
+    width: 20%;
+  }
 }/*# sourceMappingURL=custom.css.map */

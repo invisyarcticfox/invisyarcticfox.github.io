@@ -1,5 +1,6 @@
 @import '../../vars';
 
+
 div[id] {
   display: block;
   margin: 0 auto;
@@ -38,11 +39,12 @@ div[id] {
 }
 
 @keyframes spotifyAnim {
+  $lr-pos: 260px;
   0%, 100% {
-    transform: translate(260px, 10px);
+    transform: translate($lr-pos, 10px);
   }
   50% {
-    transform: translate(260px, -10px);
+    transform: translate($lr-pos, -10px);
   }
 }
 
@@ -116,7 +118,10 @@ div[id] {
         transition-timing-function: ease;
         width: 10%;
         left: 45%;
-      }
+      } /* i can probably calc() the width and left but whatever */
     }
   }
 }
+
+
+@import './mobile';

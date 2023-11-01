@@ -1,0 +1,41 @@
+@media screen and (max-width: 720px){
+  #refcont {
+    width: 90%;
+    .ref.hexhover {
+      opacity: 1;
+      filter: none;
+    }
+    .overlays {
+      display: none;
+    }
+
+    .hexcodes {
+      width: 100%;
+    }
+  }
+
+  .sep {
+    width: 75%;
+  }
+
+  #artcont {
+    h3 {
+      font-size: 22px;
+    }
+    div {
+      width: 90%;
+      img {
+        width: 65%;
+        margin: 5px 0;
+        &[src*="eolixa"],
+        &[src*="breaded"],
+        &[src*="eutumned"] {
+          width: 65%;
+        }
+        &[src*="eolixa"]:nth-child(3) {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}

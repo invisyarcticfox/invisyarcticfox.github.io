@@ -1,5 +1,6 @@
 @import '../../vars';
 
+
 #header.pc {
   margin-bottom: 20px;
 }
@@ -92,3 +93,6 @@ table {
     display: none !important;
   }
 }
+
+
+@import './mobile';

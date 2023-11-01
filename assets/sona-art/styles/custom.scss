@@ -96,6 +96,12 @@
       &[src*="eutumned"] {
         width: 49%;
       }
+      &[src*="eolixa"]:nth-child(3) {
+        margin-top: 10px;
+      }
     }
   }
 }
+
+
+@import './mobile';

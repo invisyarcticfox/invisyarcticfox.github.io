@@ -85,4 +85,42 @@
 }
 #artcont div img[src*=eolixa], #artcont div img[src*=breaded], #artcont div img[src*=eutumned] {
   width: 49%;
+}
+#artcont div img[src*=eolixa]:nth-child(3) {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  #refcont {
+    width: 90%;
+  }
+  #refcont .ref.hexhover {
+    opacity: 1;
+    filter: none;
+  }
+  #refcont .overlays {
+    display: none;
+  }
+  #refcont .hexcodes {
+    width: 100%;
+  }
+  .sep {
+    width: 75%;
+  }
+  #artcont h3 {
+    font-size: 22px;
+  }
+  #artcont div {
+    width: 90%;
+  }
+  #artcont div img {
+    width: 65%;
+    margin: 5px 0;
+  }
+  #artcont div img[src*=eolixa], #artcont div img[src*=breaded], #artcont div img[src*=eutumned] {
+    width: 65%;
+  }
+  #artcont div img[src*=eolixa]:nth-child(3) {
+    margin-top: 0px;
+  }
 }/*# sourceMappingURL=custom.css.map */
