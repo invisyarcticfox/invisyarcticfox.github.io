@@ -1,8 +1,4 @@
-#header {
-  text-align: center;
-  margin-top: 40px;
-}
-#header.a {
+#header.pc {
   margin-bottom: 20px;
 }
 
@@ -60,12 +56,6 @@ table tbody td:last-child {
 table thead th:first-child,
 table tbody td:first-child {
   text-align: center;
-}
-table thead th i,
-table tbody td i {
-  opacity: 0.5;
-  margin-left: 10px;
-  float: right;
 }
 table thead th img,
 table tbody td img {

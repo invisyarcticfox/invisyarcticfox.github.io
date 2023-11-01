@@ -1,0 +1,101 @@
+@import '../../vars';
+
+
+#refcont {
+  position: relative;
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  img {
+    width: 100%;
+  }
+
+  .ref {
+    opacity: 1;
+    filter: saturate(1);
+    transition-property: filter, opacity;
+    transition: .2s ease;
+    &.hexhover {
+      opacity: .15;
+      filter: saturate(.15);
+      transition-property: filter, opacity;
+      transition: .2s ease;
+    }
+  }
+  .overlays {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .2s ease;
+    &.visible {
+      opacity: 1;
+      transition: opacity .2s ease;
+    }
+  }
+  
+  .hexcodes {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 20px 15px;
+    background: rgba($color: $bg2, $alpha: .75);
+    border-radius: 25px;
+    width: 55%;
+    font-size: 30px;
+    text-align: center;
+    cursor: default; /* because of stupid whitespace */
+
+    .hcodes {
+      cursor: text;
+      display: inline-table;
+      padding: 5px;
+      margin-top: 10px;
+      &[style*="#ccff00"],
+      &[style*="#ffffff"] {
+        color: $bg;
+      }
+    }
+  }
+}
+
+@keyframes overlayAnim {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .75;
+  }
+}
+
+
+.sep {
+  display: block;
+  margin: 35px auto;
+  width: 65%;
+  height: 2px;
+  background: $lgrey;
+}
+
+
+#artcont {
+  margin-bottom: 50px;
+  div {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+    img {
+      width: 55%;
+      vertical-align: middle;
+      &[src*="eolixa"],
+      &[src*="breaded"],
+      &[src*="eutumned"] {
+        width: 49%;
+      }
+    }
+  }
+}

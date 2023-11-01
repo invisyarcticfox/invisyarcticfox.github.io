@@ -12,7 +12,7 @@ div[id] {
   height: calc($av-wh / 1.5);
 
   #pfp {
-    background: #222;
+    background: $bg2;
     outline: $outline $fg;
     border-radius: 50%;
     width: 100%;
@@ -23,7 +23,7 @@ div[id] {
     width: 75px;
     height: 75px;
     position: absolute;
-    background: #000;
+    background: $bg2;
     outline: $outline $bg;
     border-radius: 50%;
     opacity: 0;

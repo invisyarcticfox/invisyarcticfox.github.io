@@ -1,9 +1,7 @@
-#header {
-  text-align: center;
-  margin-top: 40px;
-  &.a {
-    margin-bottom: 20px;
-  }
+@import '../../vars';
+
+#header.pc {
+  margin-bottom: 20px;
 }
 
 .headerunder {
@@ -40,7 +38,7 @@
 }
 
 table {
-  $border: 2px #aaa dashed;
+  $border: 2px $lgrey dashed;
   display: block;
   margin: 0 auto;
   margin-bottom: 150px;
@@ -62,11 +60,6 @@ table {
       text-align: center;
     }
 
-    i {
-      opacity: .5;
-      margin-left: 10px;
-      float: right;
-    }
     img {
       position: absolute;
       height: 150px;

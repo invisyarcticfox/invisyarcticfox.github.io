@@ -10,7 +10,7 @@ div[id] {
   height: 333.3333333333px;
 }
 #avatar #pfp {
-  background: #222;
+  background: #000;
   outline: 5px solid #fff;
   border-radius: 50%;
   width: 100%;
