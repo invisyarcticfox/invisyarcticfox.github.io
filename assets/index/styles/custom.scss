@@ -20,20 +20,51 @@ div[id] {
     height: 100%;
   }
 
-  .spotifylink {
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    background: $bg2;
-    outline: $outline $bg;
-    border-radius: 50%;
-    opacity: 0;
-    cursor: default;
+  .spotifycont {
+    width: 35vw;
     animation: spotifyAnim 5s ease-in-out forwards infinite;
-    transition: opacity .25s ease;
-    svg {
-      width: 100%;
-      height: 100%;
+    .spotifylink {
+      display: none;
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      background: $bg2;
+      outline: $outline $bg;
+      border-radius: 50%;
+      transition: opacity .25s ease;
+      &:hover + .tooltip {
+        visibility: visible;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .tooltip {
+      $dgrey: #888;
+      visibility: hidden;
+      position: absolute;
+      background: $dgrey;
+      padding: 5px;
+      transform: translate(110px, 15px);
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      &::before { /* idk how to do arrows lol */
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 28px;
+        height: 28px;
+        background: $dgrey;
+        transform: rotate(45deg);
+        left: -15px;
+      }
+
+      .txt {
+        padding: 0 15px 0 20px;
+      }
     }
   }
 }

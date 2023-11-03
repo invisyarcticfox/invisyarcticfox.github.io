@@ -4,11 +4,21 @@
     width: calc($av-wh / 1.5);
     height: calc($av-wh / 1.5);
 
-    .spotifylink {
-      width: 60px;
-      height: 60px;
+    .spotifycont {
+      .spotifylink {
+        width: 60px;
+        height: 60px;
+        &:hover + .tooltip {
+          visibility: hidden !important;
+        }
+      }
+      .tooltip {
+        display: none !important;
+        visibility: hidden !important;
+      }
     }
   }
+  
   @keyframes spotifyAnim {
     $lr-pos: 180px;
     0%, 100% {
