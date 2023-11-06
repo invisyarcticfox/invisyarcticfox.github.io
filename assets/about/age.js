@@ -12,8 +12,10 @@ function showBirthday()
   for(i=0; i<items.length; i++)
   {
     elem = items[i];
-    elem.innerHTML = AutoAge(elem.dataset.year || 2005, elem.dataset.month || 5, elem.dataset.day || 4) + ' year old';
+    elem.innerHTML = AutoAge(elem.dataset.year || 2005, elem.dataset.month || 5, elem.dataset.day || 4);
   }
+  console.log("age:",elem.innerHTML)
 }
+showBirthday()
 
 // https://stackoverflow.com/a/54492798

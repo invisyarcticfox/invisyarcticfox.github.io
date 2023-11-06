@@ -1,0 +1,126 @@
+#refcont {
+  position: relative;
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#refcont h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#refcont img {
+  width: 100%;
+}
+#refcont .ref {
+  opacity: 1;
+  filter: saturate(1);
+  transition-property: filter, opacity;
+  transition: 0.2s ease;
+}
+#refcont .ref.hexhover {
+  opacity: 0.15;
+  filter: saturate(0.15);
+  transition-property: filter, opacity;
+  transition: 0.2s ease;
+}
+#refcont .overlays {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+#refcont .overlays.visible {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+#refcont .hexcodes {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  width: 55%;
+  font-size: 30px;
+  text-align: center;
+  cursor: default; /* because of stupid whitespace */
+}
+#refcont .hexcodes .hcodes {
+  cursor: text;
+  display: inline-table;
+  padding: 5px;
+  margin-top: 10px;
+}
+#refcont .hexcodes .hcodes[style*="#ccff00"], #refcont .hexcodes .hcodes[style*="#ffffff"] {
+  color: #141414;
+}
+
+@keyframes overlayAnim {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+.sep {
+  display: block;
+  margin: 35px auto;
+  width: 65%;
+  height: 2px;
+  background: #aaa;
+}
+
+#artcont {
+  margin-bottom: 50px;
+}
+#artcont div {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 55%;
+}
+#artcont div img {
+  width: 55%;
+  vertical-align: middle;
+}
+#artcont div img[src*=eolixa], #artcont div img[src*=breaded], #artcont div img[src*=eutumned] {
+  width: 49%;
+}
+#artcont div img[src*=eolixa]:nth-child(3) {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  #refcont {
+    width: 90%;
+  }
+  #refcont .ref.hexhover {
+    opacity: 1;
+    filter: none;
+  }
+  #refcont .overlays {
+    display: none;
+  }
+  #refcont .hexcodes {
+    width: 100%;
+  }
+  .sep {
+    width: 75%;
+  }
+  #artcont h3 {
+    font-size: 22px;
+  }
+  #artcont div {
+    width: 90%;
+  }
+  #artcont div img {
+    width: 65%;
+    margin: 5px 0;
+  }
+  #artcont div img[src*=eolixa], #artcont div img[src*=breaded], #artcont div img[src*=eutumned] {
+    width: 65%;
+  }
+  #artcont div img[src*=eolixa]:nth-child(3) {
+    margin-top: 0px;
+  }
+}/*# sourceMappingURL=custom.css.map */

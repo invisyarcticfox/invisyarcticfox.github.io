@@ -1,0 +1,204 @@
+div[id] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+#avatar {
+  margin-top: 50px;
+  width: 333.3333333333px;
+  height: 333.3333333333px;
+}
+#avatar #pfp {
+  background: #000;
+  outline: 5px solid #fff;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+#avatar .spotifycont {
+  width: 35vw;
+  animation: spotifyAnim 5s ease-in-out forwards infinite;
+}
+#avatar .spotifycont .spotifylink {
+  display: none;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  background: #000;
+  outline: 5px solid #141414;
+  border-radius: 50%;
+  transition: opacity 0.25s ease;
+}
+#avatar .spotifycont .spotifylink:hover + .tooltip {
+  visibility: visible;
+}
+#avatar .spotifycont .spotifylink svg {
+  width: 100%;
+  height: 100%;
+}
+#avatar .spotifycont .tooltip {
+  visibility: hidden;
+  position: absolute;
+  background: #888;
+  padding: 5px;
+  transform: translate(110px, 15px);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+#avatar .spotifycont .tooltip::before { /* idk how to do arrows lol */
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background: #888;
+  transform: rotate(45deg);
+  left: -15px;
+}
+#avatar .spotifycont .tooltip .txt {
+  padding: 0 15px 0 20px;
+}
+
+@keyframes spotifyAnim {
+  0%, 100% {
+    transform: translate(260px, 10px);
+  }
+  50% {
+    transform: translate(260px, -10px);
+  }
+}
+#desc {
+  text-align: center;
+  width: 35%;
+  font-size: 40px;
+}
+#desc .about {
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+#socials {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#socials a {
+  display: flex;
+  text-decoration: none !important;
+  height: 65px;
+  width: 65px;
+  margin: 0 5px;
+}
+#socials a:nth-child(3) {
+  height: 60px;
+  width: 60px;
+}
+#socials a svg {
+  fill: #fff;
+  height: 100%;
+  width: 100%;
+  transition: fill 0.2s ease;
+}
+#socials a svg:hover {
+  fill: #0e0;
+  transition: fill 0.2s ease;
+}
+
+#links {
+  width: 50%;
+  font-size: 40px;
+  text-align: center;
+}
+#links div {
+  margin: 25px auto;
+  width: 50%;
+}
+#links div a {
+  text-decoration: none;
+  padding-bottom: 5px;
+  /* i can probably calc() the width and left but whatever */
+}
+#links div a::after {
+  content: "";
+  margin: 0 auto;
+  margin-top: 5px;
+  display: block;
+  position: absolute;
+  background: #fff;
+  left: 47.5%;
+  width: 5%;
+  height: 3px;
+  transition-property: background, width, left;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+#links div a:hover::after {
+  background: #0e0;
+  transition-property: background, width, left;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  width: 10%;
+  left: 45%;
+}
+
+@media screen and (max-width: 720px) {
+  #avatar {
+    width: 60%;
+    height: 60%;
+  }
+  #avatar .spotifycont .spotifylink {
+    width: 60px;
+    height: 60px;
+  }
+  #avatar .spotifycont .spotifylink:hover + .tooltip {
+    visibility: hidden !important;
+  }
+  #avatar .spotifycont .tooltip {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  @keyframes spotifyAnim {
+    0%, 100% {
+      transform: translate(180px, 10px);
+    }
+    50% {
+      transform: translate(180px, -10px);
+    }
+  }
+  #desc {
+    width: 90%;
+    font-size: 30px;
+  }
+  #desc .about {
+    font-size: 25px;
+  }
+  #socials a {
+    height: 50px;
+    width: 50px;
+  }
+  #socials a[href*="bsky.app"] svg > rect {
+    width: 50px;
+    height: 50px;
+  }
+  #socials a:nth-child(3) {
+    width: 50px;
+    height: 50px;
+  }
+  #links {
+    width: 90%;
+    font-size: 30px;
+  }
+  #links div {
+    width: 90%;
+  }
+  #links div a::after {
+    left: 42.5%;
+    width: 15%;
+  }
+  #links div a:hover::after {
+    left: 40%;
+    width: 20%;
+  }
+}/*# sourceMappingURL=custom.css.map */
