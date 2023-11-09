@@ -78,30 +78,30 @@ div[id] {
   margin-top: 10px;
 }
 
-#socials {
+#socialicons {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-#socials a {
+#socialicons a {
   display: flex;
   text-decoration: none !important;
   height: 65px;
   width: 65px;
   margin: 0 5px;
 }
-#socials a:nth-child(3) {
+#socialicons a:nth-child(3) {
   height: 60px;
   width: 60px;
 }
-#socials a svg {
+#socialicons a svg {
   fill: #fff;
   height: 100%;
   width: 100%;
   transition: fill 0.2s ease;
 }
-#socials a svg:hover {
+#socialicons a svg:hover {
   fill: #0e0;
   transition: fill 0.2s ease;
 }
