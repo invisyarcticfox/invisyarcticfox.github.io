@@ -33,7 +33,9 @@ div[id] {
       border-radius: 50%;
       transition: opacity .25s ease;
       &:hover + .tooltip {
-        visibility: visible;
+        opacity: 1;
+        transform: translate(110px, 15px);
+        transition: opacity .2s ease, transform .2s ease;
       }
 
       svg {
@@ -44,11 +46,12 @@ div[id] {
 
     .tooltip {
       $dgrey: #888;
-      visibility: hidden;
+      opacity: 0;
+      transform: translate(130px, 15px);
+      transition: opacity .2s ease, transform .2s ease;
       position: absolute;
       background: $dgrey;
       padding: 5px;
-      transform: translate(110px, 15px);
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
       &::before { /* idk how to do arrows lol */

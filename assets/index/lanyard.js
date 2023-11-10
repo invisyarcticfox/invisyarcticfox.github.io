@@ -48,6 +48,7 @@ async function setListening() {
     } = await fetchResponse(USERID)
     spotifylink.style.display = 'block'
     spotifytt.innerHTML = `${song} - ${artist}`
+    spotifylink.style.cursor = ''
     spotifylink.href = `https://open.spotify.com/track/${track_id}`
     if(!track_id) {
       spotifylink.removeAttribute('href')
@@ -60,7 +61,7 @@ function invoke() {
   console.log(APIRUL+USERID)
   setInterval(() => {
     setListening()
-  }, 2500);
+  }, 5000);
   setAvatar()
 }
 invoke()
