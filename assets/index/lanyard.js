@@ -61,7 +61,7 @@ function invoke() {
   console.log(APIRUL+USERID)
   setInterval(() => {
     setListening()
-  }, 5000);
+  }, 2500);
   setAvatar()
 }
 invoke()
