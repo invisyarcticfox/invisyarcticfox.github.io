@@ -87,7 +87,7 @@ div[id] {
   width: 35%;
   font-size: 40px;
   .about {
-    font-size: 35px;
+    font-size: 30px;
     margin-top: 10px;
   }
 }
@@ -100,12 +100,12 @@ div[id] {
   a {
     display: flex;
     text-decoration: none !important;
-    height: 65px;
-    width: 65px;
+    height: 60px;
+    width: 60px;
     margin: 0 5px;
     &:nth-child(3) {
-      height: 60px;
-      width: 60px;
+      height: 55px;
+      width: 55px;
     }
 
     svg {
@@ -123,7 +123,7 @@ div[id] {
 
 #links {
   width: 50%;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
   div {
     margin: 25px auto;
