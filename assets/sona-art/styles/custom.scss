@@ -17,12 +17,12 @@
 
   .ref {
     opacity: 1;
-    filter: saturate(1);
+    filter: saturate(1) blur(0);
     transition-property: filter, opacity;
     transition: .2s ease;
     &.hexhover {
       opacity: .15;
-      filter: saturate(.15);
+      filter: saturate(.15) blur(1px);
       transition-property: filter, opacity;
       transition: .2s ease;
     }
@@ -54,6 +54,9 @@
       display: inline-table;
       padding: 5px;
       margin-top: 10px;
+      &:hover {
+        cursor: pointer;
+      }
       &[style*="#ccff00"],
       &[style*="#ffffff"] {
         color: $bg;

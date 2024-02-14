@@ -13,13 +13,13 @@
 }
 #refcont .ref {
   opacity: 1;
-  filter: saturate(1);
+  filter: saturate(1) blur(0);
   transition-property: filter, opacity;
   transition: 0.2s ease;
 }
 #refcont .ref.hexhover {
   opacity: 0.15;
-  filter: saturate(0.15);
+  filter: saturate(0.15) blur(1px);
   transition-property: filter, opacity;
   transition: 0.2s ease;
 }
@@ -49,6 +49,9 @@
   display: inline-table;
   padding: 5px;
   margin-top: 10px;
+}
+#refcont .hexcodes .hcodes:hover {
+  cursor: pointer;
 }
 #refcont .hexcodes .hcodes[style*="#ccff00"], #refcont .hexcodes .hcodes[style*="#ffffff"] {
   color: #141414;
