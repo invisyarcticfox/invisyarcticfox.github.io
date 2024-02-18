@@ -89,9 +89,6 @@
 #artcont div img[src*=eolixa], #artcont div img[src*=breaded], #artcont div img[src*=eutumned] {
   width: 49%;
 }
-#artcont div img[src*=eolixa]:nth-child(3) {
-  margin-top: 10px;
-}
 
 @media screen and (max-width: 720px) {
   #refcont {
