@@ -63,18 +63,14 @@ div[id] {
   padding: 0 15px 0 20px;
 }
 
-
 @keyframes spotifyAnim {
-  /* translate(lr,ud) */
   0%, 100% {
-    transform: translate(250px, 10px);
+    transform: translate(260px, 10px);
   }
   50% {
-    transform: translate(250px, -10px);
+    transform: translate(260px, -10px);
   }
 }
-
-
 #desc {
   text-align: center;
   width: 35%;

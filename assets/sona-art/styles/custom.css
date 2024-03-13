@@ -86,7 +86,7 @@
   width: 55%;
   vertical-align: middle;
 }
-#artcont div img[src*=eolixa], #artcont div img[src*=breaded], #artcont div img[src*=eutumned] {
+#artcont div img[src*=breaded], #artcont div img[src*=eutumned] {
   width: 49%;
 }
 
