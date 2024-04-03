@@ -1,7 +1,7 @@
 const ws = new WebSocket('wss://api.lanyard.rest/socket');
 const discordurl = 'https://cdn.discordapp.com';
-const userid = '470193291053498369';
-const avatar = document.querySelector('#avatar #pfp');
+const uid = '470193291053498369';
+const pfp = document.querySelector('#avatar #pfp');
 const spotifylink = document.querySelector('.spotifylink');
 const spotifytt = document.querySelector('.tooltip');
 const spotifytxt = document.querySelector('.tooltip .txt');
@@ -17,7 +17,7 @@ ws.onmessage = ({data: msg}) => {
         ws.send(JSON.stringify({
           op: 2,
           d: {
-            subscribe_to_id: userid
+            subscribe_to_id: uid
           }
         }));
         setInterval(() => {
@@ -34,9 +34,29 @@ ws.onmessage = ({data: msg}) => {
     // dnd: #f23f43
     // offline: #80848e
 
+    pfp.title = data.d.discord_status
+    switch (data.d.discord_status) {
+      case 'idle':
+        pfp.style.outlineColor = '#f0b232'
+        break;
+      case 'online':
+        pfp.style.outlineColor = '#23a55a'
+        break;
+      case 'dnd':
+        pfp.style.outlineColor = '#f23f43'
+        break;
+      case 'offline':
+        pfp.style.outlineColor = '#80848e'
+        break;
 
-    avatar.src = discordurl+'/avatars/'+userid+'/'+data.d.discord_user.avatar+'?size=512';
+      default:
+        pfp.style.outlineColor = '#fff'
+        break;
+    }
+
+    pfp.src = discordurl+'/avatars/'+uid+'/'+data.d.discord_user.avatar+'?size=512';
     // i hate long urls >:(
+    // id shorten the whole 'data.d' stuff but its the stuff AFTER thats long smh
 
     if(data.d.listening_to_spotify === true){
       const artistsplit = data.d.spotify.artist.split(';')
