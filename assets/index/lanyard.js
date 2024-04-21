@@ -37,20 +37,20 @@ ws.onmessage = ({data: msg}) => {
     pfp.title = data.d.discord_status
     switch (data.d.discord_status) {
       case 'idle':
-        pfp.style.outlineColor = '#f0b232'
+        pfp.style.borderColor = '#f0b232'
         break;
       case 'online':
-        pfp.style.outlineColor = '#23a55a'
+        pfp.style.borderColor = '#23a55a'
         break;
       case 'dnd':
-        pfp.style.outlineColor = '#f23f43'
+        pfp.style.borderColor = '#f23f43'
         break;
       case 'offline':
-        pfp.style.outlineColor = '#80848e'
+        pfp.style.borderColor = '#80848e'
         break;
 
       default:
-        pfp.style.outlineColor = '#fff'
+        pfp.style.borderColor = '#fff'
         break;
     }
 

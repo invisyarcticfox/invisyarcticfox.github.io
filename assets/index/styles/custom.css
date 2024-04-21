@@ -6,13 +6,13 @@ div[id] {
 
 #avatar {
   margin-top: 50px;
-  width: 283.3333333333px;
-  height: 283.3333333333px;
+  width: 280px;
+  height: 280px;
 }
 #avatar #pfp {
   background: #000;
-  outline: 7px solid;
-  outline-color: #fff;
+  border: 7px solid;
+  border-color: #fff;
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -72,10 +72,31 @@ div[id] {
     transform: translate(260px, -10px);
   }
 }
+#resources {
+  position: fixed;
+  display: block;
+  font-size: 22px;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 15px 20px 0 20px;
+  border-bottom-right-radius: 25px;
+  height: 27vh;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.6666666667);
+}
+#resources li {
+  margin-top: 10px;
+}
+#resources li i {
+  color: #aaa;
+  font-size: 17px;
+}
+
 #desc {
   text-align: center;
   width: 35%;
-  font-size: 40px;
+  font-size: 37px;
 }
 #desc .about {
   font-size: 30px;
