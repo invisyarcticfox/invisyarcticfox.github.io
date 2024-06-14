@@ -81,7 +81,8 @@ div[id] {
   margin: 0;
   padding: 15px 20px 0 20px;
   border-bottom-right-radius: 25px;
-  height: 27vh;
+  height: -moz-max-content;
+  height: max-content;
   width: 200px;
   background: rgba(0, 0, 0, 0.6666666667);
 }
