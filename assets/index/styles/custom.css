@@ -16,6 +16,7 @@ div[id] {
   border-radius: 50%;
   width: 100%;
   height: 100%;
+  transition: border-color 0.2s ease;
 }
 #avatar .spotifycont {
   width: 35vw;
