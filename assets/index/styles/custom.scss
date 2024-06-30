@@ -19,7 +19,20 @@ div[id] {
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    transition: border-color .2s ease;
+    transition: border-color .2s ease, filter .2s ease;
+    &[title="online"] {
+      border-color: #23A55A;
+    }
+    &[title="idle"] {
+      border-color: #F0B232;
+    }
+    &[title="dnd"] {
+      border-color: #F23F43;
+    }
+    &[title="offline"] {
+      border-color: #80848E;
+      filter: saturate(50%);
+    }
   }
 
   .spotifycont {
@@ -84,6 +97,7 @@ div[id] {
   }
 }
 
+/*
 #resources {
   position: fixed;
   display: block;
@@ -105,6 +119,7 @@ div[id] {
     }
   }
 }
+*/
 
 #desc {
   text-align: center;
@@ -127,11 +142,30 @@ div[id] {
     height: 60px;
     width: 60px;
     margin: 0 5px;
-    &:nth-child(3) {
+    &.small {
       height: 55px;
       width: 55px;
     }
+    &.big {
+      height: 65px;
+      width: 65px;
+    }
 
+    &[href*="discord"]:hover svg {
+      fill: #7289da;
+    }
+    &[href*="steam"]:hover svg {
+      fill: #1A9FFF;
+    }
+    &[href*="t.me"]:hover svg {
+      fill: #26A5E4;
+    }
+    &[href*="twitter"]:hover svg {
+      fill: #249ef0;
+    }
+    &[href*="youtube"]:hover svg {
+      fill: #ff0808;
+    }
     svg {
       fill: $fg;
       height: 100%;

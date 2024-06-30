@@ -28,35 +28,9 @@ ws.onmessage = ({data: msg}) => {
         break
     }
 
-
-    // idle: #f0b232
-    // online: #23a55a
-    // dnd: #f23f43
-    // offline: #80848e
-
+    
     pfp.title = data.d.discord_status
-    switch (data.d.discord_status) {
-      case 'idle':
-        pfp.style.borderColor = '#f0b232'
-        break;
-      case 'online':
-        pfp.style.borderColor = '#23a55a'
-        break;
-      case 'dnd':
-        pfp.style.borderColor = '#f23f43'
-        break;
-      case 'offline':
-        pfp.style.borderColor = '#80848e'
-        break;
-
-      default:
-        pfp.style.borderColor = '#fff'
-        break;
-    }
-
     pfp.src = discordurl+'/avatars/'+uid+'/'+data.d.discord_user.avatar+'?size=512';
-    // i hate long urls >:(
-    // id shorten the whole 'data.d' stuff but its the stuff AFTER thats long smh
 
     if(data.d.listening_to_spotify === true){
       const artistsplit = data.d.spotify.artist.split(';')

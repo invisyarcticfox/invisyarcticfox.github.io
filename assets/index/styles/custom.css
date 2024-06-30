@@ -16,7 +16,20 @@ div[id] {
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, filter 0.2s ease;
+}
+#avatar #pfp[title=online] {
+  border-color: #23A55A;
+}
+#avatar #pfp[title=idle] {
+  border-color: #F0B232;
+}
+#avatar #pfp[title=dnd] {
+  border-color: #F23F43;
+}
+#avatar #pfp[title=offline] {
+  border-color: #80848E;
+  filter: saturate(50%);
 }
 #avatar .spotifycont {
   width: 35vw;
@@ -73,6 +86,7 @@ div[id] {
     transform: translate(260px, -10px);
   }
 }
+/*
 #resources {
   position: fixed;
   display: block;
@@ -82,19 +96,19 @@ div[id] {
   margin: 0;
   padding: 15px 20px 0 20px;
   border-bottom-right-radius: 25px;
-  height: -moz-max-content;
   height: max-content;
   width: 200px;
-  background: rgba(0, 0, 0, 0.6666666667);
-}
-#resources li {
-  margin-top: 10px;
-}
-#resources li i {
-  color: #aaa;
-  font-size: 17px;
-}
+  background: #000a;
 
+  li {
+    margin-top: 10px;
+    i {
+      color: #aaa;
+      font-size: 17px;
+    }
+  }
+}
+*/
 #desc {
   text-align: center;
   width: 35%;
@@ -118,9 +132,28 @@ div[id] {
   width: 60px;
   margin: 0 5px;
 }
-#socialicons a:nth-child(3) {
+#socialicons a.small {
   height: 55px;
   width: 55px;
+}
+#socialicons a.big {
+  height: 65px;
+  width: 65px;
+}
+#socialicons a[href*=discord]:hover svg {
+  fill: #7289da;
+}
+#socialicons a[href*=steam]:hover svg {
+  fill: #1A9FFF;
+}
+#socialicons a[href*="t.me"]:hover svg {
+  fill: #26A5E4;
+}
+#socialicons a[href*=twitter]:hover svg {
+  fill: #249ef0;
+}
+#socialicons a[href*=youtube]:hover svg {
+  fill: #ff0808;
 }
 #socialicons a svg {
   fill: #fff;
