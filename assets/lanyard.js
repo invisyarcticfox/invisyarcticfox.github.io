@@ -37,14 +37,12 @@ ws.onmessage = ({data: msg}) => {
     if (!data.d.spotify.track_id && !data.d.spotify.album_art_url) {
       spotifytitle.href = ''
       spotifycover.src = './assets/cover.png'
-      spotifytitle.innerHTML = ''
-      spotifyartist.innerHTML = ''
     } else {
       spotifytitle.href = 'https://open.spotify.com/track/'+data.d.spotify.track_id
       spotifycover.src = data.d.spotify.album_art_url
-      spotifytitle.innerHTML = data.d.spotify.song
-      spotifyartist.innerHTML = data.d.spotify.artist
     }
+    spotifytitle.innerHTML = data.d.spotify.song ?? ''
+    spotifyartist.innerHTML = data.d.spotify.artist ?? ''
 
   } catch{}
 }
