@@ -28,21 +28,36 @@ ws.onmessage = ({data: msg}) => {
         break
     }
 
-    if (data.d.listening_to_spotify === false) {
-      spotifycont.style.display = 'none'
-    } else {
-      spotifycont.style.display = 'block'
+    switch (data.d.listening_to_spotify) {
+      case false:
+        break;
+      case true:
+        spotifycont.style.display = 'block'
+        break;
+
+      default:
+        break;
     }
 
-    if (!data.d.spotify.track_id && !data.d.spotify.album_art_url) {
-      spotifytitle.href = ''
+    if (!data.d.spotify.track_id) {
       spotifycover.src = './assets/cover.png'
+      spotifytitle.removeAttribute('href')
+      spotifytitle.removeAttribute('target')
+      spotifytitle.removeAttribute('rel')
+      spotifytitle.style.color = '#fff'
+      spotifytitle.style.textDecoration  = 'none'
     } else {
-      spotifytitle.href = 'https://open.spotify.com/track/'+data.d.spotify.track_id
-      spotifycover.src = data.d.spotify.album_art_url
+      spotifycover.src = data.d.spotify.album_art_url	
+      spotifytitle.setAttribute('href', `https://open.spotify.com/track/${data.d.spotify.track_id}`)
+      spotifytitle.setAttribute('target', '_blank')
+      spotifytitle.setAttribute('rel', 'noopener noreferrer')
+      spotifytitle.removeAttribute('style')
     }
-    spotifytitle.innerHTML = data.d.spotify.song ?? ''
-    spotifyartist.innerHTML = data.d.spotify.artist ?? ''
 
+    spotifytitle.innerHTML = data.d.spotify.song
+    spotifyartist.innerHTML = data.d.spotify.artist
+
+
+    // this could probably be done better lol
   } catch{}
 }
