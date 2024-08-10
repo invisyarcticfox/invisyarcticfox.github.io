@@ -5,6 +5,7 @@ const spotifycont = document.querySelector('.spotify')
 const spotifycover = document.querySelector('.spotify .cover')
 const spotifytitle = document.querySelector('.spotify .title a')
 const spotifyartist = document.querySelector('.spotify .artist')
+const spotifyalbum = document.querySelector('.spotify .album')
 
 
 ws.onopen = console.log('WebSocket open!')
@@ -30,12 +31,14 @@ ws.onmessage = ({data: msg}) => {
 
     switch (data.d.listening_to_spotify) {
       case false:
+        spotifycont.style.display = 'none'
         break;
       case true:
         spotifycont.style.display = 'block'
         break;
 
       default:
+        spotifycont.style.display = 'none'
         break;
     }
 
@@ -55,7 +58,8 @@ ws.onmessage = ({data: msg}) => {
     }
 
     spotifytitle.innerHTML = data.d.spotify.song
-    spotifyartist.innerHTML = data.d.spotify.artist
+    spotifyartist.innerHTML = '<span style="color: #ccc">By </span><i>'+data.d.spotify.artist+'</i>'
+    spotifyalbum.innerHTML = '<span style="color: #ccc">On </span><i>'+data.d.spotify.album+'</i>'
 
 
     // this could probably be done better lol

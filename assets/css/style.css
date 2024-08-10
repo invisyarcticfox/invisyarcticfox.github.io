@@ -56,11 +56,11 @@ ul li img {
   margin: 5px 0 0 15px;
 }
 .spotify .info img {
-  width: 52px;
+  width: 78px;
   float: left;
   margin-right: 5px;
 }
-.spotify .info .title, .spotify .info .artist {
+.spotify .info .title {
   font-weight: bold;
 }
 
