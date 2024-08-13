@@ -43,7 +43,7 @@ ws.onmessage = ({data: msg}) => {
     }
 
     if (!data.d.spotify.track_id) {
-      spotifycover.src = './assets/cover.png'
+      spotifycover.src = './assets/img/cover.png'
       spotifytitle.removeAttribute('href')
       spotifytitle.removeAttribute('target')
       spotifytitle.removeAttribute('rel')
