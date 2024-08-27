@@ -9,7 +9,7 @@
 
   const nekoEl = document.createElement("div");
 
-  let nekoPosX = 400;
+  let nekoPosX = 440;
   let nekoPosY = 40;
 
   let mousePosX = nekoPosX - 32;
