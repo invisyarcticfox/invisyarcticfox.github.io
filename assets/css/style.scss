@@ -11,7 +11,10 @@ body {
   color: #000;
 }
 
-a, a:visited, a:active, a:focus {
+a,
+a:visited,
+a:active,
+a:focus {
   color: #0080ff;
   text-decoration: none;
 }
@@ -48,15 +51,22 @@ ul {
   }
 }
 
-.spotify .info {
-  margin: 5px 0 0 15px;
-  img {
-    width: calc(26px * 3);
-    float: left;
-    margin-right: 5px;
+.spotify {
+  .info {
+    margin: 5px 0 0 15px;
+    
+    img {
+      width: calc(26px * 3);
+      float: left;
+      margin-right: 5px;
+    }
+    .title {
+      font-weight: bold;
+    }
   }
-  .title {
-    font-weight: bold;
+
+  .links {
+    margin-left: 15px;
   }
 }
 

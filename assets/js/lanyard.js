@@ -1,11 +1,12 @@
 const ws = new WebSocket('wss://api.lanyard.rest/socket');
 const discordurl = 'https://cdn.discordapp.com';
-const uid = '470193291053498369';
 const spotifycont = document.querySelector('.spotify')
 const spotifycover = document.querySelector('.spotify .cover')
-const spotifytitle = document.querySelector('.spotify .title a')
+const spotifytitle = document.querySelector('.spotify .title')
 const spotifyartist = document.querySelector('.spotify .artist')
 const spotifyalbum = document.querySelector('.spotify .album')
+const spotifylink = document.querySelector('.links span[link="spotify"] a')
+const lastfmlink = document.querySelector('.links span[link="lastfm"] a')
 
 
 ws.onopen = console.log('WebSocket open!')
@@ -18,7 +19,7 @@ ws.onmessage = ({data: msg}) => {
         ws.send(JSON.stringify({
           op: 2,
           d: {
-            subscribe_to_id: uid
+            subscribe_to_id: '470193291053498369'
           }
         }));
         setInterval(() => {
@@ -44,22 +45,16 @@ ws.onmessage = ({data: msg}) => {
 
     if (!data.d.spotify.track_id) {
       spotifycover.src = './assets/img/cover.png'
-      spotifytitle.removeAttribute('href')
-      spotifytitle.removeAttribute('target')
-      spotifytitle.removeAttribute('rel')
-      spotifytitle.style.color = '#fff'
-      spotifytitle.style.textDecoration  = 'none'
     } else {
       spotifycover.src = data.d.spotify.album_art_url	
-      spotifytitle.setAttribute('href', `https://open.spotify.com/track/${data.d.spotify.track_id}`)
-      spotifytitle.setAttribute('target', '_blank')
-      spotifytitle.setAttribute('rel', 'noopener noreferrer')
-      spotifytitle.removeAttribute('style')
     }
 
     spotifytitle.innerHTML = data.d.spotify.song
     spotifyartist.innerHTML = '<span style="color: #ccc">By </span><i>'+data.d.spotify.artist+'</i>'
     spotifyalbum.innerHTML = '<span style="color: #ccc">On </span><i>'+data.d.spotify.album+'</i>'
+
+    spotifylink.href = `https://open.spotify.com/track/${data.d.spotify.track_id}`
+    lastfmlink.href = `https://www.last.fm/music/${data.d.spotify.artist}/_/${data.d.spotify.song}`
 
 
     // this could probably be done better lol

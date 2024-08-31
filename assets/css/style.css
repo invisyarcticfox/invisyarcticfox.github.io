@@ -16,7 +16,10 @@ body {
   color: #000;
 }
 
-a, a:visited, a:active, a:focus {
+a,
+a:visited,
+a:active,
+a:focus {
   color: #0080ff;
   text-decoration: none;
 }
@@ -62,6 +65,9 @@ ul li img {
 }
 .spotify .info .title {
   font-weight: bold;
+}
+.spotify .links {
+  margin-left: 15px;
 }
 
 footer {
