@@ -21,17 +21,17 @@ a:visited,
 a:active,
 a:focus {
   color: #0080ff;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:hover {
   color: #9c30ff;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 h1 {
   font-size: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 h1 a {
   color: #2a2 !important;
@@ -81,5 +81,5 @@ footer {
   text-align: left;
 }
 footer p {
-  margin: 2px 0;
+  margin: 1px 0;
 }/*# sourceMappingURL=style.css.map */

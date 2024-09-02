@@ -1,6 +1,6 @@
 const ws = new WebSocket('wss://api.lanyard.rest/socket');
 const discordurl = 'https://cdn.discordapp.com';
-const statustxt = document.querySelector('#head span')
+const statustxt = document.querySelector('#head div span')
 const spotifycont = document.querySelector('.spotify')
 const spotifycover = document.querySelector('.spotify .cover')
 const spotifytitle = document.querySelector('.spotify .title')
@@ -75,7 +75,6 @@ ws.onmessage = ({data: msg}) => {
 
     spotifylink.href = `https://open.spotify.com/track/${data.d.spotify.track_id}`
     lastfmlink.href = `https://www.last.fm/music/${data.d.spotify.artist}/_/${data.d.spotify.song}`
-
 
     // this could probably be done better lol
   } catch{}
