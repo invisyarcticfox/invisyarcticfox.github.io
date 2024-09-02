@@ -1,5 +1,6 @@
 const ws = new WebSocket('wss://api.lanyard.rest/socket');
 const discordurl = 'https://cdn.discordapp.com';
+const statustxt = document.querySelector('#head span')
 const spotifycont = document.querySelector('.spotify')
 const spotifycover = document.querySelector('.spotify .cover')
 const spotifytitle = document.querySelector('.spotify .title')
@@ -28,6 +29,25 @@ ws.onmessage = ({data: msg}) => {
           }))
         }, data.d.heartbeat_interval);
         break
+    }
+
+    statustxt.innerHTML = data.d.discord_status
+    switch (data.d.discord_status	) {
+      case "online":
+        statustxt.style.color = '#23A55A'
+        break;
+      case "idle":
+        statustxt.style.color = '#F0B232'
+        break
+      case "dnd":
+        statustxt.style.color = '#F23F43'
+        break
+      case "offline":
+        statustxt.style.color = '#80848E'
+        break
+      default:
+        statustxt.style.color = '#80848E'
+        break;
     }
 
     switch (data.d.listening_to_spotify) {
