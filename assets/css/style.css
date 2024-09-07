@@ -21,12 +21,12 @@ a:visited,
 a:active,
 a:focus {
   color: #0080ff;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 a:hover {
   color: #9c30ff;
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
 h1 {
