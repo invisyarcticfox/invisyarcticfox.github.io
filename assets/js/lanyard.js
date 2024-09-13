@@ -31,21 +31,25 @@ ws.onmessage = ({data: msg}) => {
         break
     }
 
-    statustxt.innerHTML = data.d.discord_status
     switch (data.d.discord_status	) {
       case "online":
+        statustxt.innerHTML = data.d.discord_status
         statustxt.style.color = '#23A55A'
         break;
       case "idle":
+        statustxt.innerHTML = data.d.discord_status
         statustxt.style.color = '#F0B232'
         break
       case "dnd":
+        statustxt.innerHTML = data.d.discord_status
         statustxt.style.color = '#F23F43'
         break
       case "offline":
+        statustxt.innerHTML = data.d.discord_status
         statustxt.style.color = '#80848E'
         break
       default:
+        statustxt.innerHTML = 'offline'
         statustxt.style.color = '#80848E'
         break;
     }
@@ -74,8 +78,15 @@ ws.onmessage = ({data: msg}) => {
     spotifyalbum.innerHTML = '<span style="color: #ccc">On </span><i>'+data.d.spotify.album+'</i>'
 
     spotifylink.href = `https://open.spotify.com/track/${data.d.spotify.track_id}`
-    lastfmlink.href = `https://www.last.fm/music/${data.d.spotify.artist}/_/${data.d.spotify.song}`
+    lastfmlink.href = `https://www.last.fm/music/${data.d.spotify.artist.split(';')[0]}/_/${data.d.spotify.song}`
 
-    // this could probably be done better lol
+    // this all could probably be done better lol
   } catch{}
+}
+
+ws.onerror = () => {
+  try {
+    document.querySelector('#head div').innerHTML = '<i style="opacity: .5;">lanyard broke lol</i><br><img src="https://i.imgur.com/A8YEwrw.png">'
+  }
+  catch{}
 }

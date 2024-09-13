@@ -1,26 +1,26 @@
 {
-    "sonas": [
-        {
-            "name": "Invisy ArcticFox",
-            "pronouns": "He/They",
-            "gender": "Male",
-            "species": "Arctic Fox",
-            "description": "Just an arctic fox really, nothing special. i guess he likes aviation and photography",
-            "ref": "https://invisyarcticfox.uk/fursona/ref.png",
-            "refAlt": "alt text",
-            "avatar": "https://invisyarcticfox.uk/fursona/avatar.png",
-            "avatarAlt": "by @eutumned on twitter",
-            "age": 19,
-            "birthdate": "2005-05-04",
-            "colors": [
-                "#99c317",
-                "#ccff00",
-                "#f093c8",
-                "#7f7f7f",
-                "#212121",
-                "#ffffff",
-                "#172758"
-            ]
-        }
-    ]
+  "sonas": [
+    {
+      "name": "Invisy",
+      "pronouns": "He/They",
+      "gender": "Male",
+      "species": "Arctic Fox",
+      "description": "Just an arctic fox really, nothing special. i guess he likes aviation and photography",
+      "ref": "https://invisyarcticfox.uk/assets/fursona/ref.png",
+      "refAlt": "alt text",
+      "avatar": "https://invisyarcticfox.uk/assets/fursona/avatar.png",
+      "avatarAlt": "by @eutumned on twitter",
+      "age": 19,
+      "birthdate": "2005-05-04",
+      "colors": [
+        "#99c317",
+        "#ccff00",
+        "#f093c8",
+        "#7f7f7f",
+        "#212121",
+        "#ffffff",
+        "#172758"
+      ]
+    }
+  ]
 }

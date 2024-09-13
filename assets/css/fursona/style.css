@@ -1,0 +1,63 @@
+body {
+  margin-bottom: 250px;
+}
+
+.back {
+  width: 50px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+  color: #000;
+  padding: 5px 50px 5px 25px;
+  margin-left: -25px;
+  transition: width 0.2s ease;
+}
+.back:hover {
+  width: 75px;
+  transition: width 0.2s ease;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.ref span {
+  font-size: 20px;
+}
+.ref img {
+  display: block;
+  height: 500px;
+  margin-top: 5px;
+}
+
+.gallery .cont {
+  display: inline-block;
+  width: calc(33.3333333333vw - 25px);
+  vertical-align: middle;
+}
+.gallery .cont img {
+  display: block;
+  width: 100%;
+}
+.gallery .cont figcaption {
+  font-size: 30px;
+  padding: 10px 0 10px 10px;
+  position: relative;
+  background: rgba(20, 20, 20, 0.6666666667);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.gallery .cont figcaption a {
+  color: #fff;
+  text-decoration: underline;
+}
+.gallery .cont figcaption a:hover {
+  color: #9c30ff;
+}
+
+.divider {
+  display: block;
+  height: 2px;
+  width: 90vw;
+  margin: 25px auto 50px;
+  background: #555;
+}/*# sourceMappingURL=style.css.map */
