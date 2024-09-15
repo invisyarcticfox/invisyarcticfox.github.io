@@ -19,11 +19,15 @@ h1 {
   }
 }
 
+
 ul {
   list-style: none;
   padding-left: 20px;
-  li img {
+  li svg {
     @include imgpos;
+    width: 24px;
+    height: 24px;
+    fill: #fff;
   }
 }
 
@@ -59,3 +63,6 @@ footer {
     margin: 1px 0;
   }
 }
+
+
+@media only screen and (max-width: 600px) {@import './mobile';}

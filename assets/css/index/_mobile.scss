@@ -1,0 +1,25 @@
+h1 {
+  font-size: 25px;
+  a {
+    img {
+      height: 25px;
+    }
+  }
+}
+
+ul {
+  margin-top: 5px;
+}
+
+footer {
+  user-select: none !important;
+  width: 95%;
+  p:nth-last-child(3) {
+    display: none;
+  }
+}
+
+
+#oneko {
+  display: none !important;
+}

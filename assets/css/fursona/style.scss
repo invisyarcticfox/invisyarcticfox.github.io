@@ -26,7 +26,7 @@ h1 {
   }
   img {
     display: block;
-    height: 500px;
+    width: 1000px;
     margin-top: 5px;
   }
 }
@@ -64,3 +64,6 @@ h1 {
   margin: 25px auto 50px;
   background: #555;
 }
+
+
+@media only screen and (max-width: 600px) {@import './mobile';}

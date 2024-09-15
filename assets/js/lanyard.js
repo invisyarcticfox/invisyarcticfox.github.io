@@ -31,7 +31,7 @@ ws.onmessage = ({data: msg}) => {
         break
     }
 
-    switch (data.d.discord_status	) {
+    switch (data.d.discord_status) {
       case "online":
         statustxt.innerHTML = data.d.discord_status
         statustxt.style.color = '#23A55A'

@@ -18,11 +18,14 @@ ul {
   list-style: none;
   padding-left: 20px;
 }
-ul li img {
+ul li svg {
   position: relative;
   vertical-align: bottom;
   bottom: 2px;
   margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  fill: #fff;
 }
 
 .spotify .info {
@@ -51,4 +54,28 @@ footer {
 }
 footer p {
   margin: 1px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  h1 a img {
+    height: 25px;
+  }
+  ul {
+    margin-top: 5px;
+  }
+  footer {
+    -webkit-user-select: none !important;
+       -moz-user-select: none !important;
+            user-select: none !important;
+    width: 95%;
+  }
+  footer p:nth-last-child(3) {
+    display: none;
+  }
+  #oneko {
+    display: none !important;
+  }
 }/*# sourceMappingURL=style.css.map */
