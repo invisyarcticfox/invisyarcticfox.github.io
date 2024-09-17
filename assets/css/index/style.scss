@@ -37,19 +37,29 @@
   }
 }
 
-h1 {
-  font-size: 30px;
-  margin-bottom: 4px;
-  a {
-    color: #2a2 !important;
-    text-decoration: underline;
-    img {
-      @include imgpos;
-      height: 30px;
+
+#head {
+  h1 {
+    font-size: 30px;
+    margin-bottom: 4px;
+    a {
+      color: #2a2 !important;
+      text-decoration: underline;
+      img {
+        @include imgpos;
+        height: 30px;
+      }
+    }
+  }
+  .desc {
+    font-size: 20px;
+    img, svg {
+      height: 24px;
+      width: 24px;
+      vertical-align: middle;
     }
   }
 }
-
 
 ul {
   list-style: none;
@@ -63,6 +73,7 @@ ul {
 }
 
 .spotify {
+  margin-bottom: 150px;
   .info {
     margin: 5px 0 0 15px;
     
@@ -83,6 +94,7 @@ ul {
 
 
 footer {
+  user-select: none;
   position: fixed;
   font-size: 15px;
   left: 10px;
@@ -92,6 +104,9 @@ footer {
   text-align: left;
   p {
     margin: 1px 0;
+    &:has(a) {
+      user-select: text;
+    }
   }
 }
 

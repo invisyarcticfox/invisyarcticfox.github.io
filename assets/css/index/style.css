@@ -30,20 +30,28 @@
   animation: colon 2s steps(1, end) 0s forwards infinite;
 }
 
-h1 {
+#head h1 {
   font-size: 30px;
   margin-bottom: 4px;
 }
-h1 a {
+#head h1 a {
   color: #2a2 !important;
   text-decoration: underline;
 }
-h1 a img {
+#head h1 a img {
   position: relative;
   vertical-align: bottom;
   bottom: 2px;
   margin-right: 5px;
   height: 30px;
+}
+#head .desc {
+  font-size: 20px;
+}
+#head .desc img, #head .desc svg {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
 }
 
 ul {
@@ -60,6 +68,9 @@ ul li svg {
   fill: #fff;
 }
 
+.spotify {
+  margin-bottom: 150px;
+}
 .spotify .info {
   margin: 5px 0 0 15px;
 }
@@ -76,6 +87,9 @@ ul li svg {
 }
 
 footer {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   position: fixed;
   font-size: 15px;
   left: 10px;
@@ -86,6 +100,11 @@ footer {
 }
 footer p {
   margin: 1px 0;
+}
+footer p:has(a) {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
 @media only screen and (max-width: 600px) {
@@ -99,9 +118,9 @@ footer p {
     margin-top: 5px;
   }
   footer {
-    -webkit-user-select: none !important;
-       -moz-user-select: none !important;
-            user-select: none !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     width: 95%;
   }
   footer p:nth-last-child(3) {

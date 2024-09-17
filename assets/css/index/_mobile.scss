@@ -12,7 +12,7 @@ ul {
 }
 
 footer {
-  user-select: none !important;
+  user-select: none;
   width: 95%;
   p:nth-last-child(3) {
     display: none;

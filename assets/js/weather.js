@@ -20,10 +20,16 @@ async function getData() {
 getData()
 
 
-hour = new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', hour: '2-digit'});
-minute = new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', minute: '2-digit'});
-document.querySelector('#weather .time .hour').innerHTML = hour.format(new Date())
-document.querySelector('#weather .time .minute').innerHTML = minute.format(new Date())
+function setTime() {
+  hour = new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', hour: '2-digit'});
+  minute = new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', minute: '2-digit'});
+  document.querySelector('#weather .time .hour').innerHTML = hour.format(new Date())
+  document.querySelector('#weather .time .minute').innerHTML = minute.format(new Date())
+}
+setTime()
+setInterval(() => {
+  setTime()
+}, 15000);
 
 
 
