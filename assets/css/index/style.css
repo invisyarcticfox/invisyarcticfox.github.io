@@ -1,3 +1,35 @@
+@keyframes colon {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+#weather {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3333333333);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100px;
+  padding: 5px 30px 5px 10px;
+  border-bottom-left-radius: 15px;
+}
+#weather img {
+  float: left;
+}
+#weather .txt {
+  float: right;
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+}
+#weather .txt .colon {
+  animation: colon 2s steps(1, end) 0s forwards infinite;
+}
+
 h1 {
   font-size: 30px;
   margin-bottom: 4px;
@@ -75,7 +107,8 @@ footer p {
   footer p:nth-last-child(3) {
     display: none;
   }
-  #oneko {
+  #oneko,
+  #weather {
     display: none !important;
   }
 }/*# sourceMappingURL=style.css.map */
