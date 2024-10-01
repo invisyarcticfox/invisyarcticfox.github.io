@@ -1,6 +1,6 @@
 async function getData() {
-  // https://gist.github.com/lalithabacies/c8f973dc6754384d6cade282b64a8cb1 hehehe not exposing my own api key today
-  const url = "https://api.openweathermap.org/data/2.5/weather?lat=52.251202&lon=-2.882980&units=metric&appid=bd5e378503939ddaee76f12ad7a97608";
+  const url = "https://api.openweathermap.org/data/2.5/weather?lat=52.251202&lon=-2.882980&units=metric&appid=5796abbde9106b7da4febfae8c44c232";
+                                                                                                        // lol i just used the api key that gets used on the front page
   try {
     const response = await fetch(url);
     if (!response.ok) {
