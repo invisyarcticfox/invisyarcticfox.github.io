@@ -11,6 +11,7 @@ body {
   padding: 5px 50px 5px 25px;
   margin-left: -25px;
   transition: width .2s ease;
+  z-index: 100;
   &:hover {
     width: 75px;
     transition: width .2s ease;
@@ -49,9 +50,9 @@ h1 {
     backdrop-filter: blur(5px);
     a {
       color: #fff;
-      text-decoration: underline;
       &:hover {
-        color: #9c30ff;
+        color: #aaa;
+        text-decoration: unset;
       }
     }
   }

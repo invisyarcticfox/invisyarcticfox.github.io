@@ -11,6 +11,7 @@ body {
   padding: 5px 50px 5px 25px;
   margin-left: -25px;
   transition: width 0.2s ease;
+  z-index: 100;
 }
 .back:hover {
   width: 75px;
@@ -49,10 +50,10 @@ h1 {
 }
 .gallery .cont figcaption a {
   color: #fff;
-  text-decoration: underline;
 }
 .gallery .cont figcaption a:hover {
-  color: #9c30ff;
+  color: #aaa;
+  text-decoration: unset;
 }
 
 .divider {
