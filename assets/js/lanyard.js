@@ -69,15 +69,16 @@ ws.onmessage = ({data: msg}) => {
 
     if (!data.d.spotify.track_id) {
       spotifycover.src = './assets/img/cover.png'
+    spotifylink.href = `#`
     } else {
       spotifycover.src = data.d.spotify.album_art_url	
+    spotifylink.href = `https://open.spotify.com/track/${data.d.spotify.track_id}`
     }
 
     spotifytitle.innerHTML = data.d.spotify.song
     spotifyartist.innerHTML = '<span style="color: #ccc">By </span><i>'+data.d.spotify.artist+'</i>'
     spotifyalbum.innerHTML = '<span style="color: #ccc">On </span><i>'+data.d.spotify.album+'</i>'
 
-    spotifylink.href = `https://open.spotify.com/track/${data.d.spotify.track_id}`
     lastfmlink.href = `https://www.last.fm/music/${data.d.spotify.artist.split(';')[0]}/_/${data.d.spotify.song}`
 
     // this all could probably be done better lol

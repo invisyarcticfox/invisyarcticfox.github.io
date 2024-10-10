@@ -1,4 +1,4 @@
-async function getData() {
+async function getWeather() {
   const url = "https://api.openweathermap.org/data/2.5/weather?lat=52.251202&lon=-2.882980&units=metric&appid=5796abbde9106b7da4febfae8c44c232";
                                                                                                         // lol i just used the api key that gets used on the front page
   try {
@@ -10,14 +10,14 @@ async function getData() {
 
     document.querySelector('#weather img').src = `https://openweathermap.org/img/wn/${w.weather.filter(m => m.length != '1').shift().icon}@2x.png`
     document.querySelector('#weather .desc').innerHTML = w.weather.filter(m => m.length != '1').shift().description
-    document.querySelector('#weather .temp').innerHTML = `${w.main.temp}°C`
+    document.querySelector('#weather .temp').innerHTML = `${w.main.temp}<sup>°c</sup>`
     // idk what the filter thing is i just know it works and it gets around the stupid weather.0 in the original json
     // also for the record the "name" in the json is NOT my town so the weather might be off at times, i just didnt wanna dox myself :(
   } catch (error) {
     console.error(error.message);
   }
 }
-getData()
+getWeather()
 
 
 function setTime() {
