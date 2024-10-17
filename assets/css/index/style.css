@@ -54,11 +54,14 @@
   vertical-align: middle;
 }
 
-ul {
+.links {
+  width: 25%;
+}
+.links ul {
   list-style: none;
   padding-left: 20px;
 }
-ul li svg {
+.links ul li svg {
   position: relative;
   vertical-align: bottom;
   bottom: 2px;

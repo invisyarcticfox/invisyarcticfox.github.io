@@ -5,6 +5,13 @@
   margin-right: 5px;
 }
 
+@mixin svgstuff {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+
 @keyframes colon {
   0%, 100% {
     opacity: 1;
@@ -61,14 +68,15 @@
   }
 }
 
-ul {
-  list-style: none;
-  padding-left: 20px;
-  li svg {
-    @include imgpos;
-    width: 24px;
-    height: 24px;
-    fill: #fff;
+.links {
+  width: 25%;
+  ul {
+    list-style: none;
+    padding-left: 20px;
+    li svg {
+      @include imgpos;
+      @include svgstuff;
+    }
   }
 }
 

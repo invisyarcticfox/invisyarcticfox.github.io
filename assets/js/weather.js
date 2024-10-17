@@ -29,6 +29,7 @@ function setTime() {
 setTime()
 setInterval(() => {
   setTime()
+  getWeather()
 }, 15000);
 
 
