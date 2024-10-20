@@ -1,6 +1,6 @@
 const ws = new WebSocket('wss://api.lanyard.rest/socket');
 const discordurl = 'https://cdn.discordapp.com';
-const statustxt = document.querySelector('#head div span')
+const statustxt = document.querySelector('#head span b')
 const spotifycont = document.querySelector('.spotify')
 const spotifycover = document.querySelector('.spotify .cover')
 const spotifytitle = document.querySelector('.spotify .title')

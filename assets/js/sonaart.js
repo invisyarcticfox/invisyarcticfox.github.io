@@ -14,7 +14,7 @@ async function getArt() {
 
       document.querySelector('div.gallery').insertBefore(cont, document.querySelector('div#imagesgohere'))
       cont.innerHTML = `
-        <img src='${json[key].imgurl}' alt='${json[key].artist}' loading='lazy'>
+        <img src='${json[key].imgurl}' alt='${json[key].artist}' loading='lazy' style='background-image: url(${json[key].smallimgurl})'>
         <figcaption>
           <a href='${json[key].artisturl}' target='_blank' rel='noopener noreferrer'>
             @<u>${json[key].artist}</u>
@@ -22,11 +22,6 @@ async function getArt() {
         </figcaption>
       `
     })
-
-    var el = document.querySelectorAll('figcaption');
-    for(var i=0;i<el.length;i++){
-      el[i].style.bottom = `${el[0].clientHeight}px`;
-    }
 
   } catch (error) {
     console.error(error.message);

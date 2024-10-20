@@ -10,7 +10,7 @@ async function getWeather() {
 
     document.querySelector('#weather img').src = `https://openweathermap.org/img/wn/${w.weather.filter(m => m.length != '1').shift().icon}@2x.png`
     document.querySelector('#weather .desc').innerHTML = w.weather.filter(m => m.length != '1').shift().description
-    document.querySelector('#weather .temp').innerHTML = `${w.main.temp}<sup>°c</sup>`
+    document.querySelector('#weather .temp').innerHTML = `${w.main.temp}°c`
     // idk what the filter thing is i just know it works and it gets around the stupid weather.0 in the original json
     // also for the record the "name" in the json is NOT my town so the weather might be off at times, i just didnt wanna dox myself :(
   } catch (error) {
@@ -29,7 +29,6 @@ function setTime() {
 setTime()
 setInterval(() => {
   setTime()
-  getWeather()
 }, 15000);
 
 
