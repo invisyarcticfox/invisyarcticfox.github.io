@@ -1,0 +1,25 @@
+#cont {
+  margin: 0 auto;
+  width: 75%;
+}
+#cont #item {
+  margin-bottom: 75px;
+}
+#cont #item .title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+#cont #item video {
+  margin: 5px 0;
+}
+#cont #item .notes {
+  margin-top: 10px;
+}
+
+.divider {
+  width: 85%;
+  height: 1px;
+  background: #aaa;
+  margin: 20px auto;
+}/*# sourceMappingURL=style.css.map */

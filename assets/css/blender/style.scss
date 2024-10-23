@@ -1,0 +1,26 @@
+#cont {
+  margin: 0 auto;
+  width: 75%;
+
+  #item {
+    margin-bottom: 75px;
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    video {
+      margin: 5px 0;
+    }
+    .notes {
+      margin-top: 10px;
+    }
+  }
+}
+
+.divider {
+  width: 85%;
+  height: 1px;
+  background: #aaa;
+  margin: 20px auto;
+}
