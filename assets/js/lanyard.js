@@ -1,13 +1,20 @@
 const ws = new WebSocket('wss://api.lanyard.rest/socket');
 const discordurl = 'https://cdn.discordapp.com';
 const statustxt = document.querySelector('#head span b')
-const spotifycont = document.querySelector('.spotify')
-const spotifycover = document.querySelector('.spotify .cover')
-const spotifytitle = document.querySelector('.spotify .title')
-const spotifyartist = document.querySelector('.spotify .artist')
+const actcont = document.querySelector('.actcont')
+const actspotify = document.querySelector('.actcont .spotify')
+const spotifyimg = document.querySelector('.spotify img')
+const spotifysong = document.querySelector('.spotify .song')
 const spotifyalbum = document.querySelector('.spotify .album')
-const spotifylink = document.querySelector('.links span[link="spotify"] a')
-const lastfmlink = document.querySelector('.links span[link="lastfm"] a')
+const spotifyartist = document.querySelector('.spotify .artist')
+const spotifyurl = document.querySelector('.spotify a.spoturl')
+const spotifylfmurl = document.querySelector('.spotify a.lfmurl')
+// const actgame = document.querySelector('.actcont .game')
+// const gameimg = document.querySelector('.game img')
+// const gamename = document.querySelector('.game .name')
+// const gamestate = document.querySelector('.game .state')
+// const gamedetails = document.querySelector('.game .details')
+// const gameparty = document.querySelector('.game .party')
 
 
 ws.onopen = console.log('WebSocket open!')
@@ -30,6 +37,7 @@ ws.onmessage = ({data: msg}) => {
         }, data.d.heartbeat_interval);
         break
     }
+
 
     switch (data.d.discord_status) {
       case "online":
@@ -55,31 +63,38 @@ ws.onmessage = ({data: msg}) => {
     }
 
     switch (data.d.listening_to_spotify) {
-      case false:
-        spotifycont.style.display = 'none'
-        break;
       case true:
-        spotifycont.style.display = 'block'
+        actspotify.style.display = 'block'
+        if (!data.d.spotify.track_id) {
+          spotifyimg.src = './assets/img/cover.png'
+          spotifyurl.href = ''
+        } else {
+          spotifyimg.src = data.d.spotify.album_art_url
+          spotifyurl.href = `https://open.spotify.com/track/${data.d.spotify.track_id}`
+        }
+        spotifysong.innerHTML = `<b>${data.d.spotify.song}</b>`
+        spotifyalbum.innerHTML = `<empty style='color: #aaa'>On </empty><i>${data.d.spotify.album}</i>`
+        spotifyartist.innerHTML = `<empty style='color: #aaa'>On </empty><i>${data.d.spotify.artist}</i>`
+        spotifylfmurl.href = `https://last.fm/music/${data.d.spotify.artist}/_/${data.d.spotify.song}`
         break;
-
+      case false:
+        actspotify.style.display = 'none'
+        break
       default:
-        spotifycont.style.display = 'none'
-        break;
+        actspotify.style.display = 'none'
     }
 
-    if (!data.d.spotify.track_id) {
-      spotifycover.src = './assets/img/cover.png'
-    spotifylink.href = `#`
-    } else {
-      spotifycover.src = data.d.spotify.album_art_url	
-    spotifylink.href = `https://open.spotify.com/track/${data.d.spotify.track_id}`
-    }
-
-    spotifytitle.innerHTML = data.d.spotify.song
-    spotifyartist.innerHTML = '<span style="color: #ccc">By </span><i>'+data.d.spotify.artist+'</i>'
-    spotifyalbum.innerHTML = '<span style="color: #ccc">On </span><i>'+data.d.spotify.album+'</i>'
-
-    lastfmlink.href = `https://www.last.fm/music/${data.d.spotify.artist.split(';')[0]}/_/${data.d.spotify.song}`
+    // const gamefilter = data.d.activities.filter(m => m.type == 0).shift()
+    // if (gamefilter != undefined) {
+    //   actgame.style.display = 'block'
+    //   gameimg.src = `${discordurl}/app-assets/${gamefilter.application_id}/${gamefilter.assets.large_image}`
+    //   gamename.innerHTML = gamefilter.name
+    //   gamedetails.innerHTML = gamefilter.details
+    //   gamestate.innerHTML = gamefilter.state
+    //   gameparty.innerHTML = `Party ${gamefilter.party.size[0]} of ${gamefilter.party.size[1]}`
+    // } else {
+    //   actgame.style.display = 'none'
+    // }
 
     // this all could probably be done better lol
   } catch{}

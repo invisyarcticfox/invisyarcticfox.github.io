@@ -80,23 +80,28 @@
   }
 }
 
-.spotify {
-  margin-bottom: 150px;
-  .info {
-    margin: 5px 0 0 15px;
-    
-    img {
-      width: calc(26px * 3);
-      float: left;
-      margin-right: 5px;
-    }
-    .title {
-      font-weight: bold;
-    }
-  }
 
-  .links {
-    margin-left: 15px;
+.actcont {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  .spotify, .game {
+    width: 50%;
+    border: 2px solid #000a;
+    background: #0005;
+    img {
+      float: left;
+      width: calc(26px * 4 - 5px);
+      height: calc(26px * 4 - 5px);
+      margin-right: 5px;
+      padding: 5px;
+    }
+    span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 

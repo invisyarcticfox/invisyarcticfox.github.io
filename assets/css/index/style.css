@@ -71,22 +71,28 @@
   fill: #fff;
 }
 
-.spotify {
-  margin-bottom: 150px;
+.actcont {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
 }
-.spotify .info {
-  margin: 5px 0 0 15px;
+.actcont .spotify, .actcont .game {
+  width: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.6666666667);
+  background: rgba(0, 0, 0, 0.3333333333);
 }
-.spotify .info img {
-  width: 78px;
+.actcont .spotify img, .actcont .game img {
   float: left;
+  width: 99px;
+  height: 99px;
   margin-right: 5px;
+  padding: 5px;
 }
-.spotify .info .title {
-  font-weight: bold;
-}
-.spotify .links {
-  margin-left: 15px;
+.actcont .spotify span, .actcont .game span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 footer {
