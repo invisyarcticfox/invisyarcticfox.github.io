@@ -9,12 +9,6 @@ const spotifyalbum = document.querySelector('.spotify .album')
 const spotifyartist = document.querySelector('.spotify .artist')
 const spotifyurl = document.querySelector('.spotify a.spoturl')
 const spotifylfmurl = document.querySelector('.spotify a.lfmurl')
-// const actgame = document.querySelector('.actcont .game')
-// const gameimg = document.querySelector('.game img')
-// const gamename = document.querySelector('.game .name')
-// const gamestate = document.querySelector('.game .state')
-// const gamedetails = document.querySelector('.game .details')
-// const gameparty = document.querySelector('.game .party')
 
 
 ws.onopen = console.log('WebSocket open!')
@@ -74,7 +68,7 @@ ws.onmessage = ({data: msg}) => {
         }
         spotifysong.innerHTML = `<b>${data.d.spotify.song}</b>`
         spotifyalbum.innerHTML = `<empty style='color: #aaa'>On </empty><i>${data.d.spotify.album}</i>`
-        spotifyartist.innerHTML = `<empty style='color: #aaa'>On </empty><i>${data.d.spotify.artist}</i>`
+        spotifyartist.innerHTML = `<empty style='color: #aaa'>By </empty><i>${data.d.spotify.artist}</i>`
         spotifylfmurl.href = `https://last.fm/music/${data.d.spotify.artist}/_/${data.d.spotify.song}`
         break;
       case false:
@@ -84,25 +78,6 @@ ws.onmessage = ({data: msg}) => {
         actspotify.style.display = 'none'
     }
 
-    // const gamefilter = data.d.activities.filter(m => m.type == 0).shift()
-    // if (gamefilter != undefined) {
-    //   actgame.style.display = 'block'
-    //   gameimg.src = `${discordurl}/app-assets/${gamefilter.application_id}/${gamefilter.assets.large_image}`
-    //   gamename.innerHTML = gamefilter.name
-    //   gamedetails.innerHTML = gamefilter.details
-    //   gamestate.innerHTML = gamefilter.state
-    //   gameparty.innerHTML = `Party ${gamefilter.party.size[0]} of ${gamefilter.party.size[1]}`
-    // } else {
-    //   actgame.style.display = 'none'
-    // }
-
     // this all could probably be done better lol
   } catch{}
-}
-
-ws.onerror = () => {
-  try {
-    document.querySelector('#head div').innerHTML = '<i style="opacity: .5;">lanyard broke lol</i><br><img src="https://i.imgur.com/A8YEwrw.png">'
-  }
-  catch{}
 }
