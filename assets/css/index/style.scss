@@ -37,9 +37,17 @@
     float: right;
     text-align: left;
     font-size: 25px;
-    font-weight: bold;
-    .time .colon {
-      animation: colon 2s steps(1, end) 0s forwards infinite;
+    .desc {
+      font-weight: bold;
+    }
+    .time {
+      .colon {
+        animation: colon 2s steps(1, end) 0s forwards infinite;
+      }
+      .tz {
+        font-style: italic;
+        font-size: 20px;
+      }
     }
   }
 }
@@ -107,20 +115,14 @@
 
 
 footer {
-  user-select: none;
   position: fixed;
   font-size: 15px;
-  left: 10px;
-  bottom: 20px;
+  margin: 0 0 5px 10px;
+  left: 0px;
+  bottom: 0px;
   width: 100%;
   color: #888;
   text-align: left;
-  p {
-    margin: 1px 0;
-    &:has(a) {
-      user-select: text;
-    }
-  }
 }
 
 

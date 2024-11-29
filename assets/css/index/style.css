@@ -24,10 +24,16 @@
   float: right;
   text-align: left;
   font-size: 25px;
+}
+#weather .txt .desc {
   font-weight: bold;
 }
 #weather .txt .time .colon {
   animation: colon 2s steps(1, end) 0s forwards infinite;
+}
+#weather .txt .time .tz {
+  font-style: italic;
+  font-size: 20px;
 }
 
 #head h1 {
@@ -96,24 +102,14 @@
 }
 
 footer {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   position: fixed;
   font-size: 15px;
-  left: 10px;
-  bottom: 20px;
+  margin: 0 0 5px 10px;
+  left: 0px;
+  bottom: 0px;
   width: 100%;
   color: #888;
   text-align: left;
-}
-footer p {
-  margin: 1px 0;
-}
-footer p:has(a) {
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
 }
 
 @media only screen and (max-width: 600px) {

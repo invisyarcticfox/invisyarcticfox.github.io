@@ -1,6 +1,7 @@
 #cont {
   margin: 0 auto;
   width: 75%;
+  padding-top: 75px;
 }
 #cont #item {
   margin-bottom: 75px;

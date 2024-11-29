@@ -17,6 +17,7 @@ body {
   margin-left: -25px;
   transition: width .2s ease;
   z-index: 100;
+  text-align: left;
 }
 .back:hover {
   width: 75px;
