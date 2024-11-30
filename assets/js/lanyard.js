@@ -159,11 +159,11 @@ ws.onmessage = ({data: msg}) => {
         break;
     }
 
-    if (fuckingfilter) {
-      startTime = fuckingfilter?.timestamps.start
-      updateGameDetails(fuckingfilter)
-      updateTimer()
-    }
+    // if (fuckingfilter) {
+    //   startTime = fuckingfilter?.timestamps.start
+    //   updateGameDetails(fuckingfilter)
+    //   updateTimer()
+    // }
 
   } catch (error) {
     console.error('Error processing WebSocket message:', error.message);
