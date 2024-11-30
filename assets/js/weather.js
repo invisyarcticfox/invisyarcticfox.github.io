@@ -1,8 +1,9 @@
-const elems = {
-  weatherImg: document.querySelector('#weather img'),
-  weatherDesc: document.querySelector('#weather .desc'),
-  weatherTemp: document.querySelector('#weather .temp'),
-  weatherTime: document.querySelector('#weather .time')
+const weather = {
+  container: document.querySelector('#weather'),
+  icon: document.querySelector('#weather img'),
+  desc: document.querySelector('#weather .desc'),
+  temp: document.querySelector('#weather .temp'),
+  time: document.querySelector('#weather .time')
 }
 
 async function getWeather() {
@@ -15,9 +16,11 @@ async function getWeather() {
     }
     const weatherData = await response.json();
 
-    elems.weatherImg.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
-    elems.weatherDesc.innerHTML = weatherData.weather[0].description;
-    elems.weatherTemp.innerHTML = `${weatherData.main.temp}°c`;
+    weather.container.style.visibility = 'visible'
+    weather.container.style.opacity = '1'
+    weather.icon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+    weather.desc.innerHTML = weatherData.weather[0].description;
+    weather.temp.innerHTML = `${weatherData.main.temp}°c`;
   } catch (error) {
     console.error("Failed to fetch weather data:", error.message);
     throw error;
@@ -30,7 +33,7 @@ function setTime() {
   time = new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit'});
   splittime = time.format(new Date()).split(':');
   splittimehtml = `${splittime[0]}<span class='colon'>:</span>${splittime[1]}`;
-  elems.weatherTime.innerHTML = `${splittimehtml} <span class='tz'>(GMT)</span>`;
+  weather.time.innerHTML = `${splittimehtml} <span class='tz'>(GMT)</span>`;
 }
 setTime()
 setInterval(() => {

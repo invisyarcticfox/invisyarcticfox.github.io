@@ -1,16 +1,4 @@
-@mixin imgpos {
-  position: relative;
-  vertical-align: bottom;
-  bottom: 2px;
-  margin-right: 5px;
-}
-
-@mixin svgstuff {
-  width: 24px;
-  height: 24px;
-  fill: #fff;
-}
-
+@use './mixin' as *;
 
 @keyframes colon {
   0%, 100% {
@@ -30,6 +18,7 @@
   height: 100px;
   padding: 5px 30px 5px 10px;
   border-bottom-left-radius: 15px;
+  @include transtiming(opacity);
   img {
     float: left;
   }
@@ -60,9 +49,32 @@
     a {
       color: #2a2 !important;
       text-decoration: underline;
-      img {
-        @include imgpos;
-        height: 30px;
+      .imgs {
+        display: inline-block;
+        position: relative;
+        width: 33px;
+        height: 33px;
+        vertical-align: bottom;
+        margin-right: 5px;
+        img.avt {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          @include transtiming(border-radius);
+        }
+        img.decor {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(1.2);
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          @include transtiming(opacity);
+        }
       }
     }
   }
@@ -92,11 +104,13 @@
 .actcont {
   display: flex;
   justify-content: space-between;
-  width: 50vw;
+  width: calc(420px * 2);
+  gap: 4px;
   .spotify, .game {
     width: 50%;
     border: 2px solid #000a;
     background: #0005;
+    @include transtiming(opacity);
     img {
       float: left;
       width: calc(26px * 4 - 5px);
@@ -109,6 +123,16 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    .progbar {
+      position: relative;
+      display: block;
+      background: #1bc357;
+      width: 0px;
+      height: 3px;
+      left: 0px;
+      bottom: -2px;
+      @include transtiming(width, 1s, linear);
     }
   }
 }
@@ -124,6 +148,3 @@ footer {
   color: #888;
   text-align: left;
 }
-
-
-@media only screen and (max-width: 600px) {@import './mobile';}

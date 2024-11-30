@@ -41,27 +41,4 @@ h1 {
   width: 90vw;
   margin: 25px auto 50px;
   background: #555;
-}
-
-@media only screen and (max-width: 600px) {
-  .back {
-    display: none;
-  }
-  h1 {
-    font-size: 25px;
-    margin-top: 50px;
-  }
-  .ref span {
-    font-size: 17px;
-  }
-  .ref img {
-    display: block;
-    width: 90%;
-  }
-  .gallery .cont {
-    width: 90%;
-  }
-  .gallery .cont figcaption {
-    font-size: 25px;
-  }
 }/*# sourceMappingURL=style.css.map */

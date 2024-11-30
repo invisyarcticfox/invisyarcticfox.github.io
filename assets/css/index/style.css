@@ -16,6 +16,9 @@
   height: 100px;
   padding: 5px 30px 5px 10px;
   border-bottom-left-radius: 15px;
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
 #weather img {
   float: left;
@@ -44,12 +47,36 @@
   color: #2a2 !important;
   text-decoration: underline;
 }
-#head h1 a img {
+#head h1 a .imgs {
+  display: inline-block;
   position: relative;
+  width: 33px;
+  height: 33px;
   vertical-align: bottom;
-  bottom: 2px;
   margin-right: 5px;
-  height: 30px;
+}
+#head h1 a .imgs img.avt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition-property: border-radius;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+#head h1 a .imgs img.decor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
 #head .desc {
   font-size: 20px;
@@ -80,12 +107,16 @@
 .actcont {
   display: flex;
   justify-content: space-between;
-  width: 50vw;
+  width: 840px;
+  gap: 4px;
 }
 .actcont .spotify, .actcont .game {
   width: 50%;
   border: 2px solid rgba(0, 0, 0, 0.6666666667);
   background: rgba(0, 0, 0, 0.3333333333);
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
 .actcont .spotify img, .actcont .game img {
   float: left;
@@ -100,6 +131,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.actcont .spotify .progbar, .actcont .game .progbar {
+  position: relative;
+  display: block;
+  background: #1bc357;
+  width: 0px;
+  height: 3px;
+  left: 0px;
+  bottom: -2px;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
 
 footer {
   position: fixed;
@@ -110,29 +153,4 @@ footer {
   width: 100%;
   color: #888;
   text-align: left;
-}
-
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 25px;
-  }
-  h1 a img {
-    height: 25px;
-  }
-  ul {
-    margin-top: 5px;
-  }
-  footer {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    width: 95%;
-  }
-  footer p:nth-last-child(3) {
-    display: none;
-  }
-  #oneko,
-  #weather {
-    display: none !important;
-  }
 }/*# sourceMappingURL=style.css.map */

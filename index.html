@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="./assets/img/avatar.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/master.css">
     <link rel="stylesheet" href="./assets/css/index/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
 
     <meta name="title" content="invisyarcticfox.uk">
     <meta name="description" content="a gay fox that likes military aviation :3">
@@ -35,7 +34,7 @@
     <meta name="twitter:image" value="https://cdn.invisyarcticfox.uk/img/embedbanner.png">
 </head>
 <body>
-    <div id="weather">
+    <div id="weather" style="visibility: hidden; opacity: 0;">
         <img src="" alt="">
         <div class="txt">
             <div class="desc"></div>
@@ -45,7 +44,14 @@
     </div>
 
     <div id="head">
-        <h1><a href="./"><img src="./assets/img/avatar.png" alt="">https://invisyarcticfox.uk</a></h1>
+        <h1>
+            <a href="./">
+                <div class="imgs">
+                    <img src="./assets/img/avatar.png" class="avt" style="border-radius: 0;">
+                    <img src="" class="decor" style="opacity: 0;">
+                </div>https://invisyarcticfox.uk
+            </a>
+        </h1>
         <span style="font-size: 20px;">i am currently <b style="color: #80848E;">offline</b>!</span>
     </div>
 
@@ -149,19 +155,20 @@
     </div>
 
     <div class="actcont">
-        <div class="spotify" style="display: none;">
+        <div class="spotify" style="visibility: hidden; opacity: 0;">
             <img src="" alt="">
             <span class="song"></span>
             <span class="album"></span>
             <span class="artist"></span>
-            <span>on <a class="spoturl" href="" target="_blank" rel="noopener noreferrer">spotify</a> - on <a class="lfmurl" href="" target="_blank" rel="noopener noreferrer">last.fm</a></span>
+            <span class="spotfm">on <a class="spoturl" href="" target="_blank" rel="noopener noreferrer">spotify</a> - on <a class="lfmurl" href="" target="_blank" rel="noopener noreferrer">last.fm</a></span>
+            <div class="progbar"></div>
         </div>
-        <div class="game" style="display: none;">
-            <img src="" alt="">
-            <span class="name"></span>
-            <span class="state"></span>
-            <span class="details"></span>
-            <span class="party"></span>
+        <div class="game" style="visibility: hidden; opacity: 0;">
+            <img src="./assets/img/avatar.png" alt="">
+            <span class="name">buh</span>
+            <span class="details">buh</span>
+            <span class="state">buh</span>
+            <div class="timer"></div>
         </div>
     </div>
 
