@@ -94,44 +94,47 @@
   list-style: none;
   padding-left: 20px;
 }
+.links ul li {
+  margin: 2px 0;
+}
 .links ul li svg {
   position: relative;
   vertical-align: bottom;
-  bottom: 2px;
-  margin-right: 5px;
   width: 24px;
   height: 24px;
   fill: #fff;
+  bottom: 2px;
+  margin-right: 5px;
 }
 
 .actcont {
   display: flex;
   justify-content: space-between;
-  width: 840px;
+  width: 420px;
   gap: 4px;
 }
-.actcont .spotify, .actcont .game {
-  width: 50%;
+.actcont .spotify {
+  width: 100%;
   border: 2px solid rgba(0, 0, 0, 0.6666666667);
   background: rgba(0, 0, 0, 0.3333333333);
   transition-property: opacity;
   transition-duration: 200ms;
   transition-timing-function: ease;
 }
-.actcont .spotify img, .actcont .game img {
+.actcont .spotify img {
   float: left;
   width: 99px;
   height: 99px;
   margin-right: 5px;
   padding: 5px;
 }
-.actcont .spotify span, .actcont .game span {
+.actcont .spotify span {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.actcont .spotify .progbar, .actcont .game .progbar {
+.actcont .spotify .progbar {
   position: relative;
   display: block;
   background: #1bc357;

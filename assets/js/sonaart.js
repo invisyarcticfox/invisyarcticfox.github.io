@@ -1,19 +1,20 @@
 function createArtElement(data) {
   const cont = document.createElement('div')
+  const imgurl = 'https://cdn.invisyarcticfox.uk/art'
   cont.className = 'cont'
   cont.innerHTML = `
-    <img src='${data.imgurl}' alt='${data.artist}' loading='lazy' style='background-image: url(${data.smallimgurl}); background-size: contain;'>
-    <figcaption>
+    <img src='${imgurl}/${data.file}' alt='${data.artist}' loading='lazy' style='background-image: url(${imgurl}/small/${data.file}); background-size: contain;'>
+    <div class="caption">
       <a href='${data.artisturl}' target='_blank' rel='noopener noreferrer'>
         @<u>${data.artist}</u>
       </a>
-    </figcaption>
+    </div>
   `
   return cont
 }
 
 async function getArt() {
-  const url = "https://cdn.invisyarcticfox.uk/sonaart.json"
+  const url = 'https://api.invisyarcticfox.uk/sonaart'
   try {
     const response = await fetch(url)
     if (!response.ok) throw new Error(`Response status: ${response.status}`)
@@ -31,5 +32,4 @@ async function getArt() {
     console.error(error.message)
   }
 }
-
 getArt()

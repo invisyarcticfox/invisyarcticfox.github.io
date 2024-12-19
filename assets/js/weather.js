@@ -7,7 +7,7 @@ const weather = {
 }
 
 async function getWeather() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=52.251202&lon=-2.882980&units=metric&appid=5796abbde9106b7da4febfae8c44c232`;
+  const url = `https://api.invisyarcticfox.uk/weather`;
 
   try {
     const response = await fetch(url);

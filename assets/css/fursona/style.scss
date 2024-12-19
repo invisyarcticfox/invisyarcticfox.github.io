@@ -19,10 +19,10 @@ h1 {
     display: block;
     width: 100%;
   }
-  figcaption {
+  div.caption {
     font-size: 30px;
     padding: 10px 0 10px 10px;
-    bottom: 54px;
+    transform: translateY(-54px);
     position: relative;
     background: #141414aa;
     backdrop-filter: blur(5px);

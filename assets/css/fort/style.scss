@@ -5,7 +5,7 @@
   a {
     display: inline-block;
     width: calc(25% - 4px);
-    margin: 2px;
+    margin: 5px 2px;
     filter: brightness(100%);
     transition: filter .1s ease;
     &:hover {

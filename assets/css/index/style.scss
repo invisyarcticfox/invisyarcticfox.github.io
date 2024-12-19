@@ -1,4 +1,8 @@
-@use './mixin' as *;
+@mixin transtiming($prop, $length: 200ms, $tf: ease) {
+  transition-property: $prop;
+  transition-duration: $length;
+  transition-timing-function: $tf;
+}
 
 @keyframes colon {
   0%, 100% {
@@ -8,6 +12,7 @@
     opacity: 0;
   }
 }
+
 
 #weather {
   position: fixed;
@@ -93,9 +98,17 @@
   ul {
     list-style: none;
     padding-left: 20px;
-    li svg {
-      @include imgpos;
-      @include svgstuff;
+    li {
+      margin: 2px 0;
+      svg {
+        position: relative;
+        vertical-align: bottom;
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+        bottom: 2px;
+        margin-right: 5px;
+      }
     }
   }
 }
@@ -104,10 +117,10 @@
 .actcont {
   display: flex;
   justify-content: space-between;
-  width: calc(420px * 2);
+  width: 420px;
   gap: 4px;
-  .spotify, .game {
-    width: 50%;
+  .spotify {
+    width: 100%;
     border: 2px solid #000a;
     background: #0005;
     @include transtiming(opacity);

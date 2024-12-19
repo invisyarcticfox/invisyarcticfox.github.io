@@ -18,19 +18,19 @@ h1 {
   display: block;
   width: 100%;
 }
-.gallery .cont figcaption {
+.gallery .cont div.caption {
   font-size: 30px;
   padding: 10px 0 10px 10px;
-  bottom: 54px;
+  transform: translateY(-54px);
   position: relative;
   background: rgba(20, 20, 20, 0.6666666667);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-.gallery .cont figcaption a {
+.gallery .cont div.caption a {
   color: #fff;
 }
-.gallery .cont figcaption a:hover {
+.gallery .cont div.caption a:hover {
   color: #aaa;
   text-decoration: unset;
 }
