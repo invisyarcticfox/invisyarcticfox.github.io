@@ -18,7 +18,7 @@ async function getWeather() {
 
     weather.container.style.visibility = 'visible'
     weather.container.style.opacity = '1'
-    weather.icon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+    weather.icon.src = `https://api.invisyarcticfox.uk/weather/icons/${weatherData.weather[0].icon}`;
     weather.desc.innerHTML = weatherData.weather[0].description;
     weather.temp.innerHTML = `${weatherData.main.temp}°c`;
   } catch (error) {
