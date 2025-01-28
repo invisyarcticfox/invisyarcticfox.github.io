@@ -4,7 +4,7 @@ import {
   updateSpotifyDetails
 } from './functions.js';
 
-const ws = new WebSocket('wss://api.lanyard.rest/socket');
+const ws = new WebSocket('wss://lanyard.invisyarcticfox.uk/socket');
 const spotifycont = document.querySelector('.actcont .spotify')
 
 
